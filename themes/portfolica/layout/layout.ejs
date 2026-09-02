@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'en' %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% if (page.title && !is_home()) { %><%= page.title %> · <% } %><%= theme.name %> — <%= theme.title %></title>
+    <%- partial('partial/head') %>
+</head>
+<body>
+    <%- partial('partial/header') %>
+    <main class="site-main" id="main">
+        <%- body %>
+    </main>
+    <%- partial('partial/footer') %>
+    <%- partial('partial/scripts') %>
+</body>
+</html>

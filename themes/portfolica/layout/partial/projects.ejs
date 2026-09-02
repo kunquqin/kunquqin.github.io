@@ -1,0 +1,25 @@
+<% var accents = ['#6366f1','#f59e0b','#10b981','#8b5cf6','#ec4899','#06b6d4']; var accentDark = ['#4f46e5','#d97706','#059669','#7c3aed','#db2777','#0891b2']; %>
+<section id="projects" class="projects">
+    <div class="section-container">
+        <p class="section-eyebrow reveal">Projects</p>
+        <h2 class="section-title reveal">Designed, Built, &amp; Shipped</h2>
+        <p class="section-lead reveal">Selected projects that reflect my approach to design, development, and execution.</p>
+        <div class="projects-grid">
+            <% theme.projects.forEach(function(project, index) { %>
+                <a href="<%- url_for('/projects/' + project.slug + '/') %>" class="project-card" style="--accent: <%= accents[index % accents.length] %>; --accent-dark: <%= accentDark[index % accentDark.length] %>;">
+                    <% if (project.slug === 'meowbreak') { %>
+                    <div class="project-card-img meowbreak-card-cover" aria-hidden="true"><div class="mb-card-window"><span></span><b>专注工作</b><small>00:24:18</small><i></i></div></div>
+                    <% } else { %><img class="project-card-img" src="https://picsum.photos/seed/p-<%= encodeURIComponent(project.name) %>/800/600" alt="" loading="lazy" width="800" height="600"><% } %>
+                    <div class="project-card-content">
+                        <span class="project-card-year"><%= project.name %> / <%= project.year %></span>
+                        <span class="project-card-name"><%= project.name %></span>
+                        <span class="project-card-category"><%= project.category %></span>
+                    </div>
+                </a>
+            <% }); %>
+        </div>
+        <div class="projects-cta">
+            <a href="<%- url_for('/projects/') %>" class="btn-secondary btn-large">View All Projects</a>
+        </div>
+    </div>
+</section>

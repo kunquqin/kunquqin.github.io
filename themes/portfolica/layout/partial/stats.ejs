@@ -1,0 +1,12 @@
+<section class="stats" aria-label="Key metrics">
+    <div class="section-container">
+        <div class="stats-track">
+            <% theme.stats.items.forEach(function(item, i) { %>
+                <div class="stat-card">
+                    <div class="stat-value"><%= item.value %></div>
+                    <div class="stat-label"><%= item.label %></div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,234 @@
+# Portfolio Theme Configuration — Portfolica-inspired
+
+# 网站显示姓名（导航品牌名）
+name: 覃保锟
+# 首页大标题显示名（可与 name 不同）
+display_name: 覃保锟
+# 职位/身份标题
+title: 3D视觉与AI产品设计师
+# 首页简介文案
+tagline: I build digital experiences that drive real growth for your business. Let's partner to create work that gets results.
+
+# 主 CTA 强调色（对齐 Portfolica 橙色按钮）
+# 主按钮背景色
+accent: "#ea580c"
+# 主按钮 hover 背景色
+accent_hover: "#c2410c"
+
+# 首屏按钮配置
+hero:
+  # 主按钮文案
+  cta_primary: "Start a Project"
+  # 主按钮跳转锚点/链接
+  cta_primary_link: "#contact"
+  # 次按钮文案
+  cta_secondary: "See Projects"
+  # 次按钮跳转锚点/链接
+  cta_secondary_link: "#projects"
+
+# 顶部导航配置
+nav:
+  # 导航项名称
+  - name: About
+    # 导航项链接（锚点）
+    link: "#about"
+  - name: All Projects
+    link: "#projects"
+  - name: Contact
+    link: "#contact"
+
+# 首页项目卡片与详情页基础数据
+projects:
+  - name: 喵息 MeowBreak
+    slug: meowbreak
+    year: 2026
+    category: AI Product / Windows App
+    summary: 从真实工作场景出发，用 AI 协作完成产品定义、体验设计、Electron 开发与 Microsoft Store 发布准备。
+  # 项目名称
+  - name: Connecto
+    # 项目唯一标识（会用于 /projects/{slug}/ 路径）
+    slug: connecto
+    # 项目年份
+    year: 2023
+    # 项目分类
+    category: Mobile App
+    # 项目摘要（详情页头部会显示）
+    summary: A mobile collaboration product focused on clarity, speed, and scalable UI patterns.
+  - name: PayNest
+    slug: paynest
+    year: 2024
+    category: Fintech
+    summary: Fintech flows redesigned for trust, compliance-friendly patterns, and conversion.
+  - name: Shopora
+    slug: shopora
+    year: 2014
+    category: E-commerce
+    summary: This project solves common e-commerce usability challenges by delivering a seamless shopping experience focused on higher sales conversions.
+  - name: EduNova
+    slug: edunova
+    year: 2026
+    category: EdTech
+    summary: Learning journeys simplified with accessible navigation and calm, focused visual hierarchy.
+  - name: MediLink
+    slug: medilink
+    year: 2025
+    category: Healthcare
+    summary: Healthcare UX with emphasis on clarity, forms, and sensitive data presentation.
+  - name: Travelio
+    slug: travelio
+    year: 2025
+    category: Travel
+    summary: Trip planning and booking flows with inspiring imagery and frictionless checkout.
+
+# About 区块
+about:
+  # 小标题（眉标题）
+  eyebrow: About me
+  # 主标题
+  title: Mindset, methods, & experience
+  # 内容分段（按顺序展示）
+  columns:
+    # 分段标题
+    - label: What I do
+      # 分段正文
+      text: I help brands find clarity and express it through strong, thoughtful design.
+    - label: Background
+      text: Originally from CDMX, I've been designing identities for 7+ years, working with startups, restaurants, hoteliers, and creative founders across Mexico.
+    - label: My Approach
+      text: I believe good design starts with empathy. I ask questions, listen closely, and build brands that feel as good as they look — honest, beautiful, and built to last.
+
+# Career 时间线
+career:
+  # 职位名称
+  - role: Design Director
+    # 时间区间
+    period: "2025 - Now"
+  - role: Sr. Product Designer
+    period: "2024 - 2025"
+  - role: Product Designer
+    period: "2015 - 2024"
+  - role: UI/UX Designer
+    period: "2012 - 2015"
+
+# 数字统计区
+stats:
+  # 评分（首页评分展示）
+  rating: 4.9
+  # 服务客户数量（首页“Helped xx+ businesses”）
+  clients: 120
+  # 四宫格/统计卡片
+  items:
+    # 数值
+    - value: "100%"
+      # 标签
+      label: Client Satisfaction Rate
+    - value: "50+"
+      label: Projects Completed
+    - value: "4X"
+      label: Client Growth
+    - value: "7+"
+      label: Years of Experience
+
+# Process 流程区
+process:
+  # 小标题
+  eyebrow: Process
+  # 主标题
+  title: How things get built together
+  # 步骤列表
+  steps:
+    # 步骤编号（字符串形式）
+    - num: "01"
+      # 步骤说明
+      text: Every great design starts with empathy. I dive deep into the problem to uncover insights that shape the foundation.
+    - num: "02"
+      text: I blend strategy, usability, and visual storytelling to design experiences that feel intuitive and look distinct.
+    - num: "03"
+      text: Through feedback, testing, and iteration, I ensure the design works in the real world — not just on Figma.
+    - num: "04"
+      text: I guide projects from concept to launch, helping teams build scalable design systems and maintain consistent, well-crafted brand experiences across products.
+
+# 服务卡片区
+services:
+  # 服务名称
+  - name: UX-UI & Creative
+    # 服务描述
+    description: Crafting clean, user-friendly sites that reflect your brand and deliver a seamless experience.
+    # 图标类型（支持：palette / code / brand / chat）
+    icon: palette
+  - name: Web Development
+    description: Building fast, no-code websites that are easy to manage and optimized for every device.
+    icon: code
+  - name: Brand Identity
+    description: Cohesive visual systems — from logos to colors — make your brand instantly recognizable.
+    icon: brand
+  - name: Design Consultation
+    description: Offering strategic guidance to help you plan, refine, and execute your design ideas effectively.
+    icon: chat
+
+# FAQ 区
+faqs:
+  # 问题
+  - question: How do we get started?
+    # 回答
+    answer: Simply reach out via the contact form or schedule a call. We'll discuss your project requirements, timeline, and budget to ensure we're the right fit.
+  - question: Can you redesign my existing website or app?
+    answer: Absolutely! I specialize in redesigning existing digital products to improve user experience, conversion rates, and overall aesthetics.
+  - question: Do you also handle development or just design?
+    answer: I offer both design and development services — from UI/UX design to fully functional websites and web applications.
+  - question: What tools do you use for design?
+    answer: My primary tools include Figma for UI/UX design, Adobe Creative Suite for branding, and the modern web stack for implementation.
+  - question: Can I request additional revisions?
+    answer: Yes, all projects include revision rounds. The number depends on the project scope, but I always ensure we reach a result you're happy with.
+
+# 用户评价区
+testimonials:
+  # 评价内容
+  - text: Alex truly understood my vision and turned it into impactful designs — results went beyond my expectations!
+    # 评价人
+    author: Alex
+    # 身份/职位
+    role: Founder
+    # 星级评分
+    rating: 4.9
+  - text: Alex truly understood my vision and turned it into impactful designs; the results went beyond my expectations!
+    author: Morgan
+    role: Product Lead
+    rating: 5.0
+  - text: As a small business owner, I appreciated how stress-free Alex Morgan made the process.
+    author: Jamie
+    role: Owner, Local Studio
+    rating: 4.6
+  - text: As a small business owner, the entire process felt effortless thanks to Alex's clear guidance and excellence.
+    author: Priya
+    role: Operations
+    rating: 5.0
+  - text: Running a small business is challenging, but Alex Morgan made this experience smooth and completely hassle-free.
+    author: Chris
+    role: CEO
+    rating: 4.8
+
+# 联系区
+contact:
+  # 联系邮箱
+  email: hello@alexmorgan.design
+  # 表单提交按钮文案
+  button_text: Submit
+  # 表单下方提示文案
+  note: We will reach out to you within 24hrs
+
+# 社交链接区
+social:
+  # Dribbble 链接
+  dribbble: https://dribbble.com/
+  # Behance 链接
+  behance: https://behance.net/
+  # Figma 链接
+  figma: https://figma.com/
+  # X（Twitter）链接
+  x: https://x.com/
+
+# 页脚 Framer 链接
+framer_url: https://www.framer.com/
+# 项目详情页“Visit Live Site”默认链接
+project_live_url: https://framer.com

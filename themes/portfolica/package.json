@@ -1,0 +1,17 @@
+{
+  "name": "hexo-theme-portfolica",
+  "version": "1.0.0",
+  "description": "A modern dark portfolio theme for Hexo",
+  "author": "Alex Morgan",
+  "license": "MIT",
+  "keywords": [
+    "hexo",
+    "theme",
+    "portfolio",
+    "dark"
+  ],
+  "repository": {},
+  "engines": {
+    "node": ">=12.0"
+  }
+}

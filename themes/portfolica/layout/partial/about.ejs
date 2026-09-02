@@ -1,0 +1,27 @@
+<section id="about" class="about">
+    <div class="section-container">
+        <p class="section-eyebrow reveal"><%= theme.about.eyebrow %></p>
+        <h2 class="section-title reveal"><%= theme.about.title %></h2>
+        <div class="about-stack">
+            <% theme.about.columns.forEach(function(col, i) { %>
+                <article class="about-block reveal">
+                    <h3 class="about-block__label"><%= col.label %></h3>
+                    <div class="about-block__body">
+                        <p class="about-block__text"><%= col.text %></p>
+                    </div>
+                </article>
+            <% }); %>
+            <aside class="about-block about-block--career reveal">
+                <h3 class="about-block__label">Career</h3>
+                <ul class="career-list">
+                    <% theme.career.forEach(function(row) { %>
+                        <li class="career-item">
+                            <span class="career-role"><%= row.role %></span>
+                            <span class="career-period"><%= row.period %></span>
+                        </li>
+                    <% }); %>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</section>

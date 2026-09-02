@@ -1,0 +1,51 @@
+<section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner section-container">
+        <div class="hero-top">
+            <div class="hero-avatar-col">
+                <div class="hero-avatar-square reveal">
+                    <img src="<%- url_for('/images/avatar.png') %>" alt="<%= theme.name %>" width="400" height="400" loading="eager" decoding="async">
+                </div>
+            </div>
+            <div class="hero-intro-col">
+                <div class="hero-intro-inner reveal">
+                    <div class="hero-name-head">
+                        <h1 class="hero-name-line hero-name-line--primary"><%= theme.name %></h1>
+                    </div>
+                    <p class="hero-tagline hero-tagline--intro"><%= theme.tagline %></p>
+                    <div class="hero-cta hero-cta--intro">
+                        <a href="<%= theme.hero.cta_primary_link %>" class="btn-primary btn-primary--accent btn-large">
+                            <%= theme.hero.cta_primary %>
+                            <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="<%= theme.hero.cta_secondary_link %>" class="btn-outline btn-large"><%= theme.hero.cta_secondary %></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-marquee-band">
+        <div class="hero-marquee-inner section-container">
+            <div class="hero-marquee-viewport" data-hero-marquee>
+                <div class="hero-marquee-track">
+                    <div class="hero-marquee-set">
+                        <% theme.projects.forEach(function(project) { %>
+                            <a href="<%- url_for('/projects/' + project.slug + '/') %>" class="hero-marquee-card">
+                                <img src="https://picsum.photos/seed/mq-<%= encodeURIComponent(project.name) %>/480/640" alt="<%= project.name %>" loading="lazy" width="480" height="640">
+                                <span class="hero-marquee-card__label"><%= project.name %></span>
+                            </a>
+                        <% }); %>
+                    </div>
+                    <div class="hero-marquee-set" aria-hidden="true">
+                        <% theme.projects.forEach(function(project) { %>
+                            <a href="<%- url_for('/projects/' + project.slug + '/') %>" class="hero-marquee-card" tabindex="-1">
+                                <img src="https://picsum.photos/seed/mq-<%= encodeURIComponent(project.name) %>/480/640" alt="" loading="lazy" width="480" height="640">
+                                <span class="hero-marquee-card__label"><%= project.name %></span>
+                            </a>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

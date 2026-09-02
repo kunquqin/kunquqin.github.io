@@ -1,0 +1,213 @@
+<article class="dewu-case">
+  <header class="dewu-hero">
+    <a class="case-back" href="<%- url_for('/#projects') %>">← 返回项目</a>
+    <div class="dewu-cover-heading">
+      <div class="dewu-cover-title"><span class="dewu-mark"><img src="<%- url_for('/images/dewu/dewu-logo.png') %>" alt="得物"></span><i></i><h1>3D 数字资产升级</h1></div>
+      <div class="dewu-cover-sub"><i></i><b>自动化生产流程迭代</b><i></i></div>
+      <div class="dewu-cover-tags"><span># 3D/AR</span><span># AI自动化</span><span># 技术升级</span><span># 流程优化</span></div>
+    </div>
+    <div class="dewu-stage">
+      <div class="stage-grid" aria-hidden="true"></div>
+      <div class="poizon-logo" aria-hidden="true"></div>
+      <div class="dewu-phone-ui"><img src="<%- url_for('/images/dewu/phone-ui.png') %>" alt="得物 3D 空间手机界面"></div>
+      <div class="shoe-carousel" id="shoeCarousel" aria-label="五双鞋循环展示，点击左右鞋款切换">
+        <% [4,3,1,2,5].forEach(function(n){ %><button class="carousel-shoe" data-shoe="<%= n %>" type="button" aria-label="选择鞋<%= String(n).padStart(2,'0') %>"><img src="<%- url_for('/images/dewu/shoe-0' + n + '.png') %>" alt="鞋<%= String(n).padStart(2,'0') %>"></button><% }) %>
+      </div>
+      <div class="dewu-cover-slogan"><img src="<%- url_for('/images/dewu/dewu-sport-mark.png') %>" alt="得到运动"></div>
+    </div>
+  </header>
+
+  <section class="dewu-context"><div class="dewu-section-index">01 / 项目背景与目标</div><div class="context-layout"><article class="context-background"><span>PROJECT BACKGROUND</span><h2>从“看见商品”，<br>走向“真实感知”。</h2><p>随着运动鞋高客单价商品在线交易规模增长，用户仍主要依靠静态图片和视频完成购买决策。既有 3D Mesh 虽能提供空间预览，但生产流程缓慢，难以规模化覆盖更多鞋类商品。</p><div class="context-signals"><div><b>商品还原不足</b><small>细节与材质感知有限</small></div><div><b>缺乏穿戴感知</b><small>无法建立真实体验预期</small></div><div><b>转化效率放缓</b><small>内容体验难以支撑增长</small></div><div><b>购买决策偏弱</b><small>用户判断成本依然较高</small></div></div></article><aside class="context-goals"><span>PROJECT GOALS</span><h3>以体验升级，连接三重价值。</h3><div class="goal-stack"><article><strong>01</strong><div><b>用户价值</b><p>增强真实感知<br>降低决策成本</p></div></article><article><strong>02</strong><div><b>业务价值</b><p>提升用户互动<br>促进交易转化</p></div></article><article><strong>03</strong><div><b>品牌价值</b><p>提升品质感知<br>强化平台心智</p></div></article></div></aside></div></section>
+
+  <section class="dewu-overview"><div class="dewu-section-index">02 / 项目挑战</div><div class="dewu-copy-grid"><h2>规模化增长下，传统生产链路成为瓶颈。</h2><div><p>问题不只发生在建模环节，而是贯穿采集、制作、验收和上线：大量人工操作让效率、品质与规模难以同时成立。</p><p>项目需要重新定义一条稳定、可复制、可持续扩展的 3D 数字资产生产链路。</p></div></div><div class="dewu-problem-flow"><article><img src="<%- url_for('/images/dewu/challenge-01.png') %>" alt="手动采集项目挑战"><span>01</span><b>采集效率低</b><p>依赖人工逐角度拍摄，单品耗时长</p></article><em>→</em><article><img src="<%- url_for('/images/dewu/challenge-02.png') %>" alt="人工建模项目挑战"><span>02</span><b>制作成本高</b><p>建模步骤繁琐，修改返工频繁</p></article><em>→</em><article><img src="<%- url_for('/images/dewu/challenge-03.png') %>" alt="品质验收项目挑战"><span>03</span><b>品质不稳定</b><p>验收标准分散，结果一致性不足</p></article><em>→</em><article><img src="<%- url_for('/images/dewu/challenge-04.png') %>" alt="上线项目挑战"><span>04</span><b>难以规模上线</b><p>生产周期过长，无法快速覆盖 SKU</p></article></div></section>
+
+  <section class="dewu-role"><div class="dewu-section-index">02 / 我的职责</div><div class="dewu-copy-grid role-heading"><h2>从设计判断，<br>到生产落地。</h2><div class="role-intro"><b>负责的不是单点制作，而是整条生产链路。</b><p>以商品展示体验为起点，推进需求定义、技术验证、流程设计与质量验收，并协同产品、硬件、算法、开发和外部制作团队。</p></div></div><div class="role-board"><aside class="role-profile"><span>PROJECT ROLE</span><h3>3D 设计负责人</h3><p>负责把设计目标转译为可执行的技术方案、生产流程与验收标准，持续平衡展示效果、生产效率和规模化质量。</p><div class="role-scope"><span>需求定义</span><span>技术验证</span><span>流程设计</span><span>质量标准</span><span>跨团队推进</span></div></aside><div class="role-workstreams"><article><span>01</span><div><h3>业务与体验定义</h3><p>从用户浏览和商品展示场景出发，明确 3D 资产的体验价值、生产目标与项目优先级。</p></div><b>需求方案</b></article><article><span>02</span><div><h3>采集设备与技术验证</h3><p>参与自动化采集设备研发与 3DGS 方案验证，持续评估素材质量、建模效果和生产可行性。</p></div><b>验证结论</b></article><article><span>03</span><div><h3>生产流程与系统协同</h3><p>梳理采集、建模、验收、上线的完整链路，协同开发搭建生产与管理工具，减少重复人工操作。</p></div><b>流程方案</b></article><article><span>04</span><div><h3>规范建立与品质验收</h3><p>制定鞋类资产制作规范和验收口径，对齐内部与外部团队，保证批量生产结果稳定一致。</p></div><b>生产规范</b></article></div></div><div class="role-collaboration"><span>协作链路</span><div><b>产品</b><i>需求与价值</i></div><em>→</em><div><b>硬件</b><i>采集设备</i></div><em>→</em><div><b>算法</b><i>技术方案</i></div><em>→</em><div><b>开发</b><i>生产系统</i></div><em>→</em><div><b>外部团队</b><i>批量制作</i></div></div></section>
+
+  <section class="dewu-pipeline"><div class="dewu-section-index">03 / 流程重构</div><div class="dewu-copy-grid"><h2>自动化重构生产流程。</h2><p>把重复劳动交给自动化，让设计聚焦质量与体验。</p><div class="pipeline-switch" role="group" aria-label="流程对比"><button class="active" data-pipeline="after">升级后</button><button data-pipeline="before">升级前</button></div></div><div class="pipeline-board">
+    <div class="pipeline-mode active" data-mode="after"><div class="pipeline-summary"><strong>80%</strong><span>采集效率提升</span></div><div class="pipeline-steps image-steps"><article><img src="<%- url_for('/images/dewu/automation-01.png') %>" alt="自动化采集"><span>01</span><b>自动化采集</b><small>效率提升80%</small></article><em>→</em><article><img src="<%- url_for('/images/dewu/automation-02.png') %>" alt="自动化建模"><span>02</span><b>自动化建模</b><small>可大批量稳定生产</small></article><em>→</em><article><img src="<%- url_for('/images/dewu/automation-03.png') %>" alt="品质验收"><span>03</span><b>品质验收</b><small>管理后台统一验收标准</small></article><em>→</em><article><img src="<%- url_for('/images/dewu/automation-04.png') %>" alt="上线"><span>04</span><b>上线</b><small>实现规模化生产</small></article></div></div>
+    <div class="pipeline-mode" data-mode="before"><div class="pipeline-summary before-summary"><strong>传统流程</strong><span>大量人工参与</span></div><div class="pipeline-steps image-steps before-steps"><article><img src="<%- url_for('/images/dewu/challenge-01.png') %>" alt="手动采集"><span>01</span><b>手动采集</b><small>手动拍摄采集数据效率低</small></article><em>→</em><article><img src="<%- url_for('/images/dewu/challenge-02.png') %>" alt="人工建模"><span>02</span><b>人工建模</b><small>步骤繁琐易出错返工</small></article><em>→</em><article><img src="<%- url_for('/images/dewu/challenge-03.png') %>" alt="品质验收"><span>03</span><b>品质验收</b><small>品质有高低，影响上线成功率</small></article><em>→</em><article><img src="<%- url_for('/images/dewu/challenge-04.png') %>" alt="上线"><span>04</span><b>上线</b><small>周期长难规模化</small></article></div></div>
+  </div></section>
+
+  <section class="dewu-system"><div class="dewu-section-index">04 / AI 效率驱动</div><div class="system-heading"><h2><span>AI</span> 效率驱动，<br>重构生产链路。</h2><div class="system-context"><p>通过 Claude Code、Cursor 辅助自动化工具开发与后台原型设计，把重复处理交给程序，让团队把时间集中在质量判断和体验优化上。</p><div class="ai-tool-stack"><span>AI 编程协作</span><b>Claude Code</b><b>Cursor</b></div></div></div><div class="ai-system-grid"><article class="ai-system-card"><header><strong>01</strong><div><h3>采集数据批处理</h3><p>角度、命名、品质等合规检测</p></div></header><div class="ai-system-visual"><img src="<%- url_for('/images/dewu/ai-data-processing.png') %>" alt="采集数据 AI 自动化处理界面"></div><footer><p>将批量导入、智能检测、自动处理和结果输出串成连续流程，减少人工逐张检查与重复操作。</p><span>节省人工检查时间</span></footer></article><article class="ai-system-card"><header><strong>02</strong><div><h3>流程链路原型设计</h3><p>数据流转、增删改查、统计与验收</p></div></header><div class="ai-system-visual"><img src="<%- url_for('/images/dewu/backend-review-platform.png') %>" alt="3D 资产后端验收平台"></div><footer><p>基于真实生产链路设计后台原型，协同产品和开发统一任务状态、验收口径与资产管理方式。</p><span>提升跨团队协作效率</span></footer></article></div></section>
+
+  <section class="dewu-quality"><div class="quality-intro"><div class="dewu-section-index">05 / 品质与体验</div><div class="dewu-copy-grid"><h2>技术升级，最终回到真实的商品体验。</h2><p>通过新旧模型对比、材质细节检查和多品类测试，验证自动化结果能否达到商业展示要求。</p></div></div><div class="quality-compare-screen"><div class="compare-module"><figure class="compare-side"><div class="quality-phone quality-before"><img src="<%- url_for('/images/dewu/quality-before-3dmesh.png') %>" alt="升级前 3D Mesh 商品浏览效果"><figcaption><span>BEFORE / 优化前</span><b>3D MESH</b></figcaption><div class="quality-hover-note"><i></i><span>塑料感</span></div></div></figure><div class="compare-handle"><i></i><span>VS</span></div><figure class="compare-side after"><div class="quality-phone quality-after"><img src="<%- url_for('/images/dewu/quality-after-3dgs.png') %>" alt="升级后 3DGS 商品浏览效果"><figcaption><span>AFTER / 优化后</span><b>3DGS</b></figcaption><div class="quality-hover-note"><i></i><span>更加真实</span></div></div></figure></div></div></section>
+
+  <section class="dewu-browse phase-shoes" id="dewuBrowse">
+    <div class="browse-sticky">
+      <div class="browse-scene scene-figures" data-scene="figures" data-reaction="<%- url_for('/images/dewu/reaction-heart.png') %>"><img class="browse-background" src="<%- url_for('/images/dewu/browse-figures.png') %>" alt="手办 3D 浏览效果"><div class="browse-copy"><span>FROM SHOES TO COLLECTIBLES</span><h2>从鞋履到潮玩，<br>3D 浏览延展更多品类。</h2><p>细节可以被放大、旋转和比较，真实质感也收获了用户持续好评。</p></div><div class="browse-comments"><article class="browse-comment tone-orange left" style="--x:30%;--delay:.3s"><img src="<%- url_for('/images/dewu/avatar-xilanhua.png') %>" alt="羞羞西蓝花"><div><b>羞羞西蓝花</b><p>第一次在手机里看到这么逼真的 3D 手办模型</p></div></article><article class="browse-comment tone-pink right" style="--x:57%;--delay:2.8s"><img src="<%- url_for('/images/dewu/avatar-laofuzi.png') %>" alt="潮玩老夫子"><div><b>潮玩老夫子</b><p>效果好棒，甚至可以看到反光！</p></div></article><article class="browse-comment tone-green left" style="--x:25%;--delay:5.3s"><img src="<%- url_for('/images/dewu/avatar-wangzi.png') %>" alt="wangzifight6"><div><b>wangzifight6</b><p>有一种所见即所得的感觉，质感很好</p></div></article></div></div>
+      <div class="browse-scene scene-shoes" data-scene="shoes" data-reaction="<%- url_for('/images/dewu/reaction-like.png') %>"><img class="browse-background" src="<%- url_for('/images/dewu/browse-shoes.png') %>" alt="鞋类 3D 浏览效果"><div class="browse-copy"><span>06 / 上线体验</span><h2>3D 商品浏览，<br>真正走向用户。</h2><p>鞋类 3D 空间上线后，用户可以在手机中自由查看商品，也留下了真实而积极的评价。</p></div><div class="browse-comments"><article class="browse-comment tone-orange left" style="--x:31%;--delay:.1s"><img src="<%- url_for('/images/dewu/avatar-huya.png') %>" alt="虎牙丫"><div><b>虎牙丫</b><p>效果好棒，感觉直接在手机上就可以逛实体店啦</p></div></article><article class="browse-comment tone-purple right" style="--x:57%;--delay:2s"><img src="<%- url_for('/images/dewu/avatar-mowang.png') %>" alt="魔王兔叽"><div><b>魔王兔叽</b><p>模型比之前更逼真，效果更好了 👍</p></div></article><article class="browse-comment tone-cyan left" style="--x:25%;--delay:4s"><img src="<%- url_for('/images/dewu/avatar-heijin.png') %>" alt="鬼畜小黑金"><div><b>鬼畜小黑金</b><p>到货实物和 3D 模型看到的效果几乎一样</p></div></article><article class="browse-comment tone-silver left" style="--x:33%;--delay:6s"><img src="<%- url_for('/images/dewu/avatar-xixi.png') %>" alt="乘风破防小西西"><div><b>乘风破防小西西</b><p>可以全方位查看鞋子，真不错</p></div></article></div></div>
+      <div class="reaction-layer" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="dewu-results"><div class="dewu-section-index">07 / 项目成果</div><div class="results-layout"><div class="results-summary"><div class="result-title"><p>从单点验证走向规模生产</p><h2>流程跑通，并真正产生业务价值。</h2></div><div class="dewu-result-grid"><div><strong>60<small>%</small></strong><span>人工成本降低</span></div><div><strong>6<small>×</small></strong><span>生产效率提升</span></div><div><strong>3W<small>+</small></strong><span>SKU 规模覆盖</span></div></div></div><div class="result-visuals"><figure><img src="<%- url_for('/images/dewu/result-3d-space.png') %>" alt="得物 3D 空间项目成果"></figure><figure><img src="<%- url_for('/images/dewu/result-ar-tryon.png') %>" alt="得物 AR 试穿项目成果"></figure></div></div></section>
+
+  <nav class="case-next dewu-next"><span>NEXT PROJECT</span><a href="<%- url_for('/projects/mimo/') %>">嘟记豆 · AI 产品设计 →</a></nav>
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.getElementById('shoeCarousel');
+  if (carousel) {
+    let order = Array.from(carousel.querySelectorAll('.carousel-shoe'));
+    let busy = false;
+    const render = function () {
+      order.forEach(function (shoe, index) {
+        const position = index - 2;
+        shoe.dataset.position = String(position);
+        shoe.classList.toggle('active', position === 0);
+        shoe.setAttribute('aria-pressed', position === 0 ? 'true' : 'false');
+      });
+    };
+    const wait = function (ms) { return new Promise(function (resolve) { window.setTimeout(resolve, ms); }); };
+    const shiftTo = async function (distance) {
+      const wrapCount = Math.abs(distance);
+      const wrapping = distance > 0 ? order.slice(0, wrapCount) : order.slice(order.length - wrapCount);
+      const ghosts = wrapping.map(function (shoe, index) {
+        const ghost = shoe.cloneNode(true);
+        const destination = distance > 0 ? 3 - wrapCount + index : -2 + index;
+        ghost.classList.remove('active'); ghost.classList.add('carousel-ghost', 'instant', 'edge-reset');
+        ghost.dataset.position = String(distance > 0 ? 3 + index : -3 - index);
+        ghost.dataset.destination = String(destination); ghost.removeAttribute('aria-pressed'); ghost.setAttribute('aria-hidden','true'); ghost.tabIndex = -1;
+        carousel.appendChild(ghost); return ghost;
+      });
+      ghosts.forEach(function (ghost) { void ghost.offsetWidth; ghost.classList.remove('instant'); });
+      requestAnimationFrame(function () { ghosts.forEach(function (ghost) { ghost.dataset.position = ghost.dataset.destination; ghost.classList.remove('edge-reset'); }); });
+      order.forEach(function (shoe, index) {
+        const destination = index - 2 - distance;
+        shoe.dataset.position = String(destination);
+        shoe.classList.toggle('active', destination === 0);
+        shoe.setAttribute('aria-pressed', destination === 0 ? 'true' : 'false');
+      });
+      await wait(520);
+      let entering;
+      if (distance > 0) {
+        entering = order.splice(0, distance);
+        order = order.concat(entering);
+      } else {
+        entering = order.splice(order.length + distance, -distance);
+        order = entering.concat(order);
+      }
+      entering.forEach(function (shoe) { shoe.classList.add('instant'); });
+      render();
+      entering.forEach(function (shoe) { void shoe.offsetWidth; shoe.classList.remove('instant'); });
+      ghosts.forEach(function (ghost) { ghost.remove(); });
+      await wait(40);
+    };
+    const select = async function (shoe) {
+      if (busy) return;
+      let distance = order.indexOf(shoe) - 2;
+      if (!distance) return;
+      busy = true;
+      await shiftTo(distance);
+      busy = false;
+    };
+    order.forEach(function (shoe) { shoe.addEventListener('click', function () { select(shoe); }); });
+    if (window.matchMedia('(pointer:fine)').matches) {
+      carousel.addEventListener('pointermove', function (event) {
+        const current = order[2]; const r = current.getBoundingClientRect();
+        const x = Math.max(-.5, Math.min(.5, (event.clientX-r.left)/r.width-.5));
+        const y = Math.max(-.5, Math.min(.5, (event.clientY-r.top)/r.height-.5));
+        current.style.setProperty('--gyro-x', (y*-14)+'deg'); current.style.setProperty('--gyro-y', (x*18)+'deg');
+      });
+      carousel.addEventListener('pointerleave', function () { order[2].style.setProperty('--gyro-x','0deg'); order[2].style.setProperty('--gyro-y','0deg'); });
+    }
+    render();
+  }
+  document.querySelectorAll('[data-pipeline]').forEach(function(btn){ btn.addEventListener('click',function(){ document.querySelectorAll('[data-pipeline]').forEach(b=>b.classList.remove('active')); document.querySelectorAll('[data-mode]').forEach(m=>m.classList.remove('active')); btn.classList.add('active'); document.querySelector('[data-mode="'+btn.dataset.pipeline+'"]').classList.add('active'); }); });
+  document.querySelectorAll('.result-visuals figure').forEach(function (card) {
+    card.addEventListener('pointermove', function (event) {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((event.clientX - rect.left) / rect.width * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', ((event.clientY - rect.top) / rect.height * 100).toFixed(1) + '%');
+    });
+  });
+  if (window.matchMedia('(pointer:fine)').matches) {
+    document.querySelectorAll('.quality-phone').forEach(function (card) {
+      card.addEventListener('pointermove', function (event) {
+        const rect = card.getBoundingClientRect();
+        const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+        const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+        card.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
+        card.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+        card.style.setProperty('--tilt-x', ((.5 - y) * 5).toFixed(2) + 'deg');
+        card.style.setProperty('--tilt-y', ((x - .5) * 7).toFixed(2) + 'deg');
+        card.style.setProperty('--tip-x', Math.max(66, Math.min(rect.width - 66, event.clientX - rect.left + 18)) + 'px');
+        card.style.setProperty('--tip-y', Math.max(38, Math.min(rect.height - 38, event.clientY - rect.top - 22)) + 'px');
+      });
+      card.addEventListener('pointerleave', function () {
+        card.style.setProperty('--tilt-x', '0deg');
+        card.style.setProperty('--tilt-y', '0deg');
+      });
+    });
+  }
+  const browse = document.getElementById('dewuBrowse');
+  if (browse) {
+    const stage = browse.querySelector('.browse-sticky');
+    const layer = browse.querySelector('.reaction-layer');
+    let browseProgress = 0;
+    let browseTicking = false;
+    const clamp01 = function (value) { return Math.max(0, Math.min(1, value)); };
+    const updateBrowse = function () {
+      const rect = browse.getBoundingClientRect();
+      const stickyHeight = stage.getBoundingClientRect().height;
+      const travel = Math.max(1, browse.offsetHeight - stickyHeight);
+      const layered = window.matchMedia('(min-width:901px)').matches;
+      const coverDistance = layered ? stickyHeight : 0;
+      const narrativeTravel = Math.max(1, travel - coverDistance * 2);
+      browseProgress = clamp01((72 - rect.top - coverDistance) / narrativeTravel);
+      const shoeExit = clamp01((browseProgress - .34) / .22);
+      const shoeIntro = clamp01((browseProgress - .025) / .10);
+      const shoeOutro = 1 - clamp01((browseProgress - .24) / .10);
+      const figureIntro = clamp01((browseProgress - .56) / .12);
+      const figureOutro = 1 - clamp01((browseProgress - .88) / .09);
+      browse.style.setProperty('--shoe-exit', shoeExit.toFixed(4));
+      browse.style.setProperty('--shoe-copy-opacity', (shoeIntro * shoeOutro).toFixed(4));
+      browse.style.setProperty('--shoe-copy-y', ((1 - shoeIntro) * 28 - (1 - shoeOutro) * 18) + 'px');
+      browse.style.setProperty('--figure-copy-opacity', (figureIntro * figureOutro).toFixed(4));
+      browse.style.setProperty('--figure-copy-y', ((1 - figureIntro) * 28 - (1 - figureOutro) * 18) + 'px');
+      browse.classList.toggle('phase-shoes', browseProgress < .5);
+      browse.classList.toggle('phase-figures', browseProgress >= .5);
+      browse.classList.toggle('is-visible', browseProgress > .02 && browseProgress < .98);
+      browseTicking = false;
+    };
+    const requestBrowseUpdate = function () { if (!browseTicking) { browseTicking = true; requestAnimationFrame(updateBrowse); } };
+    window.addEventListener('scroll', requestBrowseUpdate, { passive:true });
+    window.addEventListener('resize', requestBrowseUpdate);
+    if (window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+      let lastReaction = 0;
+      stage.addEventListener('pointermove', function (event) {
+        const now = performance.now();
+        if (now - lastReaction < 200) return;
+        lastReaction = now;
+        const scene = browse.querySelector(browseProgress < .5 ? '.scene-shoes' : '.scene-figures');
+        const rect = stage.getBoundingClientRect();
+        const particle = document.createElement('img');
+        particle.className = 'reaction-particle';
+        particle.src = scene.dataset.reaction;
+        particle.alt = '';
+        particle.style.left = (event.clientX - rect.left) + 'px';
+        particle.style.top = (event.clientY - rect.top) + 'px';
+        particle.style.setProperty('--size', (32 + Math.random() * 20) + 'px');
+        const life = 980 + Math.random() * 300;
+        const wave = 12 + Math.random() * 13;
+        const phase = Math.random() * Math.PI * 2;
+        const drift = (Math.random() - .5) * 24;
+        const rotation = (Math.random() - .5) * 18;
+        layer.appendChild(particle);
+        const frames = [];
+        for (let i = 0; i <= 36; i += 1) {
+          const t = i / 36;
+          const x = Math.sin(t * Math.PI * 2.15 + phase) * wave * (1 - t * .3) + drift * t;
+          const y = -178 * t;
+          const opacity = t < .12 ? t / .12 * .82 : (t > .78 ? (1 - t) / .22 * .82 : .82);
+          frames.push({ transform: 'translate(calc(-50% + ' + x.toFixed(2) + 'px), calc(-50% + ' + y.toFixed(2) + 'px)) scale(' + (1 - t * .66).toFixed(3) + ') rotate(' + (rotation * t + Math.sin(t * Math.PI * 2 + phase) * 3).toFixed(2) + 'deg)', opacity: Math.max(0, opacity).toFixed(3) });
+        }
+        const motion = particle.animate(frames, { duration: life, easing: 'linear', fill: 'forwards' });
+        motion.finished.then(function () { particle.remove(); }).catch(function () { particle.remove(); });
+      });
+    }
+    updateBrowse();
+  }
+});
+</script>

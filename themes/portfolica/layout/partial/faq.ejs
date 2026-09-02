@@ -1,0 +1,17 @@
+<section id="faq" class="faq">
+    <div class="section-container">
+        <p class="section-eyebrow reveal">FAQ</p>
+        <h2 class="section-title reveal">Before you ask</h2>
+        <div class="faq-list">
+            <% theme.faqs.forEach(function(faq, index) { %>
+                <div class="faq-item<%= index === 0 ? ' active' : '' %>">
+                    <button type="button" class="faq-question" aria-expanded="<%= index === 0 ? 'true' : 'false' %>">
+                        <span><%= faq.question %></span>
+                        <span class="faq-toggle" aria-hidden="true"><%= index === 0 ? '−' : '+' %></span>
+                    </button>
+                    <div class="faq-answer"><%= faq.answer %></div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>

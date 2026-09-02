@@ -1,0 +1,15 @@
+<section class="process">
+    <div class="section-container">
+        <p class="section-eyebrow reveal"><%= theme.process.eyebrow %></p>
+        <h2 class="section-title reveal"><%= theme.process.title %></h2>
+        <ol class="process-list">
+            <% theme.process.steps.forEach(function(step, i) { %>
+                <li class="process-step">
+                    <div class="process-num"><%= step.num %></div>
+                    <span class="process-divider" aria-hidden="true">—</span>
+                    <p class="process-text"><%= step.text %></p>
+                </li>
+            <% }); %>
+        </ol>
+    </div>
+</section>

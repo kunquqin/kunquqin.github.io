@@ -1,0 +1,26 @@
+<section id="testimonials" class="testimonials">
+    <div class="section-container">
+        <p class="section-eyebrow section-eyebrow--on-dark reveal">Testimonials</p>
+        <div class="testimonials-header reveal">
+            <div class="rating-wrap">
+                <span class="rating"><%= theme.stats.rating %></span><span class="rating-suffix">/5</span>
+            </div>
+            <p class="rating-label">Helped <%= theme.stats.clients %>+ businesses &amp; counting</p>
+        </div>
+        <h2 class="section-title reveal">Good work gets noticed</h2>
+        <div class="testimonials-grid">
+            <% theme.testimonials.forEach(function(t, i) { %>
+                <article class="testimonial-card reveal" style="--delay: <%= (0.06 * i).toFixed(2) %>s">
+                    <div class="testimonial-avatar" aria-hidden="true">
+                        <img src="https://picsum.photos/seed/t-<%= encodeURIComponent(t.author) %>/96/96" alt="" loading="lazy" width="48" height="48">
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="testimonial-rating"><%= t.rating %></div>
+                        <p class="testimonial-text"><%= t.text %></p>
+                        <div class="testimonial-author"><%= t.author %><% if (t.role) { %><span class="testimonial-role"> · <%= t.role %></span><% } %></div>
+                    </div>
+                </article>
+            <% }); %>
+        </div>
+    </div>
+</section>

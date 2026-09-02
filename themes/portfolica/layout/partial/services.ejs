@@ -1,0 +1,40 @@
+<section id="services" class="services">
+    <div class="section-container">
+        <p class="section-eyebrow reveal">Services</p>
+        <h2 class="section-title reveal">End-to-end design services</h2>
+        <div class="services-grid">
+            <% theme.services.forEach(function(service, i) { %>
+                <div class="service-card reveal" style="--delay: <%= (0.06 * i).toFixed(2) %>s">
+                    <div class="service-icon">
+                        <% if (service.icon === 'palette') { %>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a10 10 0 0 1 10 10"></path>
+                                <circle cx="12" cy="8" r="2" fill="currentColor"></circle>
+                                <circle cx="8" cy="14" r="2" fill="currentColor"></circle>
+                                <circle cx="16" cy="14" r="2" fill="currentColor"></circle>
+                            </svg>
+                        <% } else if (service.icon === 'code') { %>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        <% } else if (service.icon === 'brand') { %>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"></polygon>
+                                <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                                <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                            </svg>
+                        <% } else { %>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        <% } %>
+                    </div>
+                    <h3 class="service-name"><%= service.name %></h3>
+                    <p class="service-desc"><%= service.description %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
