@@ -2405,7 +2405,7 @@ html:has(.dewu-case){scroll-snap-type:none!important}
 @media(max-width:680px){.mimo-v2 .design-story-panel[data-story-panel="brand"]{padding-top:8px}.mimo-v2 .story-icon-board{height:300px}}
 
 /* Balanced 50/50 stage: content left, product device right, shared baseline. */
-@media(min-width:681px){.mimo-v2 .design-story-stage{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(38px,5vw,76px);align-items:end}.mimo-v2 .design-story-panel{align-self:end}.mimo-v2 .design-story-phone{align-self:end;justify-self:center;width:100%;transform:none}.mimo-v2 .design-story-phone .mimo2-phone-shell{width:auto;height:min(54svh,580px);aspect-ratio:1284/2778}.mimo-v2 .design-story-panel[data-story-panel="brand"]{padding-top:0}}
+@media(min-width:681px){.mimo-v2 .design-story-stage{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(38px,5vw,76px);align-items:end}.mimo-v2 .design-story-panel{align-self:end}.mimo-v2 .design-story-phone{align-self:end;justify-self:center;justify-content:flex-end;width:100%;transform:none}.mimo-v2 .design-story-phone .mimo2-phone-shell{width:min(17.5vw,340px);height:auto;aspect-ratio:1284/2778}.mimo-v2 .design-story-phone .story-phone-theme-switch{position:absolute!important;top:-88px!important;bottom:auto!important;left:50%;transform:translateX(-50%)!important}.mimo-v2 .design-story-panel[data-story-panel="brand"]{padding-top:0}}
 @media(max-width:900px){.ip-rationale{grid-template-columns:1fr}.ip-rationale>i{height:28px;transform:rotate(90deg)}.ip-rationale article{min-height:0}.mimo-v2 .mimo2-brand-ip .brand-editorial,.mimo-v2 .mimo2-brand-ip .brand-wordmark,.mimo-v2 .mimo2-brand-ip .brand-character-stage{min-height:0}}
 
 /* Zstar hero lower-left editorial alignment */
