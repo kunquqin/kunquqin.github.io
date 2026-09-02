@@ -3,9 +3,9 @@ public/
 .deploy_git/
 db.json
 *.log
+tmp/
 
 # Local source artwork and editor metadata are not required for deployment.
 assets-source/
 .cursor/
 .gstack/
-
