@@ -393,5 +393,13 @@
                 heroVisual.style.transform = '';
             });
         }
+
+        var roleSwitcher = document.querySelector('.role-switcher:not(.hmi-role-switcher)');
+        if (roleSwitcher && !roleSwitcher.querySelector('[href="/hmi/"]')) {
+            var hmiLink = document.createElement('a');
+            hmiLink.href = '/hmi/';
+            hmiLink.textContent = '智能座舱';
+            roleSwitcher.appendChild(hmiLink);
+        }
     }
 })();

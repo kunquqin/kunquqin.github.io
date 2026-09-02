@@ -1,0 +1,40 @@
+<div class="hmi-portfolio">
+  <section class="hmi-home-hero" id="home">
+    <img class="hmi-home-bg" src="<%- url_for('/images/hmi/cockpit-hero.png') %>" alt="智能座舱多屏 HMI 概念场景">
+    <div class="hmi-home-shade"></div>
+    <div class="hmi-home-copy">
+      <nav class="role-switcher hmi-role-switcher" aria-label="作品集方向"><a href="<%- url_for('/') %>">综合</a><a href="<%- url_for('/3d/') %>">3D 设计</a><a href="<%- url_for('/ai-product/') %>">AI 产品</a><a class="active" href="<%- url_for('/hmi/') %>">智能座舱</a></nav>
+      <p class="hmi-kicker">SMART COCKPIT · HMI · 3D VISUALIZATION</p>
+      <h1>让复杂驾驶信息，<br><span>清晰、安全、可感知。</span></h1>
+      <p>以 10+ 年视觉设计、3D 数字内容与复杂项目经验为基础，探索智能座舱 HMI、ADAS 实时可视化与多端设计系统。</p>
+      <div class="hero-actions"><a class="button button-primary" href="#projects">查看专项案例 <i>↘</i></a><a class="button button-ghost" href="#contact">联系我</a></div>
+    </div>
+    <div class="hmi-home-status"><span>ROLE FOCUS</span><b>HMI VISUAL / 3D</b><small>专项概念研究 · 2026</small></div>
+  </section>
+
+  <section class="hmi-home-section" id="about">
+    <div class="hmi-section-label">01 / FIT & TRANSFERABLE EXPERIENCE</div>
+    <div class="hmi-fit-grid">
+      <div><p class="hmi-kicker">WHY ME</p><h2>不是从零学习视觉，<br>而是把成熟能力迁移到座舱。</h2></div>
+      <div class="hmi-fit-copy"><p>先后任职阿里巴巴、字节跳动、哔哩哔哩与得物，长期负责视觉体系、3D 内容、生产标准和跨团队项目推进。面向智能座舱，我将这些能力转译为多屏一致性、实时信息可视化、安全状态设计与工程协作。</p><p class="hmi-honesty"><b>项目边界</b> 以下两项为面向车载岗位的专项概念研究，不包装为量产经历；真实商业落地能力由得物与幻星案例佐证。</p></div>
+    </div>
+    <div class="hmi-capability-row"><article><span>01</span><b>VISUAL SYSTEM</b><p>品牌视觉、层级与跨屏一致性</p></article><article><span>02</span><b>3D REAL-TIME</b><p>实时场景、ADAS 与状态表达</p></article><article><span>03</span><b>SAFETY LOGIC</b><p>驾驶负荷、优先级与中断恢复</p></article><article><span>04</span><b>DELIVERY</b><p>规范、组件与跨团队推进</p></article></div>
+  </section>
+
+  <section class="hmi-home-section hmi-project-section" id="projects">
+    <div class="hmi-section-label">02 / SELECTED HMI STUDIES</div>
+    <div class="hmi-project-heading"><div><p class="hmi-kicker">ROLE-FOCUSED WORK</p><h2>两项专项研究，覆盖岗位最核心的能力闭环。</h2></div><p>从多屏座舱视觉体系，到动态驾驶信息与 ADAS 状态，将审美判断建立在安全、场景和工程约束之上。</p></div>
+    <div class="hmi-project-grid">
+      <a href="<%- url_for('/projects/hmi-cockpit/') %>" class="hmi-project-card"><img src="<%- url_for('/images/hmi/cockpit-hero.png') %>" alt="智能座舱多屏视觉系统"><div><span>CONCEPT STUDY / 01</span><h3>智能座舱多屏视觉系统</h3><p>仪表、中控、HUD 与副驾屏的任务分工、品牌统一和组件规范。</p><b>查看完整案例 →</b></div></a>
+      <a href="<%- url_for('/projects/hmi-adas/') %>" class="hmi-project-card"><img src="<%- url_for('/images/hmi/adas-hero.png') %>" alt="ADAS 3D 驾驶可视化"><div><span>CONCEPT STUDY / 02</span><h3>ADAS 3D 驾驶可视化</h3><p>车道、目标物、风险等级与接管提醒的实时三维信息表达。</p><b>查看完整案例 →</b></div></a>
+    </div>
+    <div class="hmi-proof-strip"><div><span>REAL-WORLD PROOF</span><h3>真实复杂项目，证明落地能力。</h3></div><a href="<%- url_for('/projects/dewu/') %>"><b>得物 3D 数字资产升级</b><span>技术验证 · 生产系统 · 质量标准 · 跨团队协作 →</span></a><a href="<%- url_for('/projects/zstar/') %>"><b>哔哩哔哩 · 幻星项目</b><span>虚拟角色 · 3D 管线 · 视觉体系 · 项目推进 →</span></a></div>
+  </section>
+
+  <section class="hmi-home-section hmi-method-section">
+    <div class="hmi-section-label">03 / DESIGN PRINCIPLES</div>
+    <div class="hmi-method-grid"><article><strong>01</strong><h3>一瞥可读</h3><p>驾驶相关任务采用短时、连续的视觉获取，避免长文本和不可中断操作。</p></article><article><strong>02</strong><h3>状态优先</h3><p>通过位置、层级、色彩和动效频率区分普通、提示、警告与紧急状态。</p></article><article><strong>03</strong><h3>跨屏有责</h3><p>仪表负责驾驶，HUD 负责即时，中控负责控制，副驾负责非驾驶内容。</p></article><article><strong>04</strong><h3>动效有因</h3><p>每个转场都用于解释状态变化，不以持续运动制造所谓科技感。</p></article></div>
+  </section>
+
+  <section class="hmi-home-section hmi-contact" id="contact"><div><p class="hmi-kicker">CONTACT / SMART MOBILITY</p><h2>把系统能力，带进下一代座舱体验。</h2><p>目标方向：智能座舱 HMI、ADAS 可视化、车载 3D 视觉、多端设计系统。</p></div><div class="hmi-contact-links"><a href="tel:18049722581"><span>PHONE</span><b>180 4972 2581</b></a><a href="mailto:334036981@qq.com"><span>EMAIL</span><b>334036981@qq.com</b></a></div></section>
+</div>
