@@ -1,3 +1,2 @@
 @echo off
-call "%~dp0本地预览启动器.bat" "/ai-product/"
-
+call "%~dp0portfolio-launcher.bat" "/ai-product/"
