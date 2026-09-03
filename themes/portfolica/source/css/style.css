@@ -2797,6 +2797,9 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 /* Keep the sticky display and following panel on one continuous scroll timeline. */
 .ip17-display-background img{transform:scale(1.035)}
 .ip17-camera-section{margin-top:0;border-radius:var(--ip17-radius) var(--ip17-radius) 0 0;isolation:isolate}
+.ip17-camera-section:before,.ip17-camera-section:after{content:"";position:absolute;z-index:0;top:0;width:var(--ip17-radius);height:var(--ip17-radius);pointer-events:none;background-image:url('/images/iphone17-pro/display/background-bright.webp');background-repeat:no-repeat;background-size:100vw calc(100vh - 70px)}
+.ip17-camera-section:before{left:0;background-position:left bottom;-webkit-mask:radial-gradient(circle at 100% 100%,transparent calc(var(--ip17-radius) - 1px),#000 var(--ip17-radius));mask:radial-gradient(circle at 100% 100%,transparent calc(var(--ip17-radius) - 1px),#000 var(--ip17-radius))}
+.ip17-camera-section:after{right:0;background-position:right bottom;-webkit-mask:radial-gradient(circle at 0 100%,transparent calc(var(--ip17-radius) - 1px),#000 var(--ip17-radius));mask:radial-gradient(circle at 0 100%,transparent calc(var(--ip17-radius) - 1px),#000 var(--ip17-radius))}
 
 /* Finale product lineup */
 .ip17-finale{overflow:hidden;background:#000;box-shadow:0 calc(var(--ip17-radius) * -1) 0 #000,0 -30px 90px #000b}
