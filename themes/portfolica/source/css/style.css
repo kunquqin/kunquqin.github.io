@@ -2862,14 +2862,19 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 @media(max-width:700px){.ip17-battery-section{gap:58px}.ip17-product-page .ip17-battery-copy h2{font-size:clamp(46px,13vw,62px)}.ip17-battery-stats{width:calc(100vw - 48px);grid-template-columns:1fr}.ip17-battery-stats article{min-height:150px;padding:28px 8px;border-right:0;border-bottom:1px solid #d6d7da}.ip17-battery-stats article:last-child{border-bottom:0}.ip17-battery-stats strong{font-size:clamp(38px,11vw,52px)}}
 
 /* Performance gameplay visual */
-.ip17-performance-section{position:relative;top:auto;display:flex;min-height:auto;padding:clamp(86px,9vw,130px) 0 clamp(72px,8vw,110px);flex-direction:column;justify-content:flex-start;gap:clamp(58px,7vh,88px);background:#17191e;color:#f5f5f7;text-align:center}
+.ip17-life-section{padding:clamp(90px,10vw,150px) 0;background:#f5f5f7;color:#111318;text-align:center}
+.ip17-life-copy{width:var(--ip17-content);margin:0 auto}
+.ip17-product-page .ip17-life-copy h2{max-width:850px;margin:0 auto 30px;font-size:clamp(52px,6vw,90px);line-height:1.04;letter-spacing:-.06em;text-align:center}
+.ip17-life-copy .ip17-copy{max-width:680px;margin:0 auto;color:#6d7078;font-size:clamp(15px,1.3vw,19px);line-height:1.7;text-align:center}
+.ip17-model-shot.energy{margin-left:auto;margin-right:auto}
+.ip17-performance-section{position:relative;top:auto;display:flex;min-height:auto;padding:clamp(86px,9vw,130px) 0 clamp(72px,8vw,110px);flex-direction:column;justify-content:flex-start;gap:clamp(58px,7vh,88px);background:#000;color:#f5f5f7;text-align:center}
 .ip17-performance-copy{width:var(--ip17-content);margin:0 auto}
-.ip17-product-page .ip17-performance-copy h2{margin:0 0 30px}
+.ip17-product-page .ip17-performance-copy h2{max-width:850px;margin:0 auto 30px;font-size:clamp(52px,6vw,90px);line-height:1.04;letter-spacing:-.06em;text-align:center}
 .ip17-performance-copy .ip17-copy{max-width:720px;margin:0 auto;color:#9a9da5}
 .ip17-performance-specs{justify-content:center;margin-top:44px}
 .ip17-gameplay{width:min(1120px,calc(100vw - 112px));margin:0 auto;line-height:0}
 .ip17-gameplay img{display:block;width:100%;height:auto;filter:drop-shadow(0 28px 42px rgba(0,0,0,.34))}
-@media(max-width:700px){.ip17-performance-section{padding:76px 0 70px;gap:48px}.ip17-performance-copy{width:calc(100vw - 48px)}.ip17-product-page .ip17-performance-copy h2{text-align:center}.ip17-performance-copy .ip17-copy{text-align:center}.ip17-performance-specs{justify-content:center}.ip17-gameplay{width:calc(100vw - 32px)}}
+@media(max-width:700px){.ip17-life-section{padding:76px 0}.ip17-life-copy{width:calc(100vw - 48px)}.ip17-product-page .ip17-life-copy h2{font-size:clamp(42px,12vw,56px)}.ip17-performance-section{padding:76px 0 70px;gap:48px}.ip17-performance-copy{width:calc(100vw - 48px)}.ip17-product-page .ip17-performance-copy h2{font-size:clamp(42px,12vw,56px);text-align:center}.ip17-performance-copy .ip17-copy{text-align:center}.ip17-performance-specs{justify-content:center}.ip17-gameplay{width:calc(100vw - 32px)}}
 
 /* Display sequence: one self-contained cinematic timeline */
 .ip17-product-page .ip17-display-section{--display-layout-progress:0;--display-phone-scale:3.65;--display-phone-top:50%;height:185vh;min-height:1320px}
