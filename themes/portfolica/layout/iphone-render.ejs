@@ -1,9 +1,14 @@
 <article class="ip17-product-page">
-  <header class="ip17-product-hero" id="ip17-top">
+  <header class="ip17-product-hero" id="ip17-top" data-color="orange">
     <a class="ip17-product-back" href="<%- url_for('/3d/#projects') %>">← 返回 3D 项目</a>
     <div class="ip17-product-title"><p>iPhone 17 Pro Max</p><h1>强大，<br>由内而外。</h1><span>全新一体成型设计，把专业性能装进更纯粹的轮廓。</span></div>
-    <div class="ip17-product-device"><div class="ip17-product-camera"><i></i><i></i><i></i><b></b><em></em></div><small></small></div>
-    <div class="ip17-product-colors"><i class="orange"></i><i class="blue"></i><i class="silver"></i><span>宇宙橙 · 深蓝色 · 银色</span></div>
+    <figure class="ip17-hero-product" aria-live="polite">
+      <div class="ip17-hero-aura"></div>
+      <img class="is-active" data-product-color="orange" src="<%- url_for('/images/iphone17-pro-max/hero-cosmic-orange.png') %>" alt="星宇橙色 iPhone 17 Pro Max 背面">
+      <img data-product-color="blue" src="<%- url_for('/images/iphone17-pro-max/hero-deep-blue.png') %>" alt="深蓝色 iPhone 17 Pro Max 背面">
+      <img data-product-color="silver" src="<%- url_for('/images/iphone17-pro-max/hero-silver.png') %>" alt="银色 iPhone 17 Pro Max 背面">
+    </figure>
+    <div class="ip17-product-colors" role="group" aria-label="选择机身颜色"><button class="orange is-active" type="button" data-color-option="orange" aria-label="星宇橙" aria-pressed="true"></button><button class="blue" type="button" data-color-option="blue" aria-label="深蓝色" aria-pressed="false"></button><button class="silver" type="button" data-color-option="silver" aria-label="银色" aria-pressed="false"></button><span data-color-label>星宇橙</span></div>
     <div class="ip17-product-scroll">向下探索 <b>↓</b></div>
   </header>
   <nav class="ip17-product-nav" aria-label="产品章节"><a href="#design">设计</a><a href="#display">显示屏</a><a href="#camera">影像</a><a href="#performance">性能</a><a href="#battery">续航</a></nav>
@@ -32,5 +37,25 @@
     });
   }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
   items.forEach((item) => observer.observe(item));
+})();
+(() => {
+  const hero = document.querySelector('.ip17-product-hero');
+  if (!hero) return;
+  const buttons = hero.querySelectorAll('[data-color-option]');
+  const images = hero.querySelectorAll('[data-product-color]');
+  const label = hero.querySelector('[data-color-label]');
+  const names = { orange: '星宇橙', blue: '深蓝色', silver: '银色' };
+  buttons.forEach((button) => button.addEventListener('click', () => {
+    const color = button.dataset.colorOption;
+    if (hero.dataset.color === color) return;
+    hero.dataset.color = color;
+    buttons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    images.forEach((image) => image.classList.toggle('is-active', image.dataset.productColor === color));
+    if (label) label.textContent = names[color];
+  }));
 })();
 </script>
