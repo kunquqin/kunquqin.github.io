@@ -2851,7 +2851,7 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 .ip17-battery-section{display:flex;min-height:calc(100vh - 70px);padding-left:0;padding-right:0;flex-direction:column;justify-content:center;gap:clamp(70px,9vh,110px);background:#f5f5f7;color:#111318;text-align:center}
 .ip17-battery-copy{width:var(--ip17-content);margin:0 auto}
 .ip17-battery-copy .ip17-eyebrow{color:#6e8fe8}
-.ip17-product-page .ip17-battery-copy h2{margin:18px 0 28px;font-size:clamp(54px,6.3vw,92px);line-height:1}
+.ip17-product-page .ip17-battery-copy h2{margin:0 0 28px;font-size:clamp(54px,6.3vw,92px);line-height:1}
 .ip17-battery-copy .ip17-copy{max-width:650px;margin:0 auto;color:#6a6d75;font-size:clamp(15px,1.3vw,19px);line-height:1.7}
 .ip17-battery-stats{width:min(1180px,calc(100vw - 64px));margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d6d7da;border-bottom:1px solid #d6d7da}
 .ip17-battery-stats article{min-height:230px;padding:42px clamp(24px,3.3vw,48px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;border-right:1px solid #d6d7da;text-align:left}
