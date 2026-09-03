@@ -2788,6 +2788,11 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 .ip17-stat-band span{display:block;flex:0 1 auto;min-width:0;margin:0;line-height:1.55}
 @media(max-width:900px){.ip17-stat-band>div{display:flex;min-height:240px;padding:48px 28px;gap:24px}}
 @media(max-width:600px){.ip17-stat-band>div{min-height:180px;justify-content:flex-start;padding:42px 24px}.ip17-stat-band b{min-width:42%;font-size:clamp(66px,22vw,98px)}}
+
+.ip17-stat-band>div{display:grid;grid-template-columns:max-content max-content;align-content:center;align-items:end;justify-content:center;column-gap:clamp(16px,1.25vw,20px);padding-left:32px;padding-right:32px}
+.ip17-stat-band span{padding-bottom:.16em}
+@media(max-width:900px){.ip17-stat-band>div{display:grid;column-gap:16px;padding-left:24px;padding-right:24px}}
+@media(max-width:600px){.ip17-stat-band>div{grid-template-columns:minmax(0,42%) max-content;justify-content:start}.ip17-stat-band b{min-width:0}}
 @media(prefers-reduced-motion:reduce){.ip17-display-bright,.ip17-display-copy,.ip17-screen-stage{transition:none!important}}
 
 /* Display sequence: one self-contained cinematic timeline */
