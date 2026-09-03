@@ -2794,12 +2794,9 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 @media(max-width:900px){.ip17-stat-band>div{display:grid;column-gap:16px;padding-left:24px;padding-right:24px}}
 @media(max-width:600px){.ip17-stat-band>div{grid-template-columns:minmax(0,42%) max-content;justify-content:start}.ip17-stat-band b{min-width:0}}
 
-/* Carry the daylight scene beneath the next section's rounded shoulders. */
+/* Let the next panel overlap the live daylight scene; avoid a duplicated image strip. */
 .ip17-display-background img{transform:scale(1.035)}
-.ip17-product-page .ip17-display-section:after{content:"";position:absolute;z-index:3;left:0;right:0;bottom:calc(var(--ip17-radius) * -1);height:calc(var(--ip17-radius) + 6px);background:url('/images/iphone17-pro/display/background-bright.webp') center bottom/104% auto no-repeat;pointer-events:none}
-.ip17-camera-section{margin-top:-1px;isolation:isolate}
-.ip17-camera-section:before{content:"";position:absolute;z-index:-1;left:0;right:0;top:calc(var(--ip17-radius) * -1);height:calc(var(--ip17-radius) + 3px);background:url('/images/iphone17-pro/display/background-bright.webp') center bottom/104% auto no-repeat;pointer-events:none}
-@media(max-width:600px){.ip17-product-page .ip17-display-section:after{background-size:auto 190px}}
+.ip17-camera-section{margin-top:calc(var(--ip17-radius) * -1);isolation:isolate}
 
 /* Finale product lineup */
 .ip17-finale{overflow:hidden;background:#000;box-shadow:0 calc(var(--ip17-radius) * -1) 0 #000,0 -30px 90px #000b}
