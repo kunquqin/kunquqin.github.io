@@ -35,7 +35,6 @@
       <figure class="ip17-screen-stage" aria-label="iPhone 17 Pro 显示屏在环境光变化下依然保持清晰">
         <img class="ip17-display-sequence" draggable="false" src="<%- url_for('/images/iphone17-pro/display/sequence/frame-000.webp') %>" data-frame-base="<%- url_for('/images/iphone17-pro/display/sequence/frame-') %>" data-frame-count="72" alt="iPhone 17 Pro 横屏播放高动态范围画面">
       </figure>
-      <div class="ip17-display-light-meter" aria-hidden="true"><span>夜色</span><i></i><span>日光</span></div>
     </div>
   </section>
   <section class="ip17-camera-section" id="camera"><header><p class="ip17-eyebrow">Pro Fusion 摄像系统</p><h2>八种焦段，<br>每一种都专业。</h2><p class="ip17-copy">三颗 4800 万像素融合式摄像头，覆盖从微距到 200 mm 长焦的创作视野。无需移动脚步，也能重新定义画面距离。</p></header><div class="ip17-focal-list"><span>.5×<small>13 mm</small></span><span>1×<small>24 mm</small></span><span>2×<small>48 mm</small></span><span>4×<small>100 mm</small></span><span class="active">8×<small>200 mm</small></span></div><div class="ip17-model-shot calm"><div class="ip17-model-figure"><i></i><b></b></div><div class="ip17-camera-ui"><span>PORTRAIT</span><b>8×</b></div><p>200 mm 长焦<br><small>压缩空间，让人物与光影更有张力</small></p></div><div class="ip17-camera-cards"><article><b>48MP</b><span>主摄<br>24 / 48 mm</span></article><article><b>48MP</b><span>超广角<br>13 mm / 微距</span></article><article><b>48MP</b><span>长焦<br>100 / 200 mm</span></article></div></section>
@@ -180,7 +179,7 @@
     const eased = value < .5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
     const reveal = Math.max(0, Math.min(1, (value - .48) / .42));
     const scale = 3.15 - eased * 2.15;
-    const phoneTop = 50 + eased * 24;
+    const phoneTop = 50 + eased * 22.5;
     section.style.setProperty('--display-layout-progress', eased.toFixed(3));
     section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
     section.style.setProperty('--display-phone-scale', scale.toFixed(3));
