@@ -2800,6 +2800,21 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 .ip17-camera-section{margin-top:-1px;isolation:isolate}
 .ip17-camera-section:before{content:"";position:absolute;z-index:-1;left:0;right:0;top:calc(var(--ip17-radius) * -1);height:calc(var(--ip17-radius) + 3px);background:url('/images/iphone17-pro/display/background-bright.webp') center bottom/104% auto no-repeat;pointer-events:none}
 @media(max-width:600px){.ip17-product-page .ip17-display-section:after{background-size:auto 190px}}
+
+/* Finale product lineup */
+.ip17-finale{overflow:hidden}
+.ip17-finale-lineup{width:min(1040px,calc(100vw - 64px));height:min(62vh,620px);margin:58px auto 0;display:flex;align-items:flex-end;justify-content:center;gap:clamp(28px,5vw,80px)}
+.ip17-finale-lineup figure{position:relative;width:clamp(190px,19vw,278px);height:100%;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0}
+.ip17-finale-lineup figure.blue,.ip17-finale-lineup figure.orange,.ip17-finale-lineup figure.silver{height:100%;border:0;border-radius:0;background:transparent;box-shadow:none}
+.ip17-finale-lineup figure.orange{width:clamp(210px,21vw,306px)}
+.ip17-finale-lineup img{display:block;width:auto;max-width:100%;height:calc(100% - 42px);object-fit:contain;object-position:center bottom;filter:drop-shadow(0 28px 34px rgba(0,0,0,.42))}
+.ip17-finale-lineup figcaption{height:42px;padding-top:18px;color:#a7aab2;font-size:13px;line-height:1;letter-spacing:.04em;text-align:center;white-space:nowrap}
+.ip17-finale-lineup figure.ip17-reveal{opacity:0;transform:translate3d(0,110px,0);transition:opacity .8s ease,transform 1.15s cubic-bezier(.16,.8,.24,1)}
+.ip17-finale-lineup figure.ip17-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.ip17-finale-lineup figure.orange.ip17-reveal{transition-delay:.04s}
+.ip17-finale-lineup figure.blue.ip17-reveal,.ip17-finale-lineup figure.silver.ip17-reveal{transition-delay:.3s}
+@media(max-width:700px){.ip17-finale-lineup{width:calc(100vw - 28px);height:min(52vh,440px);gap:8px}.ip17-finale-lineup figure{width:30%}.ip17-finale-lineup figure.orange{width:34%}.ip17-finale-lineup figcaption{font-size:11px;padding-top:14px}}
+@media(prefers-reduced-motion:reduce){.ip17-finale-lineup figure.ip17-reveal{opacity:1;transform:none;transition:none}}
 @media(prefers-reduced-motion:reduce){.ip17-display-bright,.ip17-display-copy,.ip17-screen-stage{transition:none!important}}
 
 /* Display sequence: one self-contained cinematic timeline */
