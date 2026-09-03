@@ -2794,9 +2794,9 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 @media(max-width:900px){.ip17-stat-band>div{display:grid;column-gap:16px;padding-left:24px;padding-right:24px}}
 @media(max-width:600px){.ip17-stat-band>div{grid-template-columns:minmax(0,42%) max-content;justify-content:start}.ip17-stat-band b{min-width:0}}
 
-/* Let the next panel overlap the live daylight scene; avoid a duplicated image strip. */
+/* Keep the sticky display and following panel on one continuous scroll timeline. */
 .ip17-display-background img{transform:scale(1.035)}
-.ip17-camera-section{margin-top:calc(var(--ip17-radius) * -1);isolation:isolate}
+.ip17-camera-section{margin-top:0;border-radius:0;isolation:isolate}
 
 /* Finale product lineup */
 .ip17-finale{overflow:hidden;background:#000;box-shadow:0 calc(var(--ip17-radius) * -1) 0 #000,0 -30px 90px #000b}
