@@ -2828,30 +2828,38 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 .ip17-camera-section header>.ip17-eyebrow{margin:0 0 30px}
 .ip17-product-page .ip17-camera-section header>h2{max-width:820px;margin:0 auto 34px;font-size:clamp(50px,5.5vw,84px);line-height:1.08;letter-spacing:-.055em}
 .ip17-camera-section header>.ip17-copy{margin:0 auto;font-size:clamp(15px,1.25vw,18px);line-height:1.65}
-.ip17-focal-tags{width:min(900px,100%);margin:44px auto 0;display:flex;align-items:center;justify-content:center;gap:8px}
-.ip17-focal-tags span{min-width:78px;padding:10px 13px;border-radius:999px;background:#191a1d;color:#9da1a9;font-size:12px;font-weight:650;line-height:1;white-space:nowrap}
-.ip17-focal-tags span:last-child{background:#f5f5f7;color:#101114}
-.ip17-camera-showcase{width:100%;height:min(64vw,760px);margin:70px auto 0;display:grid;grid-template-columns:1fr 1fr;overflow:visible;background:#000}
-.ip17-camera-keyfacts{align-self:center;padding-left:max(var(--ip17-gutter),calc((100vw - 1180px)/2));display:grid;gap:clamp(54px,7vh,88px);color:#fff;transform:translateY(-42px)}
+.ip17-camera-showcase{width:100%;height:clamp(620px,52vw,820px);margin:70px auto 0;display:grid;grid-template-columns:minmax(0,80%) minmax(190px,20%);grid-template-areas:"phone facts";align-items:center;overflow:hidden;background:#000}
+.ip17-camera-keyfacts{grid-area:facts;align-self:center;padding:0 clamp(28px,3vw,56px) 0 clamp(10px,1.6vw,26px);display:grid;gap:clamp(48px,6vh,72px);color:#fff;transform:translateY(1.5%)}
 .ip17-camera-keyfacts article{display:grid;justify-items:start}
 .ip17-camera-keyfacts small,.ip17-camera-keyfacts span{color:#8f96a3;font-size:clamp(13px,1.1vw,17px);font-weight:600;line-height:1.25}
-.ip17-camera-keyfacts strong{margin:10px 0 8px;color:#ff6a00;font-size:clamp(40px,4.3vw,66px);font-weight:730;line-height:.96;letter-spacing:-.055em}
-.ip17-camera-keyfacts article:last-child strong{font-size:clamp(38px,4vw,62px)}
-.ip17-lens-closeup{position:relative;min-width:0;height:100%;margin:0;overflow:visible;background:transparent}
-.ip17-lens-closeup img{position:absolute;left:42%;top:0;width:96%;max-width:none;height:auto;transform:translateX(-50%);filter:drop-shadow(0 34px 48px rgba(0,0,0,.4))}
+.ip17-camera-keyfacts strong{margin:8px 0 7px;color:#ff6a00;font-size:clamp(34px,3.5vw,54px);font-weight:730;line-height:.96;letter-spacing:-.055em}
+.ip17-camera-keyfacts article:last-child strong{font-size:clamp(32px,3.25vw,50px)}
+.ip17-lens-closeup{grid-area:phone;position:relative;min-width:0;width:100%;height:100%;margin:0;overflow:visible;background:transparent}
+.ip17-lens-closeup img{position:absolute;left:49%;top:50%;width:auto;max-width:none;height:min(70vw,1400px);transform:translate(-50%,-50%) rotate(90deg);filter:drop-shadow(0 34px 48px rgba(0,0,0,.4))}
 .ip17-camera-section header>.ip17-eyebrow.ip17-reveal{transition-delay:.02s}
 .ip17-camera-section header>h2.ip17-reveal{transition-delay:.1s}
 .ip17-camera-section header>.ip17-copy.ip17-reveal{transition-delay:.18s}
-.ip17-camera-section .ip17-focal-tags.ip17-reveal{transition-delay:.26s}
 .ip17-camera-keyfacts article.ip17-reveal:first-child{transition-delay:.08s}
 .ip17-camera-keyfacts article.ip17-reveal:nth-child(2){transition-delay:.18s}
 .ip17-lens-closeup.ip17-reveal{opacity:0;transform:translate3d(0,76px,0);transition:opacity 1s cubic-bezier(.2,.65,.25,1),transform 1.25s cubic-bezier(.16,.8,.24,1);transition-delay:.08s;will-change:opacity,transform}
 .ip17-lens-closeup.ip17-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
-@media(max-width:700px){.ip17-camera-section header>.ip17-eyebrow{margin-bottom:22px}.ip17-product-page .ip17-camera-section header>h2{margin-bottom:26px;font-size:clamp(40px,11vw,52px);line-height:1.1}.ip17-focal-tags{width:calc(100vw - 48px);margin-top:34px;justify-content:flex-start;overflow-x:auto;scrollbar-width:none}.ip17-focal-tags::-webkit-scrollbar{display:none}.ip17-focal-tags span{min-width:70px;padding:9px 11px;font-size:11px}.ip17-camera-showcase{height:700px;margin-top:46px;grid-template-columns:44% 56%}.ip17-camera-keyfacts{padding-left:24px;gap:52px;transform:translateY(-28px)}.ip17-camera-keyfacts small,.ip17-camera-keyfacts span{font-size:11px}.ip17-camera-keyfacts strong{font-size:clamp(30px,8.5vw,42px)}.ip17-camera-keyfacts article:last-child strong{font-size:clamp(27px,7.5vw,38px)}.ip17-lens-closeup img{left:43%;top:5%;width:162%}}
+@media(max-width:700px){.ip17-camera-section header>.ip17-eyebrow{margin-bottom:22px}.ip17-product-page .ip17-camera-section header>h2{margin-bottom:26px;font-size:clamp(40px,11vw,52px);line-height:1.1}.ip17-camera-showcase{height:430px;margin-top:46px;grid-template-columns:minmax(0,76%) minmax(96px,24%)}.ip17-camera-keyfacts{padding:0 10px 0 2px;gap:36px}.ip17-camera-keyfacts small,.ip17-camera-keyfacts span{font-size:9px}.ip17-camera-keyfacts strong{font-size:clamp(24px,7vw,34px)}.ip17-camera-keyfacts article:last-child strong{font-size:clamp(22px,6.3vw,31px)}.ip17-lens-closeup img{left:48%;height:72vw}}
+
+/* Eight focal lengths: the sample image masks the lower edge of the camera render. */
+.ip17-focal-viewer{position:relative;z-index:3;width:100%;margin-top:0;padding:clamp(54px,5vw,82px) 0 clamp(92px,9vw,140px);overflow:hidden;background:#000}
+.ip17-focal-stage{width:min(1040px,calc(100vw - 96px));aspect-ratio:4/3;margin:0 auto;overflow:hidden;border-radius:clamp(18px,2vw,30px);background:#111}
+.ip17-focal-stage img{display:block;width:100%;height:100%;object-fit:cover;opacity:1;transform:scale(1);transition:opacity .42s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.16,.8,.24,1);will-change:opacity,transform}
+.ip17-focal-stage img.is-switching{opacity:0;transform:scale(1.012)}
+.ip17-focal-tags{width:min(850px,calc(100vw - 64px));margin:28px auto 0;padding:5px;display:flex;align-items:center;justify-content:center;gap:4px;border-radius:999px;background:#242529}
+.ip17-focal-tags button{min-width:0;flex:1;padding:12px 10px;border:0;border-radius:999px;background:transparent;color:#b6b7bc;font:650 12px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;white-space:nowrap;cursor:pointer;transition:color .28s ease,background .38s cubic-bezier(.2,.7,.2,1),transform .28s ease}
+.ip17-focal-tags button:hover{color:#fff}
+.ip17-focal-tags button.is-active{background:#f5f5f7;color:#111318;transform:scale(1.015)}
+.ip17-focal-viewer.ip17-reveal{opacity:0;transform:translate3d(0,54px,0);transition:opacity .9s ease,transform 1.15s cubic-bezier(.16,.8,.24,1)}
+.ip17-focal-viewer.ip17-reveal.is-visible{opacity:1;transform:none}
+@media(max-width:700px){.ip17-focal-viewer{margin-top:0;padding:42px 0 86px}.ip17-focal-stage{width:calc(100vw - 48px);border-radius:18px}.ip17-focal-tags{width:calc(100vw - 32px);margin-top:18px;justify-content:flex-start;overflow-x:auto;scrollbar-width:none}.ip17-focal-tags::-webkit-scrollbar{display:none}.ip17-focal-tags button{flex:0 0 74px;padding:11px 8px;font-size:11px}}
 
 /* Let the camera render continue at full height; the following white panel masks it. */
-.ip17-life-section{z-index:5;margin-top:-220px;border-radius:var(--ip17-radius) var(--ip17-radius) 0 0;box-shadow:none}
-@media(max-width:700px){.ip17-life-section{margin-top:-145px}}
+.ip17-life-section{z-index:5;margin-top:0;border-radius:var(--ip17-radius) var(--ip17-radius) 0 0;box-shadow:none}
 
 /* Battery data — iPhone 17 Pro official specifications */
 .ip17-battery-section{display:flex;min-height:calc(100vh - 70px);padding-left:0;padding-right:0;flex-direction:column;justify-content:center;gap:clamp(70px,9vh,110px);background:#f5f5f7;color:#111318;text-align:center}
@@ -2903,7 +2911,7 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 
 /* Display sequence: one self-contained cinematic timeline */
 .ip17-product-page .ip17-display-section{--display-layout-progress:0;--display-phone-scale:3.65;--display-phone-top:50%;height:185vh;min-height:1320px}
-.ip17-display-copy{top:clamp(88px,13vh,122px);left:50%;width:min(760px,calc(100vw - 80px));transform:translate3d(-50%,calc(30px - var(--display-copy-opacity) * 30px),0);text-align:center}
+.ip17-display-copy{top:clamp(108px,16vh,150px);left:50%;width:min(760px,calc(100vw - 80px));transform:translate3d(-50%,calc(30px - var(--display-copy-opacity) * 30px),0);text-align:center}
 .ip17-display-copy .ip17-eyebrow{margin-bottom:13px;text-align:center}
 .ip17-product-page .ip17-display-copy h2{font-size:clamp(46px,4.4vw,72px);line-height:1.05;text-align:center}
 .ip17-product-page .ip17-display-copy .ip17-copy{max-width:660px;margin:20px auto 0;font-size:clamp(15px,1.2vw,18px);line-height:1.65;text-align:center}
@@ -2911,12 +2919,12 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 .ip17-display-shade{background:linear-gradient(180deg,rgba(2,8,20,.45) 0%,rgba(2,8,20,.13) 38%,rgba(2,8,20,0) 68%);opacity:calc(var(--display-copy-opacity) * .72)}
 @media(max-width:900px){
   .ip17-product-page .ip17-display-section{height:175vh;min-height:1180px}
-  .ip17-display-copy{top:11%;left:50%;width:min(680px,calc(100vw - 56px));transform:translate3d(-50%,calc(24px - var(--display-copy-opacity) * 24px),0)}
+  .ip17-display-copy{top:13%;left:50%;width:min(680px,calc(100vw - 56px));transform:translate3d(-50%,calc(24px - var(--display-copy-opacity) * 24px),0)}
   .ip17-product-page .ip17-screen-stage{width:min(64vw,660px)}
 }
 @media(max-width:600px){
   .ip17-product-page .ip17-display-section{height:165vh;min-height:1040px}
-  .ip17-display-copy{top:9%;left:50%;width:calc(100vw - 48px)}
+  .ip17-display-copy{top:11%;left:50%;width:calc(100vw - 48px)}
   .ip17-display-copy .ip17-eyebrow{text-align:center}
   .ip17-product-page .ip17-display-copy h2{font-size:clamp(38px,11vw,50px);text-align:center}
   .ip17-product-page .ip17-display-copy .ip17-copy{max-width:100%;font-size:14px;line-height:1.6;text-align:center}
@@ -2977,11 +2985,11 @@ main.site-main:has(.ip17-product-page){overflow:visible}
 .ip17-product-title{top:17%}.ip17-product-title>p{font-size:clamp(54px,5vw,76px);font-weight:650;letter-spacing:-.055em;color:#ff742f!important}
 .ip17-hero-product{z-index:20;bottom:-92%;width:min(64vw,780px);height:155%}
 .ip17-product-title h1{line-height:1.02}
-.ip17-product-hero.is-revealed .ip17-product-title{top:20%;left:11vw;width:39%}.ip17-product-hero.is-revealed .ip17-product-title>p{font-size:23px;letter-spacing:.04em}.ip17-product-hero.is-revealed .ip17-hero-product{left:64%;bottom:2%;width:min(36vw,470px);height:90%}
+.ip17-product-hero.is-revealed .ip17-product-title{top:20%;left:11vw;width:39%}.ip17-product-hero.is-revealed .ip17-product-title>p{font-size:clamp(29px,2.35vw,36px);letter-spacing:.025em}.ip17-product-hero.is-revealed .ip17-hero-product{left:64%;bottom:2%;width:min(36vw,470px);height:90%}
 .ip17-product-hero.is-revealed .ip17-product-back{left:11vw}
 .ip17-hero-product.is-dragging{z-index:30}.ip17-view-switch,.ip17-product-colors{z-index:6}
 @media(max-width:900px){.ip17-product-title>p{font-size:clamp(48px,6vw,66px)}.ip17-hero-product{height:145%;bottom:-84%}.ip17-product-hero.is-revealed .ip17-hero-product{left:65%;height:86%}}
-@media(max-width:600px){.ip17-product-title{top:16%}.ip17-product-title>p{font-size:42px}.ip17-hero-product{width:420px;height:140%;bottom:-82%}.ip17-product-hero.is-revealed .ip17-product-title{top:8%;left:24px}.ip17-product-hero.is-revealed .ip17-product-title>p{font-size:15px}.ip17-product-title h1{line-height:1.04}.ip17-product-hero.is-revealed .ip17-hero-product{left:50%;width:255px;height:58%;bottom:2%}}
+@media(max-width:600px){.ip17-product-title{top:16%}.ip17-product-title>p{font-size:42px}.ip17-hero-product{width:420px;height:140%;bottom:-82%}.ip17-product-hero.is-revealed .ip17-product-title{top:8%;left:24px}.ip17-product-hero.is-revealed .ip17-product-title>p{font-size:18px}.ip17-product-title h1{line-height:1.04}.ip17-product-hero.is-revealed .ip17-hero-product{left:50%;width:255px;height:58%;bottom:2%}}
 
 .featured-card-product-render{aspect-ratio:16/9;min-height:0!important}.featured-card-product-render>img{object-position:center}
 @media(max-width:900px){.featured-card-product-render{min-height:0!important}}

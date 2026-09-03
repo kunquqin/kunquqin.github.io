@@ -18,7 +18,7 @@
     </div>
   </header>
   <nav class="ip17-product-nav" aria-label="产品章节"><a href="#design">设计</a><a href="#display">显示屏</a><a href="#camera">影像</a><a href="#performance">性能</a><a href="#battery">续航</a></nav>
-  <section class="ip17-product-intro" id="design"><p class="ip17-eyebrow">一体成型机身</p><h2>更完整的结构，<br>更强大的 Pro。</h2><p class="ip17-copy">热锻铝金属一体成型机身，将性能、散热与握持感融入同一条连续曲线。横向延展的专业摄像平台，让内部空间得到更高效的利用。</p><figure class="ip17-design-stage ip17-unibody-visual"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/unibody.png') %>" alt="iPhone 17 Pro 一体成型机身结构展示"></figure></section>
+  <section class="ip17-product-intro" id="design"><h2>一体成型结构<br>更强大的 Pro。</h2><p class="ip17-copy">热锻铝金属一体成型机身，将性能、散热与握持感融入同一条连续曲线。横向延展的专业摄像平台，让内部空间得到更高效的利用。</p><figure class="ip17-design-stage ip17-unibody-visual"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/unibody.png') %>" alt="iPhone 17 Pro 一体成型机身结构展示"></figure></section>
   <section class="ip17-stat-band"><div><b>6.9</b><span>英寸<br>超视网膜 XDR 显示屏</span></div><div><b>120</b><span>Hz<br>ProMotion 自适应刷新率</span></div><div><b>3000</b><span>尼特<br>户外峰值亮度</span></div></section>
   <section class="ip17-display-section" id="display" data-sequence-state="idle">
     <div class="ip17-display-sticky">
@@ -27,8 +27,7 @@
         <span class="ip17-display-shade"></span>
       </div>
       <div class="ip17-display-copy">
-        <p class="ip17-eyebrow">沉浸式 Pro 显示屏</p>
-        <h2>大开眼界，<br>也经得起阳光。</h2>
+        <h2>阳光之下，<br>依然出色。</h2>
         <p class="ip17-copy">6.9 英寸超视网膜 XDR 显示屏，更高的户外峰值亮度与先进抗反射能力，让画面在强光环境下依然清晰鲜活。</p>
       </div>
       <figure class="ip17-screen-stage" aria-label="iPhone 17 Pro 显示屏在环境光变化下依然保持清晰">
@@ -36,7 +35,23 @@
       </figure>
     </div>
   </section>
-  <section class="ip17-camera-section" id="camera"><header><h2>八种焦段，<br>远近皆出色。</h2><p class="ip17-copy">从微距到 200 mm 长焦，取景自由切换。</p><div class="ip17-focal-tags" aria-label="八种专业焦段"><span>微距</span><span>13 mm</span><span>24 mm</span><span>28 mm</span><span>35 mm</span><span>48 mm</span><span>100 mm</span><span>200 mm</span></div></header><div class="ip17-camera-showcase"><div class="ip17-camera-keyfacts"><article><small>最高达</small><strong>8 倍</strong><span>光学品质变焦</span></article><article><small>全部</small><strong>4800 万像素</strong><span>后置摄像头</span></article></div><figure class="ip17-lens-closeup"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/hero-cosmic-orange.png') %>" alt="星宇橙 iPhone 17 Pro 背部摄像头模组特写"></figure></div></section>
+  <section class="ip17-camera-section" id="camera">
+    <header><h2>八种焦段，<br>远近皆出色。</h2><p class="ip17-copy">从微距到 200 mm 长焦，取景自由切换。</p></header>
+    <div class="ip17-camera-showcase"><div class="ip17-camera-keyfacts"><article><small>最高达</small><strong>8 倍</strong><span>光学品质变焦</span></article><article><small>全部</small><strong>4800 万像素</strong><span>后置摄像头</span></article></div><figure class="ip17-lens-closeup"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/hero-cosmic-orange.png') %>" alt="星宇橙 iPhone 17 Pro 背部摄像头模组特写"></figure></div>
+    <div class="ip17-focal-viewer" data-active-focal="200mm">
+      <figure class="ip17-focal-stage"><img src="<%- url_for('/images/iphone17-pro/focal-series/200mm.png') %>" alt="200 mm 长焦拍摄的人像特写" data-focal-image></figure>
+      <div class="ip17-focal-tags" role="group" aria-label="切换八种专业焦段">
+        <button type="button" data-focal="13mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/13mm.png') %>" aria-pressed="false">13 mm</button>
+        <button type="button" data-focal="24mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/24mm.png') %>" aria-pressed="false">24 mm</button>
+        <button type="button" data-focal="28mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/35mm.png') %>" aria-pressed="false">28 mm</button>
+        <button type="button" data-focal="35mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/28mm.png') %>" aria-pressed="false">35 mm</button>
+        <button type="button" data-focal="48mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/48mm.png') %>" aria-pressed="false">48 mm</button>
+        <button type="button" data-focal="100mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/100mm.png') %>" aria-pressed="false">100 mm</button>
+        <button class="is-active" type="button" data-focal="200mm" data-src="<%- url_for('/images/iphone17-pro/focal-series/200mm.png') %>" aria-pressed="true">200 mm</button>
+        <button type="button" data-focal="macro" data-src="<%- url_for('/images/iphone17-pro/focal-series/macro.png') %>" aria-pressed="false">微距</button>
+      </div>
+    </div>
+  </section>
   <section class="ip17-life-section">
     <div class="ip17-life-copy"><h2>动起来，<br>依然稳得漂亮。</h2><p class="ip17-copy">更强的视频防抖与电影级规格，让高速运动、低光场景和专业工作流都能保持清晰、自然、有层次。</p></div>
     <div class="ip17-motion-showcase">
@@ -59,7 +74,7 @@
 (() => {
   const page = document.querySelector('.ip17-product-page');
   if (!page || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const items = page.querySelectorAll('h2, .ip17-copy, .ip17-product-intro .ip17-eyebrow, .ip17-camera-section .ip17-eyebrow, .ip17-focal-tags, .ip17-camera-keyfacts article, .ip17-lens-closeup, .ip17-unibody-visual, .ip17-stat-band > div, .ip17-camera-cards article, .ip17-motion-gallery figure, .ip17-performance-specs, .ip17-battery-stats article, .ip17-finale-lineup figure');
+  const items = page.querySelectorAll('h2, .ip17-copy, .ip17-product-intro .ip17-eyebrow, .ip17-camera-section .ip17-eyebrow, .ip17-focal-viewer, .ip17-camera-keyfacts article, .ip17-lens-closeup, .ip17-unibody-visual, .ip17-stat-band > div, .ip17-camera-cards article, .ip17-motion-gallery figure, .ip17-performance-specs, .ip17-battery-stats article, .ip17-finale-lineup figure');
   items.forEach((item) => item.classList.add('ip17-reveal'));
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -70,6 +85,36 @@
     });
   }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
   items.forEach((item) => observer.observe(item));
+})();
+(() => {
+  const viewer = document.querySelector('.ip17-focal-viewer');
+  if (!viewer) return;
+  const image = viewer.querySelector('[data-focal-image]');
+  const buttons = Array.from(viewer.querySelectorAll('[data-focal]'));
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const labels = { macro: '微距', '13mm': '13 mm', '24mm': '24 mm', '28mm': '28 mm', '35mm': '35 mm', '48mm': '48 mm', '100mm': '100 mm', '200mm': '200 mm' };
+  buttons.forEach((button) => { const preload = new Image(); preload.src = button.dataset.src; });
+  const selectFocal = (button) => {
+    if (button.classList.contains('is-active')) return;
+    const focal = button.dataset.focal;
+    viewer.dataset.activeFocal = focal;
+    buttons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    const swap = () => {
+      image.src = button.dataset.src;
+      image.alt = `${labels[focal]} 焦段拍摄效果`;
+      requestAnimationFrame(() => image.classList.remove('is-switching'));
+    };
+    if (reduceMotion) swap();
+    else {
+      image.classList.add('is-switching');
+      setTimeout(swap, 220);
+    }
+  };
+  buttons.forEach((button) => button.addEventListener('click', () => selectFocal(button)));
 })();
 (() => {
   const hero = document.querySelector('.ip17-product-hero');
@@ -190,8 +235,8 @@
     const reveal = Math.max(0, Math.min(1, (value - .48) / .42));
     const daylightRaw = Math.max(0, Math.min(1, (value - .06) / .82));
     const daylight = daylightRaw * daylightRaw * (3 - 2 * daylightRaw);
-    const scale = 3.65 - eased * 2.65;
-    const phoneTop = 50 + eased * 22.5;
+    const scale = 3.65 - eased * 2.59;
+    const phoneTop = 50 + eased * 18;
     section.style.setProperty('--display-layout-progress', eased.toFixed(3));
     section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
     section.style.setProperty('--display-daylight', daylight.toFixed(3));
