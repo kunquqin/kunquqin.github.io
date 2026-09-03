@@ -178,7 +178,7 @@
     const reveal = Math.max(0, Math.min(1, (value - .48) / .42));
     const daylightRaw = Math.max(0, Math.min(1, (value - .06) / .82));
     const daylight = daylightRaw * daylightRaw * (3 - 2 * daylightRaw);
-    const scale = 3.15 - eased * 2.15;
+    const scale = 3.65 - eased * 2.65;
     const phoneTop = 50 + eased * 22.5;
     section.style.setProperty('--display-layout-progress', eased.toFixed(3));
     section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
