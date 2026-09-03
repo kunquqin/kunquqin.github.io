@@ -29,7 +29,7 @@
 <section class="portfolio-section" id="projects"><div class="section-label">02 / 精选项目</div><div class="section-heading"><div><p class="eyebrow">SELECTED WORK · <%= mode === '3d' ? '3D DESIGN' : mode === 'ai-product' ? 'AI PRODUCT' : 'ALL' %></p><h2><%= role.projectTitle %></h2></div><p><%= role.projectLead %></p></div><div class="project-groups">
   <% if(mode === '3d'){ %>
   <section class="project-group"><header><div><span>01 / PRODUCT VISUALIZATION</span><h3>产品渲染与商业视觉</h3></div><p>通过精密结构、材质研究与商业布光，呈现从产品细节到完整氛围的视觉化能力。</p></header><div class="featured-projects">
-    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/iphone17-pro/') %>"><img src="<%- url_for('/images/iphone17-pro/cover.png') %>" alt="iPhone 17 Pro 产品视觉化"><div class="card-overlay"><h3>iPhone 17 Pro · 产品视觉化</h3><p>以精密结构、材质控制与商业布光建立旗舰产品视觉。</p></div></a>
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/iphone17-pro/') %>"><img src="<%- url_for('/images/iphone17-pro/cover.png') %>" alt="iPhone 17 Pro 视觉设计"><div class="card-overlay"><h3>iPhone 17 Pro · 视觉设计</h3><p>围绕产品造型、材质光影与发布场景，构建完整的旗舰手机视觉表达。</p></div></a>
   </div></section>
   <section class="project-group"><header><div><span>02 / 3D & DIGITAL ASSET</span><h3>三维设计与数字资产</h3></div><p>从视觉品质、体验目标到生产标准，呈现三维内容在真实业务中的完整落地过程。</p></header><div class="featured-projects">
     <a class="featured-card featured-card-wide" href="<%- url_for('/projects/dewu/') %>"><img src="<%- url_for('/images/portfolio-hd/dewu_3d_cover.png') %>" alt="得物 3D 数字资产升级"><div class="card-overlay"><h3>得物 3D 数字资产升级</h3><p>建立自动化、规模化的 3D/AR 商品资产生产链路。</p></div></a>
