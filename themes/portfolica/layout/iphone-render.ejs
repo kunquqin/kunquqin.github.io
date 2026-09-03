@@ -170,18 +170,20 @@
 
   const setSequenceProgress = (progress) => {
     const value = Math.max(0, Math.min(1, progress));
-    const daylight = Math.max(0, Math.min(1, (value - .08) / .78));
-    section.style.setProperty('--display-daylight', daylight.toFixed(3));
+    section.style.setProperty('--display-sequence-progress', value.toFixed(3));
   };
 
   const setLayoutProgress = (progress) => {
     const value = Math.max(0, Math.min(1, progress));
     const eased = value < .5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
     const reveal = Math.max(0, Math.min(1, (value - .48) / .42));
+    const daylightRaw = Math.max(0, Math.min(1, (value - .06) / .82));
+    const daylight = daylightRaw * daylightRaw * (3 - 2 * daylightRaw);
     const scale = 3.15 - eased * 2.15;
     const phoneTop = 50 + eased * 22.5;
     section.style.setProperty('--display-layout-progress', eased.toFixed(3));
     section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
+    section.style.setProperty('--display-daylight', daylight.toFixed(3));
     section.style.setProperty('--display-phone-scale', scale.toFixed(3));
     section.style.setProperty('--display-phone-top', `${phoneTop.toFixed(2)}%`);
   };
