@@ -2823,14 +2823,14 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 .ip17-camera-section{background:#000;color:#f5f5f7}
 .ip17-camera-section header .ip17-copy{color:#8c8c92}
 .ip17-camera-showcase{width:100%;height:min(64vw,760px);margin:70px auto 0;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:#000}
-.ip17-camera-keyfacts{align-self:center;padding-left:max(var(--ip17-gutter),calc((100vw - 1180px)/2));display:grid;gap:clamp(54px,7vh,88px);color:#fff}
+.ip17-camera-keyfacts{align-self:center;padding-left:max(var(--ip17-gutter),calc((100vw - 1180px)/2));display:grid;gap:clamp(54px,7vh,88px);color:#fff;transform:translateY(-42px)}
 .ip17-camera-keyfacts article{display:grid;justify-items:start}
 .ip17-camera-keyfacts small,.ip17-camera-keyfacts span{color:#8f96a3;font-size:clamp(13px,1.1vw,17px);font-weight:600;line-height:1.25}
 .ip17-camera-keyfacts strong{margin:10px 0 8px;color:#ff6a00;font-size:clamp(40px,4.3vw,66px);font-weight:730;line-height:.96;letter-spacing:-.055em}
 .ip17-camera-keyfacts article:last-child strong{font-size:clamp(38px,4vw,62px)}
 .ip17-lens-closeup{position:relative;min-width:0;height:100%;margin:0;overflow:visible;background:transparent}
-.ip17-lens-closeup img{position:absolute;left:50%;top:4%;width:86%;max-width:none;height:auto;transform:translateX(-50%);filter:drop-shadow(0 34px 48px rgba(0,0,0,.4))}
-@media(max-width:700px){.ip17-camera-showcase{height:700px;margin-top:46px;grid-template-columns:44% 56%}.ip17-camera-keyfacts{padding-left:24px;gap:52px}.ip17-camera-keyfacts small,.ip17-camera-keyfacts span{font-size:11px}.ip17-camera-keyfacts strong{font-size:clamp(30px,8.5vw,42px)}.ip17-camera-keyfacts article:last-child strong{font-size:clamp(27px,7.5vw,38px)}.ip17-lens-closeup img{left:50%;top:7%;width:150%}}
+.ip17-lens-closeup img{position:absolute;left:42%;top:0;width:96%;max-width:none;height:auto;transform:translateX(-50%);filter:drop-shadow(0 34px 48px rgba(0,0,0,.4))}
+@media(max-width:700px){.ip17-camera-showcase{height:700px;margin-top:46px;grid-template-columns:44% 56%}.ip17-camera-keyfacts{padding-left:24px;gap:52px;transform:translateY(-28px)}.ip17-camera-keyfacts small,.ip17-camera-keyfacts span{font-size:11px}.ip17-camera-keyfacts strong{font-size:clamp(30px,8.5vw,42px)}.ip17-camera-keyfacts article:last-child strong{font-size:clamp(27px,7.5vw,38px)}.ip17-lens-closeup img{left:43%;top:5%;width:162%}}
 
 /* Display sequence: one self-contained cinematic timeline */
 .ip17-product-page .ip17-display-section{--display-layout-progress:0;--display-phone-scale:3.65;--display-phone-top:50%;height:185vh;min-height:1320px}
