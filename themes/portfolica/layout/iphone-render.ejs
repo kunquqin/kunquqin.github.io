@@ -169,15 +169,19 @@
   let ready = false;
   let played = false;
 
-  const setProgress = (progress) => {
+  const setSequenceProgress = (progress) => {
     const value = Math.max(0, Math.min(1, progress));
-    const eased = 1 - Math.pow(1 - value, 3);
-    const reveal = Math.max(0, Math.min(1, (value - .52) / .34));
     const daylight = Math.max(0, Math.min(1, (value - .08) / .78));
-    const scale = 2.7 - eased * 1.7;
-    section.style.setProperty('--display-auto-progress', eased.toFixed(3));
-    section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
     section.style.setProperty('--display-daylight', daylight.toFixed(3));
+  };
+
+  const setLayoutProgress = (progress) => {
+    const value = Math.max(0, Math.min(1, progress));
+    const eased = value < .5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
+    const reveal = Math.max(0, Math.min(1, (value - .48) / .42));
+    const scale = 2.7 - eased * 1.7;
+    section.style.setProperty('--display-layout-progress', eased.toFixed(3));
+    section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
     section.style.setProperty('--display-phone-scale', scale.toFixed(3));
   };
 
@@ -198,7 +202,7 @@
     await preload;
     if (reducedMotion) {
       sequence.src = frameUrl(count - 1);
-      setProgress(1);
+      setSequenceProgress(1);
       section.dataset.sequenceState = 'ended';
       return;
     }
@@ -211,21 +215,37 @@
       const nextSrc = frames[index] && frames[index].src ? frames[index].src : frameUrl(index);
       if (sequence.src !== nextSrc) sequence.src = nextSrc;
       section.dataset.frame = String(index);
-      setProgress(progress);
+      setSequenceProgress(progress);
       if (index < count - 1) requestAnimationFrame(render);
       else {
-        setProgress(1);
+        setSequenceProgress(1);
         section.dataset.sequenceState = 'ended';
       }
     };
     requestAnimationFrame(render);
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    if (entries.some((entry) => entry.isIntersecting)) playOnce();
-  }, { threshold: .12 });
-  observer.observe(section);
-  setProgress(0);
+  let ticking = false;
+  const updateScene = () => {
+    const rect = section.getBoundingClientRect();
+    const topOffset = innerWidth <= 600 ? 60 : 70;
+    const visibleTrigger = innerHeight * .5;
+    if (!played && rect.top <= visibleTrigger && rect.bottom > 0) playOnce();
+    const scrollRange = Math.max(360, innerHeight * .72);
+    const layoutProgress = (topOffset - rect.top) / scrollRange;
+    setLayoutProgress(layoutProgress);
+    ticking = false;
+  };
+  const requestSceneUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateScene);
+  };
+  addEventListener('scroll', requestSceneUpdate, { passive: true });
+  addEventListener('resize', requestSceneUpdate, { passive: true });
+  setSequenceProgress(0);
+  setLayoutProgress(0);
+  updateScene();
   if (ready) section.dataset.sequenceState = 'ready';
 })();
 </script>
