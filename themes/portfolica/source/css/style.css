@@ -2806,3 +2806,6 @@ main.site-main:has(.ip17-product-page){overflow:visible}
 .ip17-hero-product.is-dragging{z-index:30}.ip17-view-switch,.ip17-product-colors{z-index:6}
 @media(max-width:900px){.ip17-product-title>p{font-size:clamp(48px,6vw,66px)}.ip17-hero-product{height:145%;bottom:-84%}.ip17-product-hero.is-revealed .ip17-hero-product{left:65%;height:86%}}
 @media(max-width:600px){.ip17-product-title{top:16%}.ip17-product-title>p{font-size:42px}.ip17-hero-product{width:420px;height:140%;bottom:-82%}.ip17-product-hero.is-revealed .ip17-product-title{top:8%;left:24px}.ip17-product-hero.is-revealed .ip17-product-title>p{font-size:15px}.ip17-product-title h1{line-height:1.04}.ip17-product-hero.is-revealed .ip17-hero-product{left:50%;width:255px;height:58%;bottom:2%}}
+
+.featured-card-product-render{aspect-ratio:16/9;min-height:0!important}.featured-card-product-render>img{object-position:center}
+@media(max-width:900px){.featured-card-product-render{min-height:0!important}}
