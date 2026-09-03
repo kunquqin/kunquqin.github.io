@@ -1,13 +1,17 @@
 <article class="ip17-product-page">
-  <header class="ip17-product-hero" id="ip17-top" data-color="orange">
+  <header class="ip17-product-hero" id="ip17-top" data-color="orange" data-view="back">
     <a class="ip17-product-back" href="<%- url_for('/3d/#projects') %>">← 返回 3D 项目</a>
     <div class="ip17-product-title"><p>iPhone 17 Pro Max</p><h1>强大，<br>由内而外。</h1><span>全新一体成型设计，把专业性能装进更纯粹的轮廓。</span></div>
-    <figure class="ip17-hero-product" aria-live="polite">
+    <figure class="ip17-hero-product" role="button" tabindex="0" aria-label="展开手机完整视图" aria-expanded="false" aria-live="polite">
       <div class="ip17-hero-aura"></div>
-      <img class="is-active" data-product-color="orange" src="<%- url_for('/images/iphone17-pro-max/hero-cosmic-orange.png') %>" alt="星宇橙色 iPhone 17 Pro Max 背面">
-      <img data-product-color="blue" src="<%- url_for('/images/iphone17-pro-max/hero-deep-blue.png') %>" alt="深蓝色 iPhone 17 Pro Max 背面">
-      <img data-product-color="silver" src="<%- url_for('/images/iphone17-pro-max/hero-silver.png') %>" alt="银色 iPhone 17 Pro Max 背面">
+      <img class="is-active" data-product-color="orange" data-product-view="back" src="<%- url_for('/images/iphone17-pro-max/hero-cosmic-orange.png') %>" alt="星宇橙色 iPhone 17 Pro Max 背面">
+      <img data-product-color="blue" data-product-view="back" src="<%- url_for('/images/iphone17-pro-max/hero-deep-blue.png') %>" alt="深蓝色 iPhone 17 Pro Max 背面">
+      <img data-product-color="silver" data-product-view="back" src="<%- url_for('/images/iphone17-pro-max/hero-silver.png') %>" alt="银色 iPhone 17 Pro Max 背面">
+      <img data-product-color="orange" data-product-view="front" src="<%- url_for('/images/iphone17-pro-max/front-cosmic-orange.png') %>" alt="星宇橙色 iPhone 17 Pro Max 正面">
+      <img data-product-color="blue" data-product-view="front" src="<%- url_for('/images/iphone17-pro-max/front-deep-blue.png') %>" alt="深蓝色 iPhone 17 Pro Max 正面">
+      <img data-product-color="silver" data-product-view="front" src="<%- url_for('/images/iphone17-pro-max/front-silver.png') %>" alt="银色 iPhone 17 Pro Max 正面">
     </figure>
+    <div class="ip17-view-switch" role="group" aria-label="选择手机视角"><button type="button" data-view-option="front" aria-label="切换至正面" aria-pressed="false"><span>正</span><small>FRONT</small></button><button class="is-active" type="button" data-view-option="back" aria-label="切换至背面" aria-pressed="true"><span>背</span><small>BACK</small></button></div>
     <div class="ip17-product-colors" role="group" aria-label="选择机身颜色"><button class="orange is-active" type="button" data-color-option="orange" aria-label="星宇橙" aria-pressed="true"></button><button class="blue" type="button" data-color-option="blue" aria-label="深蓝色" aria-pressed="false"></button><button class="silver" type="button" data-color-option="silver" aria-label="银色" aria-pressed="false"></button><span data-color-label>星宇橙</span></div>
     <div class="ip17-product-scroll">向下探索 <b>↓</b></div>
   </header>
@@ -45,6 +49,7 @@
   const images = hero.querySelectorAll('[data-product-color]');
   const label = hero.querySelector('[data-color-label]');
   const names = { orange: '星宇橙', blue: '深蓝色', silver: '银色' };
+  const syncProduct = () => images.forEach((image) => image.classList.toggle('is-active', image.dataset.productColor === hero.dataset.color && image.dataset.productView === hero.dataset.view));
   buttons.forEach((button) => button.addEventListener('click', () => {
     const color = button.dataset.colorOption;
     if (hero.dataset.color === color) return;
@@ -54,8 +59,31 @@
       item.classList.toggle('is-active', active);
       item.setAttribute('aria-pressed', String(active));
     });
-    images.forEach((image) => image.classList.toggle('is-active', image.dataset.productColor === color));
+    syncProduct();
     if (label) label.textContent = names[color];
   }));
+  const viewButtons = hero.querySelectorAll('[data-view-option]');
+  viewButtons.forEach((button) => button.addEventListener('click', () => {
+    hero.dataset.view = button.dataset.viewOption;
+    viewButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    syncProduct();
+  }));
+  const product = hero.querySelector('.ip17-hero-product');
+  const toggleProduct = () => {
+    const lifted = product.classList.toggle('is-lifted');
+    product.setAttribute('aria-expanded', String(lifted));
+    product.setAttribute('aria-label', lifted ? '收起手机局部视图' : '展开手机完整视图');
+  };
+  product.addEventListener('click', toggleProduct);
+  product.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleProduct();
+    }
+  });
 })();
 </script>
