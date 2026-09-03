@@ -259,17 +259,32 @@
   const indexLabel = document.querySelector('[data-motion-index]');
   if (!gallery || !prev || !next) return;
   const cards = Array.from(gallery.querySelectorAll('figure'));
+  const controls = gallery.parentElement.querySelector('.ip17-motion-controls');
+  const dots = document.createElement('div');
+  dots.className = 'ip17-motion-dots';
+  dots.setAttribute('aria-label', '幻灯片进度');
+  const dotButtons = cards.map((card, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `第 ${index + 1} 张`);
+    dot.addEventListener('click', () => goTo(index));
+    dots.appendChild(dot);
+    return dot;
+  });
+  controls.prepend(dots);
   let activeIndex = 0;
   const updateIndex = () => {
     const anchor = gallery.scrollLeft + parseFloat(getComputedStyle(gallery).paddingLeft);
     activeIndex = cards.reduce((best, card, index) => Math.abs(card.offsetLeft - anchor) < Math.abs(cards[best].offsetLeft - anchor) ? index : best, 0);
     if (indexLabel) indexLabel.textContent = String(activeIndex + 1).padStart(2, '0');
+    dotButtons.forEach((dot, index) => dot.setAttribute('aria-current', index === activeIndex ? 'true' : 'false'));
   };
   const goTo = (index) => {
     activeIndex = Math.max(0, Math.min(cards.length - 1, index));
     const inset = parseFloat(getComputedStyle(gallery).paddingLeft);
     gallery.scrollTo({ left: cards[activeIndex].offsetLeft - inset, behavior: 'smooth' });
     if (indexLabel) indexLabel.textContent = String(activeIndex + 1).padStart(2, '0');
+    dotButtons.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === activeIndex ? 'true' : 'false'));
   };
   let scrollTicking = false;
   gallery.addEventListener('scroll', () => {
