@@ -125,8 +125,8 @@
   });
   product.addEventListener('pointermove', (event) => {
     if (!dragStart) return;
-    const x = Math.max(-110, Math.min(110, event.clientX - dragStart.x));
-    const y = Math.max(-76, Math.min(76, event.clientY - dragStart.y));
+    const x = event.clientX - dragStart.x;
+    const y = event.clientY - dragStart.y;
     product.style.setProperty('--drag-x', x + 'px');
     product.style.setProperty('--drag-y', y + 'px');
   });
