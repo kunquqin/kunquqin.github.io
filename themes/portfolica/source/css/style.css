@@ -2819,6 +2819,23 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 @media(prefers-reduced-motion:reduce){.ip17-finale-lineup figure.ip17-reveal{opacity:1;transform:none;transition:none}}
 @media(prefers-reduced-motion:reduce){.ip17-display-bright,.ip17-display-copy,.ip17-screen-stage{transition:none!important}}
 
+/* Camera focal-range showcase */
+.ip17-camera-showcase{width:var(--ip17-wide);min-height:min(72vw,760px);margin:72px auto 0;display:grid;grid-template-columns:minmax(250px,.36fr) minmax(0,.64fr);overflow:hidden;border-radius:36px;background:#dedfe2}
+.ip17-camera-showcase .ip17-focal-list{width:auto;margin:0;padding:clamp(36px,5vw,70px) clamp(24px,3.4vw,48px);display:flex;flex-direction:column;justify-content:flex-start;gap:0;background:#e9e9eb}
+.ip17-camera-showcase .ip17-focal-list span{min-width:0;padding:13px 0;display:grid;grid-template-columns:72px 1fr;align-items:baseline;border:0;border-bottom:1px solid rgba(17,18,22,.11);border-radius:0;background:transparent;color:#777a81;text-align:left;transition:color .3s ease,transform .3s ease}
+.ip17-camera-showcase .ip17-focal-list span:last-child{border-bottom:0}
+.ip17-camera-showcase .ip17-focal-list span b{font-size:clamp(18px,1.8vw,28px);line-height:1;letter-spacing:-.04em}
+.ip17-camera-showcase .ip17-focal-list span small{margin:0;font-size:11px;letter-spacing:.04em}
+.ip17-camera-showcase .ip17-focal-list span.active{background:transparent;color:#111216}
+.ip17-camera-showcase .ip17-focal-list span.active b{color:#f46f32}
+.ip17-lens-closeup{position:relative;min-width:0;height:100%;margin:0;overflow:hidden;background:#d1d2d5}
+.ip17-lens-closeup img{position:absolute;left:50%;top:-4%;width:112%;max-width:none;height:auto;transform:translateX(-50%);filter:drop-shadow(0 30px 42px rgba(91,38,12,.24))}
+.ip17-lens-closeup figcaption{position:absolute;z-index:2;right:34px;bottom:30px;display:grid;gap:5px;color:#5d6067;text-align:right}
+.ip17-lens-closeup figcaption span{color:#f46f32;font-size:11px;font-weight:800;letter-spacing:.12em}
+.ip17-lens-closeup figcaption b{font-size:14px}
+@media(hover:hover){.ip17-camera-showcase .ip17-focal-list span:hover{color:#111216;transform:translateX(5px);background:transparent}}
+@media(max-width:700px){.ip17-camera-showcase{min-height:0;margin-top:48px;grid-template-columns:1fr;border-radius:24px}.ip17-camera-showcase .ip17-focal-list{padding:26px 24px;display:grid;grid-template-columns:1fr 1fr;column-gap:22px}.ip17-camera-showcase .ip17-focal-list span{grid-template-columns:58px 1fr;padding:12px 0}.ip17-lens-closeup{height:520px}.ip17-lens-closeup img{top:-1%;width:155%}.ip17-lens-closeup figcaption{right:22px;bottom:20px}}
+
 /* Display sequence: one self-contained cinematic timeline */
 .ip17-product-page .ip17-display-section{--display-layout-progress:0;--display-phone-scale:3.65;--display-phone-top:50%;height:185vh;min-height:1320px}
 .ip17-display-copy{top:clamp(88px,13vh,122px);left:50%;width:min(760px,calc(100vw - 80px));transform:translate3d(-50%,calc(30px - var(--display-copy-opacity) * 30px),0);text-align:center}
