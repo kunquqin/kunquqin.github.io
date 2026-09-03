@@ -2809,3 +2809,11 @@ main.site-main:has(.ip17-product-page){overflow:visible}
 
 .featured-card-product-render{aspect-ratio:16/9;min-height:0!important}.featured-card-product-render>img{object-position:center}
 @media(max-width:900px){.featured-card-product-render{min-height:0!important}}
+
+/* Project entrance */
+.ip17-hero-sticky:not(.is-entered) .ip17-product-title>p{opacity:0;transform:translateY(18px)}
+.ip17-hero-sticky .ip17-product-title>p{transition:opacity .8s ease .08s,transform .95s cubic-bezier(.2,.75,.2,1) .08s,font-size .9s ease,letter-spacing .9s ease,color .7s ease}
+.ip17-hero-sticky:not(.is-entered) .ip17-hero-product{opacity:0;transform:translate(calc(-50% + var(--drag-x)),calc(var(--drag-y) + 150px))}
+.ip17-hero-sticky .ip17-hero-product{opacity:1;transition:left 1.05s cubic-bezier(.2,.75,.2,1),bottom 1.05s cubic-bezier(.2,.75,.2,1),width 1.05s cubic-bezier(.2,.75,.2,1),height 1.05s cubic-bezier(.2,.75,.2,1),transform 1.25s cubic-bezier(.16,.8,.24,1) .12s,opacity .9s ease .12s,filter .6s ease}
+.ip17-hero-sticky .ip17-hero-product.is-dragging{transition:left 1.05s cubic-bezier(.2,.75,.2,1),bottom 1.05s cubic-bezier(.2,.75,.2,1),width 1.05s cubic-bezier(.2,.75,.2,1),height 1.05s cubic-bezier(.2,.75,.2,1),filter .6s ease}
+@media(prefers-reduced-motion:reduce){.ip17-hero-sticky:not(.is-entered) .ip17-product-title>p{opacity:1;transform:none}.ip17-hero-sticky:not(.is-entered) .ip17-hero-product{opacity:1;transform:translate(calc(-50% + var(--drag-x)),var(--drag-y))}}

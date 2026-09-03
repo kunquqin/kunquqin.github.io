@@ -77,6 +77,13 @@
   }));
   const product = hero.querySelector('.ip17-hero-product');
   const sticky = hero.querySelector('.ip17-hero-sticky');
+  const enterHero = () => requestAnimationFrame(() => requestAnimationFrame(() => sticky.classList.add('is-entered')));
+  const openingImage = product.querySelector('img.is-active');
+  if (openingImage.complete) enterHero();
+  else {
+    openingImage.addEventListener('load', enterHero, { once: true });
+    setTimeout(enterHero, 900);
+  }
   let ticking = false;
   const updateHero = () => {
     const start = matchMedia('(max-width: 600px)').matches ? 60 : 70;
