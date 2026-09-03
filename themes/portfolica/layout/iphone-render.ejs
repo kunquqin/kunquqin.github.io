@@ -20,7 +20,25 @@
   <nav class="ip17-product-nav" aria-label="产品章节"><a href="#design">设计</a><a href="#display">显示屏</a><a href="#camera">影像</a><a href="#performance">性能</a><a href="#battery">续航</a></nav>
   <section class="ip17-product-intro" id="design"><p class="ip17-eyebrow">一体成型机身</p><h2>更完整的结构，<br>更强大的 Pro。</h2><p class="ip17-copy">热锻铝金属一体成型机身，将性能、散热与握持感融入同一条连续曲线。横向延展的专业摄像平台，让内部空间得到更高效的利用。</p><figure class="ip17-design-stage ip17-unibody-visual"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/unibody.png') %>" alt="iPhone 17 Pro 一体成型机身结构展示"></figure></section>
   <section class="ip17-stat-band"><div><b>6.9</b><span>英寸<br>超视网膜 XDR 显示屏</span></div><div><b>120</b><span>Hz<br>ProMotion 自适应刷新率</span></div><div><b>3000</b><span>尼特<br>户外峰值亮度</span></div></section>
-  <section class="ip17-display-section" id="display"><div class="ip17-display-copy"><p class="ip17-eyebrow">沉浸式 Pro 显示屏</p><h2>大开眼界，<br>也经得起阳光。</h2><p class="ip17-copy">6.9 英寸超视网膜 XDR 显示屏，更高的户外峰值亮度与先进抗反射能力，让画面在强光环境下依然清晰鲜活。</p></div><div class="ip17-screen-stage"><div class="ip17-front-phone"><div class="ip17-island"></div><div class="ip17-screen-art"><i></i><b>17:38</b><span>Thursday, September 18</span></div></div></div></section>
+  <section class="ip17-display-section" id="display" data-sequence-state="idle">
+    <div class="ip17-display-sticky">
+      <div class="ip17-display-background" aria-hidden="true">
+        <img class="ip17-display-night" src="<%- url_for('/images/iphone17-pro/display/background-night.webp') %>" alt="">
+        <img class="ip17-display-bright" src="<%- url_for('/images/iphone17-pro/display/background-bright.webp') %>" alt="">
+        <span class="ip17-display-shade"></span>
+      </div>
+      <div class="ip17-display-copy">
+        <p class="ip17-eyebrow">超视网膜 XDR 显示屏</p>
+        <h2>从夜色，<br>清晰到日光之下。</h2>
+        <p class="ip17-copy">更高的户外峰值亮度与先进抗反射能力，让色彩、层次与细节不因环境光改变。</p>
+        <div class="ip17-display-specs" aria-label="显示屏核心参数"><span><b>3000</b> 尼特户外峰值亮度</span><span><b>120Hz</b> ProMotion</span></div>
+      </div>
+      <figure class="ip17-screen-stage" aria-label="iPhone 17 Pro 显示屏在环境光变化下依然保持清晰">
+        <img class="ip17-display-sequence" draggable="false" src="<%- url_for('/images/iphone17-pro/display/sequence/frame-000.webp') %>" data-frame-base="<%- url_for('/images/iphone17-pro/display/sequence/frame-') %>" data-frame-count="72" alt="iPhone 17 Pro 横屏播放高动态范围画面">
+      </figure>
+      <div class="ip17-display-light-meter" aria-hidden="true"><span>夜色</span><i></i><span>日光</span></div>
+    </div>
+  </section>
   <section class="ip17-camera-section" id="camera"><header><p class="ip17-eyebrow">Pro Fusion 摄像系统</p><h2>八种焦段，<br>每一种都专业。</h2><p class="ip17-copy">三颗 4800 万像素融合式摄像头，覆盖从微距到 200 mm 长焦的创作视野。无需移动脚步，也能重新定义画面距离。</p></header><div class="ip17-focal-list"><span>.5×<small>13 mm</small></span><span>1×<small>24 mm</small></span><span>2×<small>48 mm</small></span><span>4×<small>100 mm</small></span><span class="active">8×<small>200 mm</small></span></div><div class="ip17-model-shot calm"><div class="ip17-model-figure"><i></i><b></b></div><div class="ip17-camera-ui"><span>PORTRAIT</span><b>8×</b></div><p>200 mm 长焦<br><small>压缩空间，让人物与光影更有张力</small></p></div><div class="ip17-camera-cards"><article><b>48MP</b><span>主摄<br>24 / 48 mm</span></article><article><b>48MP</b><span>超广角<br>13 mm / 微距</span></article><article><b>48MP</b><span>长焦<br>100 / 200 mm</span></article></div></section>
   <section class="ip17-life-section"><div class="ip17-model-shot energy"><div class="ip17-runner"><i></i><b></b><em></em></div><div class="ip17-motion-lines"></div><p>4K 120 fps 杜比视界<br><small>从日常记录，到专业创作。</small></p></div><div class="ip17-life-copy"><p class="ip17-eyebrow">专业视频</p><h2>动起来，<br>依然稳得漂亮。</h2><p class="ip17-copy">更强的视频防抖与电影级规格，让高速运动、低光场景和专业工作流都能保持清晰、自然、有层次。</p></div></section>
   <section class="ip17-performance-section" id="performance"><div class="ip17-chip"><span>A19</span><b>PRO</b><i></i></div><div><p class="ip17-eyebrow">A19 Pro 与均热板</p><h2>持续强劲，<br>不止一瞬间。</h2><p class="ip17-copy">激光焊接均热板与铝金属一体成型结构协同导热，让高负载游戏、影像处理与本地 AI 任务保持稳定输出。</p><div class="ip17-performance-specs"><span><b>6 核</b>CPU</span><span><b>6 核</b>GPU</span><span><b>40%</b>持续性能提升</span></div></div></section>
@@ -139,5 +157,83 @@
   });
   product.addEventListener('pointerup', releaseProduct);
   product.addEventListener('pointercancel', releaseProduct);
+})();
+(() => {
+  const section = document.querySelector('.ip17-display-section');
+  if (!section) return;
+  const sticky = section.querySelector('.ip17-display-sticky');
+  const sequence = section.querySelector('.ip17-display-sequence');
+  const count = Number(sequence.dataset.frameCount) || 72;
+  const base = sequence.dataset.frameBase;
+  const frameUrl = (index) => `${base}${String(index).padStart(3, '0')}.webp`;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const frames = [];
+  let ready = false;
+  let played = false;
+  let ticking = false;
+
+  const preload = Promise.all(Array.from({ length: count }, (_, index) => new Promise((resolve) => {
+    const image = new Image();
+    image.onload = image.onerror = () => resolve(image);
+    image.src = frameUrl(index);
+    frames[index] = image;
+  }))).then(() => {
+    ready = true;
+    section.dataset.sequenceState = 'ready';
+  });
+
+  const playOnce = async () => {
+    if (played) return;
+    played = true;
+    section.dataset.sequenceState = 'loading';
+    await preload;
+    if (reducedMotion) {
+      sequence.src = frameUrl(count - 1);
+      section.dataset.sequenceState = 'ended';
+      return;
+    }
+    section.dataset.sequenceState = 'playing';
+    const startedAt = performance.now();
+    const frameDuration = 1000 / 24;
+    const render = (now) => {
+      const index = Math.min(count - 1, Math.floor((now - startedAt) / frameDuration));
+      const nextSrc = frames[index] && frames[index].src ? frames[index].src : frameUrl(index);
+      if (sequence.src !== nextSrc) sequence.src = nextSrc;
+      section.dataset.frame = String(index);
+      if (index < count - 1) requestAnimationFrame(render);
+      else section.dataset.sequenceState = 'ended';
+    };
+    requestAnimationFrame(render);
+  };
+
+  const updateScene = () => {
+    const topOffset = innerWidth <= 600 ? 60 : 70;
+    const travel = Math.max(1, section.offsetHeight - sticky.offsetHeight);
+    const progress = Math.max(0, Math.min(1, (topOffset - section.getBoundingClientRect().top) / travel));
+    const reveal = Math.max(0, Math.min(1, (progress - .48) / .26));
+    const daylight = Math.max(0, Math.min(1, (progress - .12) / .66));
+    const scale = 1.24 - progress * .43;
+    const phoneY = 8 + progress * 16;
+    section.style.setProperty('--display-progress', progress.toFixed(3));
+    section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
+    section.style.setProperty('--display-daylight', daylight.toFixed(3));
+    section.style.setProperty('--display-phone-scale', scale.toFixed(3));
+    section.style.setProperty('--display-phone-y', `${phoneY.toFixed(1)}vh`);
+    ticking = false;
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some((entry) => entry.isIntersecting)) playOnce();
+  }, { threshold: .12 });
+  observer.observe(section);
+  addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateScene);
+    }
+  }, { passive: true });
+  addEventListener('resize', updateScene, { passive: true });
+  updateScene();
+  if (ready) section.dataset.sequenceState = 'ready';
 })();
 </script>
