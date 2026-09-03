@@ -2797,7 +2797,7 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 /* Keep the sticky display and following panel on one continuous scroll timeline. */
 .ip17-display-background img{transform:scale(1.035)}
 .ip17-product-page .ip17-display-section:after{content:"";position:absolute;z-index:3;left:0;right:0;bottom:calc(var(--ip17-radius) * -1);height:calc(var(--ip17-radius) + 2px);pointer-events:none;background:url('/images/iphone17-pro/display/background-bright.webp') center bottom/103.5% auto no-repeat}
-.ip17-camera-section{z-index:4;margin-top:0;border-radius:var(--ip17-radius) var(--ip17-radius) 0 0;box-shadow:none;isolation:isolate}
+.ip17-camera-section{z-index:4;margin-top:0;padding-bottom:0;border-radius:var(--ip17-radius) var(--ip17-radius) 0 0;box-shadow:none;isolation:isolate}
 @media(max-width:600px){.ip17-product-page .ip17-display-section:after{background-size:auto calc(100vh - 70px)}}
 
 /* Finale product lineup */
