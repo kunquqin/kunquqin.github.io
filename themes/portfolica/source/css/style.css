@@ -2802,13 +2802,16 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 @media(max-width:600px){.ip17-product-page .ip17-display-section:after{background-size:auto 190px}}
 
 /* Finale product lineup */
-.ip17-finale{overflow:hidden}
+.ip17-finale{overflow:hidden;background:#000}
 .ip17-finale-lineup{width:min(1040px,calc(100vw - 64px));height:min(62vh,620px);margin:58px auto 0;display:flex;align-items:flex-end;justify-content:center;gap:clamp(14px,2.5vw,40px)}
 .ip17-finale-lineup figure{position:relative;width:clamp(190px,19vw,278px);height:100%;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0}
 .ip17-finale-lineup figure.blue,.ip17-finale-lineup figure.orange,.ip17-finale-lineup figure.silver{height:100%;border:0;border-radius:0;background:transparent;box-shadow:none}
 .ip17-finale-lineup figure.orange{width:clamp(210px,21vw,306px)}
 .ip17-finale-lineup img{display:block;width:auto;max-width:100%;height:calc(100% - 42px);object-fit:contain;object-position:center bottom;filter:drop-shadow(0 28px 34px rgba(0,0,0,.42))}
 .ip17-finale-lineup figcaption{height:52px;padding-top:28px;color:#a7aab2;font-size:13px;line-height:1;letter-spacing:.04em;text-align:center;white-space:nowrap}
+.ip17-finale-lineup figure.blue figcaption{color:#7180a3}
+.ip17-finale-lineup figure.orange figcaption{color:#ff7a32}
+.ip17-finale-lineup figure.silver figcaption{color:#d8d8d4}
 .ip17-finale-lineup figure.ip17-reveal{opacity:0;transform:translate3d(0,110px,0);transition:opacity .8s ease,transform 1.15s cubic-bezier(.16,.8,.24,1)}
 .ip17-finale-lineup figure.ip17-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
 .ip17-finale-lineup figure.orange.ip17-reveal{transition-delay:.04s}
