@@ -2702,7 +2702,7 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 
 /* Editorial grid, layered scroll and refined motion */
 .ip17-product-page{--ip17-gutter:max(32px,calc((100vw - 1180px)/2));--ip17-radius:clamp(30px,4vw,64px)}
-.ip17-product-hero{padding-left:var(--ip17-gutter);padding-right:var(--ip17-gutter)}.ip17-product-back,.ip17-product-colors{left:var(--ip17-gutter)}.ip17-product-scroll{right:var(--ip17-gutter)}
+.ip17-product-hero{padding-left:var(--ip17-gutter);padding-right:var(--ip17-gutter);overflow:hidden}.ip17-product-back,.ip17-product-colors{left:var(--ip17-gutter)}.ip17-product-scroll{right:var(--ip17-gutter)}
 .ip17-product-title{width:clamp(420px,42vw,560px)}.ip17-product-title h1{max-width:720px}.ip17-product-title>span{max-width:480px}
 .ip17-product-page section{padding-left:var(--ip17-gutter);padding-right:var(--ip17-gutter)}
 .ip17-product-page h2{max-width:920px;text-wrap:balance}.ip17-product-page .ip17-copy{max-width:560px;text-wrap:pretty}
@@ -2724,3 +2724,25 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 @media(max-width:900px){.ip17-product-page{--ip17-gutter:clamp(28px,6vw,54px)}.ip17-product-intro{grid-template-columns:1fr}.ip17-product-intro>.ip17-eyebrow,.ip17-product-intro>h2,.ip17-product-intro>.ip17-copy,.ip17-product-intro>.ip17-design-stage{grid-column:1}.ip17-product-intro>.ip17-design-stage{grid-row:auto;height:650px;margin-top:70px}.ip17-display-section{position:relative;top:auto;grid-template-columns:1fr;min-height:auto}.ip17-camera-section header{grid-template-columns:1fr}.ip17-camera-section header>.ip17-eyebrow,.ip17-camera-section header>h2,.ip17-camera-section header>.ip17-copy{grid-column:1;grid-row:auto}.ip17-camera-section header>.ip17-copy{margin-top:25px}.ip17-life-section,.ip17-performance-section,.ip17-battery-section{grid-template-columns:1fr}.ip17-performance-section{position:relative;top:auto;min-height:auto}}
 @media(max-width:600px){.ip17-product-page{--ip17-gutter:24px;--ip17-radius:28px}.ip17-product-title{width:100%}.ip17-product-intro>.ip17-design-stage{height:520px;margin-top:50px}.ip17-product-page h2{line-height:1.08;letter-spacing:-.045em}.ip17-display-section,.ip17-camera-section,.ip17-life-section,.ip17-performance-section,.ip17-battery-section,.ip17-finale{border-radius:28px 28px 0 0}.ip17-camera-section header{display:block}.ip17-model-shot.calm{height:520px}.ip17-life-section{padding-top:80px}.ip17-reveal{transform:translateY(20px)}}
 @media(prefers-reduced-motion:reduce){.ip17-reveal{opacity:1;transform:none;transition:none}}
+
+/* Apple-style alignment pass: one axis, restrained copy, full-width imagery */
+.ip17-product-page{--ip17-content:min(980px,calc(100vw - 64px));--ip17-wide:min(1180px,calc(100vw - 64px));overflow:clip}
+.ip17-product-title{width:min(680px,54vw)}.ip17-product-title h1{max-width:none}.ip17-product-title>span{max-width:520px}
+.ip17-product-page section{padding-left:0;padding-right:0}
+.ip17-product-page h2{max-width:none;text-align:center;margin:24px auto 30px}
+.ip17-product-page .ip17-copy{max-width:720px;text-align:center;margin-left:auto;margin-right:auto}
+.ip17-product-page .ip17-eyebrow{text-align:center}
+.ip17-product-intro{display:block;text-align:center;padding-left:0;padding-right:0}
+.ip17-product-intro>.ip17-eyebrow,.ip17-product-intro>h2,.ip17-product-intro>.ip17-copy{width:var(--ip17-content);margin-left:auto;margin-right:auto}
+.ip17-product-intro>.ip17-design-stage{width:var(--ip17-wide);height:min(66vw,720px);margin:80px auto 0}
+.ip17-stat-band>div{padding-left:clamp(32px,5vw,72px);padding-right:clamp(24px,4vw,56px)}
+.ip17-display-section{grid-template-columns:1fr;gap:50px;min-height:calc(100vh - 128px);padding-left:0;padding-right:0;text-align:center}
+.ip17-display-copy{width:var(--ip17-content);margin:0 auto}.ip17-screen-stage{width:var(--ip17-wide);height:min(69vh,720px);margin:0 auto;overflow:hidden}.ip17-front-phone{top:3%}
+.ip17-camera-section{padding-left:0;padding-right:0}.ip17-camera-section header{display:block;width:var(--ip17-content);margin:0 auto;text-align:center}.ip17-camera-section header>.ip17-eyebrow,.ip17-camera-section header>h2,.ip17-camera-section header>.ip17-copy{display:block;margin-left:auto;margin-right:auto}.ip17-camera-section header>.ip17-copy{margin-top:0}
+.ip17-focal-list{width:var(--ip17-content);justify-content:center;margin-left:auto;margin-right:auto}.ip17-model-shot.calm,.ip17-camera-cards{width:var(--ip17-wide);margin-left:auto;margin-right:auto}
+.ip17-life-section{display:flex;flex-direction:column;gap:70px;padding-left:0;padding-right:0}.ip17-model-shot.energy{width:var(--ip17-wide);order:2}.ip17-life-copy{width:var(--ip17-content);order:1;margin:0 auto}.ip17-life-copy .ip17-copy{max-width:720px}
+.ip17-performance-section{display:flex;flex-direction:column-reverse;justify-content:center;gap:70px;text-align:center;padding-left:0;padding-right:0}.ip17-performance-section>div:not(.ip17-chip){width:var(--ip17-content);margin:0 auto}.ip17-chip{width:min(510px,70vw);margin:0 auto}.ip17-performance-specs{justify-content:center}
+.ip17-battery-section{display:flex;flex-direction:column;gap:70px;padding-left:0;padding-right:0;text-align:center}.ip17-battery-copy{width:var(--ip17-content);margin:0 auto}.ip17-battery-number,.ip17-charge{justify-content:center}.ip17-model-shot.night{width:var(--ip17-wide)}
+.ip17-finale{padding-left:0;padding-right:0}.ip17-finale>.ip17-eyebrow,.ip17-finale>h2{width:var(--ip17-content)}
+@media(max-width:900px){.ip17-product-page{--ip17-content:min(680px,calc(100vw - 56px));--ip17-wide:calc(100vw - 56px)}.ip17-product-title{width:min(560px,58vw)}.ip17-display-section{display:block}.ip17-display-copy{margin-bottom:55px}.ip17-performance-section{display:flex}.ip17-battery-section{display:flex}}
+@media(max-width:600px){.ip17-product-page{--ip17-content:calc(100vw - 48px);--ip17-wide:calc(100vw - 48px)}.ip17-product-title{width:100%}.ip17-product-page h2{text-align:left}.ip17-product-page .ip17-copy{text-align:left}.ip17-product-page .ip17-eyebrow{text-align:left}.ip17-product-intro{text-align:left}.ip17-product-intro>.ip17-design-stage{height:520px;margin-top:50px}.ip17-display-section{text-align:left}.ip17-camera-section header{text-align:left}.ip17-focal-list{justify-content:flex-start}.ip17-life-section{gap:50px}.ip17-performance-section{text-align:left}.ip17-performance-specs{justify-content:flex-start}.ip17-battery-section{text-align:left}.ip17-battery-number,.ip17-charge{justify-content:flex-start}.ip17-finale h2,.ip17-finale .ip17-eyebrow{text-align:center}}
