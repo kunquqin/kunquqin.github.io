@@ -2749,7 +2749,7 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
 
 /* iPhone 17 Pro display story */
 .ip17-product-page .ip17-display-section{--display-daylight:0;--display-copy-opacity:0;--display-phone-scale:1.24;--display-phone-y:8vh;position:relative;top:auto;display:block;width:100%;height:240vh;min-height:1500px;padding:0;border-radius:0;background:#071229;box-shadow:none;overflow:visible;text-align:left;isolation:isolate}
-.ip17-display-sticky{position:sticky;top:70px;width:100%;height:calc(100vh - 70px);min-height:620px;overflow:hidden;background:#071229}
+.ip17-display-sticky{position:sticky;top:70px;width:100%;height:calc(100vh - 70px);min-height:620px;overflow:hidden;background:#000}
 .ip17-display-background,.ip17-display-background img,.ip17-display-shade{position:absolute;inset:0;width:100%;height:100%}
 .ip17-display-background img{display:block;object-fit:cover;object-position:center}
 .ip17-display-bright{opacity:var(--display-daylight);will-change:opacity}
