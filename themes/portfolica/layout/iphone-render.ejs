@@ -179,10 +179,12 @@
     const value = Math.max(0, Math.min(1, progress));
     const eased = value < .5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
     const reveal = Math.max(0, Math.min(1, (value - .48) / .42));
-    const scale = 2.7 - eased * 1.7;
+    const scale = 3.15 - eased * 2.15;
+    const phoneTop = 50 + eased * 24;
     section.style.setProperty('--display-layout-progress', eased.toFixed(3));
     section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
     section.style.setProperty('--display-phone-scale', scale.toFixed(3));
+    section.style.setProperty('--display-phone-top', `${phoneTop.toFixed(2)}%`);
   };
 
   const preload = Promise.all(Array.from({ length: count }, (_, index) => new Promise((resolve) => {
