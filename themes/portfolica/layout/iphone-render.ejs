@@ -28,10 +28,9 @@
         <span class="ip17-display-shade"></span>
       </div>
       <div class="ip17-display-copy">
-        <p class="ip17-eyebrow">超视网膜 XDR 显示屏</p>
-        <h2>从夜色，<br>清晰到日光之下。</h2>
-        <p class="ip17-copy">更高的户外峰值亮度与先进抗反射能力，让色彩、层次与细节不因环境光改变。</p>
-        <div class="ip17-display-specs" aria-label="显示屏核心参数"><span><b>3000</b> 尼特户外峰值亮度</span><span><b>120Hz</b> ProMotion</span></div>
+        <p class="ip17-eyebrow">沉浸式 Pro 显示屏</p>
+        <h2>大开眼界，<br>也经得起阳光。</h2>
+        <p class="ip17-copy">6.9 英寸超视网膜 XDR 显示屏，更高的户外峰值亮度与先进抗反射能力，让画面在强光环境下依然清晰鲜活。</p>
       </div>
       <figure class="ip17-screen-stage" aria-label="iPhone 17 Pro 显示屏在环境光变化下依然保持清晰">
         <img class="ip17-display-sequence" draggable="false" src="<%- url_for('/images/iphone17-pro/display/sequence/frame-000.webp') %>" data-frame-base="<%- url_for('/images/iphone17-pro/display/sequence/frame-') %>" data-frame-count="72" alt="iPhone 17 Pro 横屏播放高动态范围画面">
@@ -161,7 +160,6 @@
 (() => {
   const section = document.querySelector('.ip17-display-section');
   if (!section) return;
-  const sticky = section.querySelector('.ip17-display-sticky');
   const sequence = section.querySelector('.ip17-display-sequence');
   const count = Number(sequence.dataset.frameCount) || 72;
   const base = sequence.dataset.frameBase;
@@ -170,7 +168,18 @@
   const frames = [];
   let ready = false;
   let played = false;
-  let ticking = false;
+
+  const setProgress = (progress) => {
+    const value = Math.max(0, Math.min(1, progress));
+    const eased = 1 - Math.pow(1 - value, 3);
+    const reveal = Math.max(0, Math.min(1, (value - .52) / .34));
+    const daylight = Math.max(0, Math.min(1, (value - .08) / .78));
+    const scale = 2.7 - eased * 1.7;
+    section.style.setProperty('--display-auto-progress', eased.toFixed(3));
+    section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
+    section.style.setProperty('--display-daylight', daylight.toFixed(3));
+    section.style.setProperty('--display-phone-scale', scale.toFixed(3));
+  };
 
   const preload = Promise.all(Array.from({ length: count }, (_, index) => new Promise((resolve) => {
     const image = new Image();
@@ -189,6 +198,7 @@
     await preload;
     if (reducedMotion) {
       sequence.src = frameUrl(count - 1);
+      setProgress(1);
       section.dataset.sequenceState = 'ended';
       return;
     }
@@ -197,43 +207,25 @@
     const frameDuration = 1000 / 24;
     const render = (now) => {
       const index = Math.min(count - 1, Math.floor((now - startedAt) / frameDuration));
+      const progress = index / (count - 1);
       const nextSrc = frames[index] && frames[index].src ? frames[index].src : frameUrl(index);
       if (sequence.src !== nextSrc) sequence.src = nextSrc;
       section.dataset.frame = String(index);
+      setProgress(progress);
       if (index < count - 1) requestAnimationFrame(render);
-      else section.dataset.sequenceState = 'ended';
+      else {
+        setProgress(1);
+        section.dataset.sequenceState = 'ended';
+      }
     };
     requestAnimationFrame(render);
-  };
-
-  const updateScene = () => {
-    const topOffset = innerWidth <= 600 ? 60 : 70;
-    const travel = Math.max(1, section.offsetHeight - sticky.offsetHeight);
-    const progress = Math.max(0, Math.min(1, (topOffset - section.getBoundingClientRect().top) / travel));
-    const reveal = Math.max(0, Math.min(1, (progress - .48) / .26));
-    const daylight = Math.max(0, Math.min(1, (progress - .12) / .66));
-    const scale = 1.24 - progress * .43;
-    const phoneY = 8 + progress * 16;
-    section.style.setProperty('--display-progress', progress.toFixed(3));
-    section.style.setProperty('--display-copy-opacity', reveal.toFixed(3));
-    section.style.setProperty('--display-daylight', daylight.toFixed(3));
-    section.style.setProperty('--display-phone-scale', scale.toFixed(3));
-    section.style.setProperty('--display-phone-y', `${phoneY.toFixed(1)}vh`);
-    ticking = false;
   };
 
   const observer = new IntersectionObserver((entries) => {
     if (entries.some((entry) => entry.isIntersecting)) playOnce();
   }, { threshold: .12 });
   observer.observe(section);
-  addEventListener('scroll', () => {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(updateScene);
-    }
-  }, { passive: true });
-  addEventListener('resize', updateScene, { passive: true });
-  updateScene();
+  setProgress(0);
   if (ready) section.dataset.sequenceState = 'ready';
 })();
 </script>
