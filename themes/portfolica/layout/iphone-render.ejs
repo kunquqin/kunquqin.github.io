@@ -17,3 +17,20 @@
   <section class="ip17-finale"><p class="ip17-eyebrow">iPhone 17 Pro Max</p><h2>Pro，登峰造极。</h2><div class="ip17-finale-lineup"><div class="orange"></div><div class="blue"></div><div class="silver"></div></div><p>宇宙橙 · 深蓝色 · 银色</p></section>
   <nav class="case-next ip17-next"><span>NEXT PROJECT</span><a href="<%- url_for('/projects/dewu/') %>">得物 3D 数字资产升级 →</a></nav>
 </article>
+<script>
+(() => {
+  const page = document.querySelector('.ip17-product-page');
+  if (!page || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const items = page.querySelectorAll('h2, .ip17-copy, .ip17-stat-band > div, .ip17-camera-cards article, .ip17-performance-specs, .ip17-battery-number, .ip17-charge');
+  items.forEach((item) => item.classList.add('ip17-reveal'));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+  items.forEach((item) => observer.observe(item));
+})();
+</script>
