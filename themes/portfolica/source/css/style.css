@@ -2781,6 +2781,13 @@ html:has(.portfolio-hero){scroll-padding-top:72px}.site-main:has(.portfolio-hero
   .ip17-display-specs{gap:18px;margin-top:20px;padding-top:18px;font-size:11px}.ip17-display-specs b{font-size:18px}
   .ip17-product-page .ip17-screen-stage{top:65%;width:168vw}
 }
+
+/* iPhone display metrics: optical spacing and true vertical centering */
+.ip17-stat-band>div{min-width:0;display:flex;align-items:center;justify-content:center;gap:clamp(24px,2.2vw,42px);padding:clamp(48px,6vw,80px) clamp(28px,4vw,60px)}
+.ip17-stat-band b{display:block;flex:0 0 auto;padding:0 .055em .04em .015em;font-variant-numeric:tabular-nums lining-nums;font-feature-settings:"tnum" 1,"lnum" 1;font-kerning:none;letter-spacing:-.035em;line-height:.92;white-space:nowrap;overflow:visible}
+.ip17-stat-band span{display:block;flex:0 1 auto;min-width:0;margin:0;line-height:1.55}
+@media(max-width:900px){.ip17-stat-band>div{display:flex;min-height:240px;padding:48px 28px;gap:24px}}
+@media(max-width:600px){.ip17-stat-band>div{min-height:180px;justify-content:flex-start;padding:42px 24px}.ip17-stat-band b{min-width:42%;font-size:clamp(66px,22vw,98px)}}
 @media(prefers-reduced-motion:reduce){.ip17-display-bright,.ip17-display-copy,.ip17-screen-stage{transition:none!important}}
 
 /* Display sequence: one self-contained cinematic timeline */
