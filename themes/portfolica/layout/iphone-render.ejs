@@ -47,7 +47,7 @@
 (() => {
   const page = document.querySelector('.ip17-product-page');
   if (!page || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const items = page.querySelectorAll('h2, .ip17-copy, .ip17-product-intro .ip17-eyebrow, .ip17-unibody-visual, .ip17-stat-band > div, .ip17-camera-cards article, .ip17-performance-specs, .ip17-battery-number, .ip17-charge, .ip17-finale-lineup figure');
+  const items = page.querySelectorAll('h2, .ip17-copy, .ip17-product-intro .ip17-eyebrow, .ip17-camera-section .ip17-eyebrow, .ip17-focal-tags, .ip17-camera-keyfacts article, .ip17-lens-closeup, .ip17-unibody-visual, .ip17-stat-band > div, .ip17-camera-cards article, .ip17-performance-specs, .ip17-battery-number, .ip17-charge, .ip17-finale-lineup figure');
   items.forEach((item) => item.classList.add('ip17-reveal'));
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
