@@ -6,12 +6,12 @@
     <title><% if (page.title && !is_home()) { %><%= page.title %> · <% } %><%= theme.name %> — <%= theme.title %></title>
     <%- partial('partial/head') %>
 </head>
-<body>
-    <%- partial('partial/header') %>
+<body<% if(page.layout === 'su7'){ %> class="su7-body"<% } %>>
+    <% if(page.layout !== 'su7'){ %><%- partial('partial/header') %><% } %>
     <main class="site-main" id="main">
         <%- body %>
     </main>
-    <%- partial('partial/footer') %>
+    <% if(page.layout !== 'su7'){ %><%- partial('partial/footer') %><% } %>
     <%- partial('partial/scripts') %>
 </body>
 </html>
