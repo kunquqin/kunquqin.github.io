@@ -6,7 +6,7 @@
 <section class="builder-hero" id="home" aria-label="精选作品轮播" aria-roledescription="轮播">
   <% slides.forEach(function(slide, i){ %><div class="builder-glow builder-glow-<%= slide.slug %><%= i === 0 ? ' is-active' : '' %>" aria-hidden="true"></div><% }); %>
   <div class="builder-copy">
-    <nav hidden class="role-switcher" aria-label="作品集方向"><a data-role-switch href="<%- url_for('/alljobs/') %>">综合</a><a data-role-switch href="<%- url_for('/3d/') %>">3D 设计</a><a data-role-switch class="active" href="<%- url_for('/ai-native-builder/?preview=1') %>">AI Native Builder</a></nav>
+    <nav hidden class="role-switcher" aria-label="作品集方向"><a data-role-switch href="<%- url_for('/alljobs/') %>">综合</a><a data-role-switch href="<%- url_for('/3d/') %>">3D 设计</a><a data-role-switch class="active" href="<%- url_for('/ai-native-builder/') %>">AI Native Builder</a></nav>
     <div class="builder-identity"><strong>覃保锟</strong><span>AI Native Builder · 设计师</span></div>
     <div class="builder-stories">
       <% slides.forEach(function(slide, i){ %>
