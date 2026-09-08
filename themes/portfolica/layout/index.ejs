@@ -1,22 +1,28 @@
 <% const mode = page.portfolio_mode || 'all'; const role = mode === '3d' ? {eyebrow:'3D DESIGN · DIGITAL ASSET · AIGC', title:'让三维内容，', accent:'兼顾品质与规模。', lead:'你好，我是覃保锟。拥有 10+ 年设计经验，聚焦 3D 数字资产、虚拟角色与生产管线，推动三维内容从单点制作走向稳定、规模化落地。', image:'/images/portfolio-hd/dewu-shoes.png', alt:'得物 3D 数字资产项目', profile:'3D 设计专家 / 数字资产与 AIGC', intro:'先后任职阿里巴巴、字节跳动、哔哩哔哩与得物，持续负责 3D 数字资产、虚拟角色与内容生产体系。能够从体验目标出发，建立制作标准、生产管线与跨团队协作机制。', projectTitle:'以三维体验为起点，把内容能力推进到规模化落地。', projectLead:'精选项目集中呈现 3D 商品资产、虚拟数字人与生产流程建设，重点说明视觉判断、技术协作和品质管理。', contact:'如果你正在寻找 3D 视觉、数字资产、虚拟角色或 AIGC 生产流程方面的合作，欢迎直接联系我。'} : mode === 'ai-product' ? {eyebrow:'AI PRODUCT · EXPERIENCE · DEVELOPMENT', title:'从产品判断出发，', accent:'用 AI 完成真实交付。', lead:'你好，我是覃保锟。以设计师视角定义产品，并通过 AI 协作完成体验、开发、测试与上线，把想法推进为用户能够真正使用的软件。', image:'/images/mimo/dudou-study.png', alt:'AI 产品设计与开发项目', profile:'AI 产品设计 / 独立开发者', intro:'在长期视觉与复杂项目经验之上，我进一步把 AI 引入产品定义、原型验证和开发交付。既关注用户问题与体验判断，也能独立推进软件实现、测试、发布与持续迭代。', projectTitle:'不只展示界面，也呈现产品如何被定义、开发与上线。', projectLead:'精选项目重点呈现独立产品闭环、AI 协作方式与真实发布结果，并补充复杂业务中的流程创新能力。', contact:'如果你正在寻找 AI 产品设计、独立产品开发、体验设计或工作流创新方面的合作，欢迎直接联系我。'} : {eyebrow:'VISUAL DESIGN · AI PRODUCT · AIGC', title:'用设计与技术，', accent:'让创意高效落地。', lead:'你好，我是覃保锟。拥有 10+ 年视觉设计经验，专注 3D 视觉、AI 产品设计、虚拟数字人与设计生产流程创新。', image:'/images/portfolio-hd/zstar-group.png', alt:'覃保锟虚拟数字人角色视觉作品', profile:'3D 视觉设计专家 / AI 产品设计', intro:'先后任职阿里巴巴、字节跳动、哔哩哔哩与得物，深耕 3D 数字内容、视觉设计与 AIGC 工业化落地。具备完整的团队管理、项目流程搭建与跨部门协同经验，并借助 AI 完成从创意、原型到真实产品的效率升级。', projectTitle:'从问题出发，把设计推进到真实结果。', projectLead:'这里既有独立完成并上线的产品，也有在复杂业务中推动落地的商业项目，重点呈现我做过的判断、承担的职责与最终成果。', contact:'如果你正在寻找 3D 视觉、AIGC、虚拟数字人、AI 产品设计或设计流程方面的合作，欢迎直接联系我。'}; %>
+<% if(mode === 'ai-product'){ %>
+<%- partial('partial/builder-hero') %>
+<% } else { %>
 <section class="portfolio-hero portfolio-hero-<%= mode %>" id="home">
-  <div class="hero-copy"><nav class="role-switcher" aria-label="作品集方向"><a class="<%= mode === 'all' ? 'active' : '' %>" href="<%- url_for('/') %>">综合</a><a class="<%= mode === '3d' ? 'active' : '' %>" href="<%- url_for('/3d/') %>">3D 设计</a><a class="<%= mode === 'ai-product' ? 'active' : '' %>" href="<%- url_for('/ai-product/') %>">AI 产品</a></nav><div class="hero-index">PORTFOLIO / 2026</div><p class="eyebrow"><%= role.eyebrow %></p><h1><%= role.title %><br><span><%= role.accent %></span></h1><p class="hero-lead"><%= role.lead %></p><div class="hero-actions"><a class="button button-primary" href="#projects">查看项目 <i>↘</i></a><a class="button button-ghost" href="#contact">联系我</a></div></div>
+  <div class="hero-copy"><nav class="role-switcher" aria-label="作品集方向"><a class="<%= mode === 'all' ? 'active' : '' %>" href="<%- url_for('/') %>">综合</a><a class="<%= mode === '3d' ? 'active' : '' %>" href="<%- url_for('/3d/') %>">3D 设计</a><a class="<%= mode === 'ai-product' ? 'active' : '' %>" href="<%- url_for('/ai-native-builder/') %>">AI Native Builder</a></nav><div class="hero-index">PORTFOLIO / 2026</div><p class="eyebrow"><%= role.eyebrow %></p><h1><%= role.title %><br><span><%= role.accent %></span></h1><p class="hero-lead"><%= role.lead %></p><div class="hero-actions"><a class="button button-primary" href="#projects">查看项目 <i>↘</i></a><a class="button button-ghost" href="#contact">联系我</a></div></div>
   <div class="hero-visual"><img src="<%- url_for(role.image) %>" alt="<%= role.alt %>"><div class="hero-badge"><strong>10+</strong><span>年设计经验</span></div></div>
-</section><a class="hero-scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i>↓</i></a>
+</section><% } %><a class="hero-scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i>↓</i></a>
 <section class="portfolio-section about-career-section" id="about">
   <div class="section-label">01 / 关于我 · 职业经历</div>
   <div class="about-career-layout">
-    <aside class="profile-card">
-      <div class="profile-portrait"><img src="<%- url_for('/images/portfolio-hd/头像.png') %>" alt="覃保锟个人头像"></div>
-      <div class="profile-identity"><span><%= role.eyebrow %></span><h2>覃保锟</h2><p><%= role.profile %></p></div>
+    <aside class="profile-card<%= mode === 'ai-product' ? ' builder-profile' : '' %>">
+      <div class="profile-portrait"><img src="<%- url_for(mode === 'ai-product' ? '/images/portfolio-hd/portrait-real.webp' : '/images/portfolio-hd/头像.png') %>" alt="覃保锟个人头像"></div>
+      <div class="profile-identity"><% if(mode !== 'ai-product'){ %><span><%= role.eyebrow %></span><% } %><h2>覃保锟</h2><p><%= mode === 'ai-product' ? 'Ai Native Builder' : role.profile %></p></div>
       <div class="profile-facts"><div><strong>10+</strong><span>年设计经验</span></div><div><strong>4</strong><span>家头部互联网企业</span></div></div>
-      <div class="profile-education"><span>EDUCATION</span><div><strong>天津理工大学艺术学院</strong><p>2014 · 本科 · 动画专业</p></div></div>
-      <div class="skill-tags"><span>3D 资产</span><span>视觉设计</span><span>AI 产品</span><span>AIGC</span><span>流程搭建</span><span>项目管理</span></div>
+      <div class="profile-education"><% if(mode !== 'ai-product'){ %><span>EDUCATION</span><% } %><div><strong>天津理工大学艺术学院</strong><p>2014 · 本科 · 动画专业</p></div></div>
+      <div class="skill-tags"><% if(mode === 'ai-product'){ %><span>产品原型</span><span>AI 协作开发</span><span>C 端体验</span><span>虚拟角色</span><span>AIGC 工作流</span><span>产品上线</span><% } else { %><span>3D 资产</span><span>视觉设计</span><span>AI 产品</span><span>AIGC</span><span>流程搭建</span><span>项目管理</span><% } %></div>
     </aside>
     <div class="career-column">
       <header class="career-intro"><p class="eyebrow">ABOUT & EXPERIENCE</p><p><%= role.intro %></p></header>
-      <section class="results-band capability-band inline-capability-band" aria-label="核心能力方向"><% if(mode === '3d'){ %><div><b>3D VISUAL</b><span>三维视觉与数字资产</span></div><div><b>ASSET PIPELINE</b><span>生产管线与质量标准</span></div><div><b>VIRTUAL IP</b><span>虚拟角色与内容体系</span></div><div><b>LEADERSHIP</b><span>跨团队协作与项目管理</span></div><% } else if(mode === 'ai-product'){ %><div><b>PRODUCT</b><span>产品定义与体验判断</span></div><div><b>AI BUILD</b><span>AI 协作开发与验证</span></div><div><b>RELEASE</b><span>测试、打包与产品上线</span></div><div><b>SYSTEM</b><span>设计系统与持续迭代</span></div><% } else { %><div><b>3D VISUAL</b><span>三维视觉与数字资产</span></div><div><b>AI PRODUCT</b><span>AI 产品设计与编程落地</span></div><div><b>AIGC PIPELINE</b><span>创意与生产流程提效</span></div><div><b>LEADERSHIP</b><span>团队协作与项目管理</span></div><% } %></section>
+      <section class="results-band capability-band inline-capability-band" aria-label="核心能力方向"><% if(mode === '3d'){ %><div><b>三维视觉与数字资产</b><span>3D VISUAL</span></div><div><b>生产管线与质量标准</b><span>ASSET PIPELINE</span></div><div><b>虚拟角色与内容体系</b><span>VIRTUAL IP</span></div><div><b>跨团队协作与项目管理</b><span>LEADERSHIP</span></div><% } else if(mode === 'ai-product'){ %><div><b>产品定义与体验判断</b><span>PRODUCT</span></div><div><b>AI 协作开发与验证</b><span>AI BUILD</span></div><div><b>测试、打包与产品上线</b><span>RELEASE</span></div><div><b>设计系统与持续迭代</b><span>SYSTEM</span></div><% } else { %><div><b>三维视觉与数字资产</b><span>3D VISUAL</span></div><div><b>AI 产品设计与编程落地</b><span>AI PRODUCT</span></div><div><b>创意与生产流程提效</b><span>AIGC PIPELINE</span></div><div><b>团队协作与项目管理</b><span>LEADERSHIP</span></div><% } %></section>
       <div class="career-timeline" id="experience">
+        <% if(mode === 'ai-product'){ %>
+        <article><time>2025—2026</time><div><h3>个人产品实践</h3><p>AI 辅助独立开发</p></div><p>背单词微信小程序：独立完成产品构思、体验设计、开发与上线。<br>Windows 桌面效率工具：借助 Cursor / Claude 开发迭代，减少重复操作、提升工作效率。</p></article>
+        <% } %>
         <article><time>2024.07—2026.01</time><div><h3>得物</h3><p>3D 设计专家</p></div><p>3D/AR 展示体系、数字商品资产标准与 AIGC 生产管线。</p></article>
         <article><time>2022.01—2024.06</time><div><h3>哔哩哔哩</h3><p>资深视觉设计</p></div><p>虚拟数字人项目、视觉体系、内容标准与跨团队流程。</p></article>
         <article><time>2020.12—2021.12</time><div><h3>字节跳动</h3><p>资深视觉设计</p></div><p>商业项目视觉升级、标准化流程与协作效率优化。</p></article>
@@ -26,30 +32,40 @@
     </div>
   </div>
 </section>
-<section class="portfolio-section" id="projects"><div class="section-label">02 / 精选项目</div><div class="section-heading"><div><p class="eyebrow">SELECTED WORK · <%= mode === '3d' ? '3D DESIGN' : mode === 'ai-product' ? 'AI PRODUCT' : 'ALL' %></p><h2><%= role.projectTitle %></h2></div><p><%= role.projectLead %></p></div><div class="project-groups">
+<% if(mode === 'ai-product'){ %><%- partial('partial/builder-capabilities') %><% } %>
+<section class="portfolio-section" id="projects"><div class="section-label"><%= mode === 'ai-product' ? '03' : '02' %> / 精选项目</div><% if(mode !== 'ai-product'){ %><div class="section-heading"><div><p class="eyebrow">SELECTED WORK · <%= mode === '3d' ? '3D DESIGN' : mode === 'ai-product' ? 'AI PRODUCT' : 'ALL' %></p><h2><%= role.projectTitle %></h2></div><p><%= role.projectLead %></p></div><% } %><div class="project-groups">
   <% if(mode === '3d'){ %>
   <section class="project-group"><header><div><span>01 / PRODUCT VISUALIZATION</span><h3>产品渲染与商业视觉</h3></div><p>通过精密结构、材质研究与商业布光，呈现从产品细节到完整氛围的视觉化能力。</p></header><div class="featured-projects">
-    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/iphone17-pro/') %>"><img src="<%- url_for('/images/iphone17-pro/cover.png') %>" alt="iPhone 17 Pro 视觉设计"><div class="card-overlay"><h3>iPhone 17 Pro · 视觉设计</h3><p>围绕产品造型、材质光影与发布场景，构建完整的旗舰手机视觉表达。</p></div></a>
-    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/su7/') %>"><img loading="lazy" src="<%- url_for('/images/su7/hero.webp') %>" alt="新一代小米 SU7 卡布里蓝产品视觉"><div class="card-overlay"><h3>小米 SU7 · 产品体验设计</h3><p>从容，有自己的速度。以驾驶者体验串联产品视觉、信息与交互。</p></div></a>
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/iphone17-pro/') %>"><img src="<%- url_for('/images/iphone17-pro/cover.png') %>" alt="iPhone 17 Pro 视觉设计"><div class="card-overlay"><h3>iPhone 17 Pro</h3><p>围绕产品造型、材质光影与发布场景，构建完整的旗舰手机视觉表达。</p></div></a>
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/su7/') %>"><img loading="lazy" src="<%- url_for('/images/su7/paint-capri-blue-refined.webp') %>" alt="新一代小米 SU7 卡布里蓝产品视觉"><div class="card-overlay"><h3>小米SU7</h3><p>从容，有自己的速度。以驾驶者体验串联产品视觉、信息与交互。</p></div></a>
   </div></section>
   <section class="project-group"><header><div><span>02 / 3D & DIGITAL ASSET</span><h3>三维设计与数字资产</h3></div><p>从视觉品质、体验目标到生产标准，呈现三维内容在真实业务中的完整落地过程。</p></header><div class="featured-projects">
     <a class="featured-card featured-card-wide" href="<%- url_for('/projects/dewu/') %>"><img src="<%- url_for('/images/portfolio-hd/dewu_3d_cover.png') %>" alt="得物 3D 数字资产升级"><div class="card-overlay"><h3>得物 3D 数字资产升级</h3><p>建立自动化、规模化的 3D/AR 商品资产生产链路。</p></div></a>
     <a class="featured-card" href="<%- url_for('/projects/zstar/') %>"><img src="<%- url_for('/images/portfolio-hd/zstar-group.png') %>" alt="哔哩哔哩幻星项目"><div class="card-overlay"><h3>哔哩哔哩 · 幻星项目</h3><p>虚拟数字人产品、角色视觉与 3D 内容生产体系。</p></div></a>
   </div></section>
   <% } else if(mode === 'ai-product'){ %>
-  <section class="project-group"><header><div><span>01 / INDEPENDENT AI PRODUCTS</span><h3>AI 产品与独立开发</h3></div><p>从需求判断、体验设计到 AI 协作开发与上线，展示能够真实运行的产品闭环。</p></header><div class="featured-projects">
-    <a class="featured-card featured-card-meowbreak" href="<%- url_for('/projects/meowbreak/') %>"><img src="<%- url_for('/images/meowbreak/ai_product_MeowBreak_cover.png') %>" alt="喵息桌面闹钟"><div class="card-overlay"><h3>喵息桌面闹钟</h3><p>面向久坐办公场景，独立完成产品定义与体验设计，借助 AI 协作实现 Electron 客户端并上线 Microsoft Store。</p></div></a>
+  <section class="project-group"><header><div><span>01 / INDEPENDENT AI DEVELOPMENT</span><h3>AI独立开发</h3></div><p>从需求判断、体验设计到 AI 协作开发与上线，展示能够真实运行的产品闭环。</p></header><div class="featured-projects">
     <a class="featured-card featured-card-mimo" href="<%- url_for('/projects/mimo/') %>"><img loading="lazy" src="<%- url_for('/images/mimo/ai_product_dujidou_cover.png') %>" alt="嘟记豆背单词"><div class="card-overlay"><h3>嘟记豆背单词</h3><p>围绕碎片化记忆场景，独立完成学习机制、品牌与产品体验设计，并借助 AI 协作完成小程序开发。</p></div></a>
+    <a class="featured-card featured-card-meowbreak" href="<%- url_for('/projects/meowbreak/') %>"><img src="<%- url_for('/images/meowbreak/ai_product_MeowBreak_cover.png') %>" alt="喵息桌面闹钟"><div class="card-overlay"><h3>喵息桌面闹钟</h3><p>面向久坐办公场景，独立完成产品定义与体验设计，借助 AI 协作实现 Electron 客户端并上线 Microsoft Store。</p></div></a>
   </div></section>
-  <section class="project-group"><header><div><span>02 / AI-ENABLED PIPELINE</span><h3>AI 与流程创新</h3></div><p>在复杂商业项目中，把自动化技术转化为可执行、可验收、可规模化的生产能力。</p></header><div class="featured-projects featured-projects-single">
-    <a class="featured-card featured-card-wide" href="<%- url_for('/projects/dewu/') %>"><img src="<%- url_for('/images/portfolio-hd/dewu_3d_cover.png') %>" alt="得物自动化 3D 数字资产生产"><div class="card-overlay"><h3>得物 · AIGC 生产流程升级</h3><p>从技术验证到生产系统，建立自动化数字资产链路。</p></div></a>
+  <section class="project-group"><header><div><span>02 / AI-ENABLED WORKFLOWS</span><h3>AI流程提效</h3></div><p>将 AI 融入数字资产与虚拟角色生产，提升内容制作效率与交付质量。</p></header><div class="featured-projects">
+    <a class="featured-card" href="<%- url_for('/projects/zstar/') %>"><img src="<%- url_for('/images/portfolio-hd/zstar-group.png') %>" alt="哔哩哔哩幻星项目"><div class="card-overlay"><h3>哔哩哔哩 · 幻星项目</h3><p>虚拟数字人产品、角色视觉与 3D 内容生产体系。</p></div></a>
+    <a class="featured-card featured-card-wide" href="<%- url_for('/projects/dewu/') %>"><img src="<%- url_for('/images/portfolio-hd/dewu_3d_cover.png') %>" alt="得物 3D 数字资产升级"><div class="card-overlay"><h3>得物 3D 数字资产升级</h3><p>建立自动化、规模化的 3D/AR 商品资产生产链路。</p></div></a>
+  </div></section>
+  <section class="project-group"><header><div><span>03 / WEBSITE DESIGN</span><h3>网页设计</h3></div><p>以产品视觉、信息组织与交互体验，构建完整的网站呈现。</p></header><div class="featured-projects">
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/iphone17-pro/') %>"><img src="<%- url_for('/images/iphone17-pro/cover.png') %>" alt="iPhone 17 Pro 视觉设计"><div class="card-overlay"><h3>iPhone 17 Pro</h3><p>围绕产品造型、材质光影与发布场景，构建完整的旗舰手机视觉表达。</p></div></a>
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/su7/') %>"><img loading="lazy" src="<%- url_for('/images/su7/paint-capri-blue-refined.webp') %>" alt="新一代小米 SU7 卡布里蓝产品视觉"><div class="card-overlay"><h3>小米SU7</h3><p>从容，有自己的速度。以驾驶者体验串联产品视觉、信息与交互。</p></div></a>
   </div></section>
   <% } else { %>
-  <section class="project-group"><header><div><span>01 / INDEPENDENT PRODUCTS</span><h3>独立产品</h3></div><p>从产品定义、体验设计到 AI 协作开发与上线，展示独立完成产品闭环的能力。</p></header><div class="featured-projects">
+  <section class="project-group"><header><div><span>01 / PRODUCT VISUAL & EXPERIENCE</span><h3>产品视觉与体验</h3></div><p>从产品造型、材质光影到使用场景与交互体验，呈现以视觉驱动产品表达的完整能力。</p></header><div class="featured-projects">
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/iphone17-pro/') %>"><img src="<%- url_for('/images/iphone17-pro/cover.png') %>" alt="iPhone 17 Pro 视觉设计"><div class="card-overlay"><h3>iPhone 17 Pro</h3><p>围绕产品造型、材质光影与发布场景，构建完整的旗舰手机视觉表达。</p></div></a>
+    <a class="featured-card featured-card-product-render" href="<%- url_for('/projects/su7/') %>"><img loading="lazy" src="<%- url_for('/images/su7/paint-capri-blue-refined.webp') %>" alt="新一代小米 SU7 产品体验设计"><div class="card-overlay"><h3>小米SU7</h3><p>从容，有自己的速度。以驾驶者体验串联产品视觉、信息与交互。</p></div></a>
+  </div></section>
+  <section class="project-group"><header><div><span>02 / INDEPENDENT AI PRODUCTS</span><h3>AI 产品与独立开发</h3></div><p>从产品定义、体验设计到 AI 协作开发与上线，展示独立完成产品闭环的能力。</p></header><div class="featured-projects">
     <a class="featured-card featured-card-meowbreak" href="<%- url_for('/projects/meowbreak/') %>"><img src="<%- url_for('/images/meowbreak/ai_product_MeowBreak_cover.png') %>" alt="喵息桌面闹钟"><div class="card-overlay"><h3>喵息桌面闹钟</h3><p>面向久坐办公场景，独立完成产品定义与体验设计，借助 AI 协作实现 Electron 客户端并上线 Microsoft Store。</p></div></a>
     <a class="featured-card featured-card-mimo" href="<%- url_for('/projects/mimo/') %>"><img loading="lazy" src="<%- url_for('/images/mimo/ai_product_dujidou_cover.png') %>" alt="嘟记豆背单词"><div class="card-overlay"><h3>嘟记豆背单词</h3><p>围绕碎片化记忆场景，独立完成学习机制、品牌与产品体验设计，并借助 AI 协作完成小程序开发。</p></div></a>
   </div></section>
-  <section class="project-group"><header><div><span>02 / COMMERCIAL WORK</span><h3>商业项目</h3></div><p>围绕真实业务目标，展示 3D 内容体系、虚拟数字人、生产流程与跨团队协作经验。</p></header><div class="featured-projects">
+  <section class="project-group"><header><div><span>03 / COMMERCIAL & CONTENT SYSTEMS</span><h3>商业项目与内容体系</h3></div><p>围绕真实业务目标，展示 3D 内容体系、虚拟数字人、生产流程与跨团队协作经验。</p></header><div class="featured-projects">
     <a class="featured-card featured-card-wide" href="<%- url_for('/projects/dewu/') %>"><img src="<%- url_for('/images/portfolio-hd/dewu_3d_cover.png') %>" alt="得物 3D 数字资产升级"><div class="card-overlay"><h3>得物 3D 数字资产升级</h3><p>从人工生产走向自动化、规模化的 3D/AR 资产链路。</p></div></a>
     <a class="featured-card" href="<%- url_for('/projects/zstar/') %>"><img src="<%- url_for('/images/portfolio-hd/zstar-group.png') %>" alt="哔哩哔哩幻星项目"><div class="card-overlay"><h3>哔哩哔哩 · 幻星项目</h3><p>虚拟数字人产品研发与 IP 视觉体系。</p></div></a>
   </div></section>
@@ -58,7 +74,9 @@
 <section class="portfolio-section contact-section" id="contact">
   <div class="contact-copy"><p class="eyebrow">CONTACT / LET'S CREATE</p><h2>期待与你一起，<br>创造下一件好作品。</h2><p><%= role.contact %></p><div class="contact-focus"><% if(mode === '3d'){ %><span>3D VISUAL</span><span>DIGITAL ASSET</span><span>VIRTUAL IP</span><span>AIGC PIPELINE</span><% } else if(mode === 'ai-product'){ %><span>AI PRODUCT</span><span>UX DESIGN</span><span>AI DEVELOPMENT</span><span>RELEASE</span><% } else { %><span>3D VISUAL</span><span>AI PRODUCT</span><span>AIGC</span><span>DESIGN SYSTEM</span><% } %></div></div>
   <div class="contact-panel">
-    <div class="contact-links"><a href="tel:18049722581"><span>PHONE / 电话</span><strong>180 4972 2581</strong><i>↗</i></a><a href="mailto:334036981@qq.com"><span>EMAIL / 邮箱</span><strong>334036981@qq.com</strong><i>↗</i></a></div>
+    <div class="contact-links"><div class="contact-row"><a href="tel:18049722581"><span>PHONE / 电话</span><strong>180 4972 2581</strong></a><button class="contact-copy-button" type="button" data-copy="18049722581" aria-label="复制电话号码">复制</button></div><div class="contact-row"><a href="mailto:334036981@qq.com"><span>EMAIL / 邮箱</span><strong>334036981@qq.com</strong></a><button class="contact-copy-button" type="button" data-copy="334036981@qq.com" aria-label="复制邮箱地址">复制</button></div></div>
     <div class="wechat"><div class="wechat-copy"><span>WECHAT / 微信</span><strong>扫码添加微信</strong><p>添加时请简单备注合作方向，方便我及时了解你的需求。</p></div><div class="wechat-qr"><img src="<%- url_for('/images/portfolio-hd/wechat-personal-qr.png') %>" alt="覃保锟个人微信二维码"></div></div>
   </div>
 </section>
+
+

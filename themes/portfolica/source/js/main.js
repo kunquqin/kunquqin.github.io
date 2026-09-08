@@ -28,6 +28,7 @@
         initSmoothScroll(lenis);
         initFaq();
         initContactForm();
+        initContactCopy();
         initPortfolioEnhancements();
 
         if (motionOk) {
@@ -258,6 +259,38 @@
         });
     }
 
+    function initContactCopy() {
+        document.querySelectorAll('.contact-copy-button').forEach(function (button) {
+            var resetTimer;
+            button.addEventListener('click', async function () {
+                if (button.disabled) return;
+                button.disabled = true;
+                clearTimeout(resetTimer);
+                var copied = false;
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(button.dataset.copy);
+                        copied = true;
+                    }
+                } catch (_) { /* Try the legacy clipboard API below. */ }
+                if (!copied) {
+                    var field = document.createElement('textarea');
+                    field.value = button.dataset.copy;
+                    field.setAttribute('readonly', '');
+                    field.style.cssText = 'position:fixed;left:-9999px;top:0';
+                    document.body.appendChild(field);
+                    field.select();
+                    try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+                    field.remove();
+                    button.disabled = false;
+                    button.focus({preventScroll:true});
+                }
+                button.textContent = copied ? '已复制' : '复制失败';
+                button.disabled = false;
+                resetTimer = setTimeout(function () { button.textContent = '复制'; }, 2000);
+            });
+        });
+    }
     function initNav() {
         var toggle = document.getElementById('nav-toggle');
         var menu = document.getElementById('nav-menu');
@@ -394,12 +427,5 @@
             });
         }
 
-        var roleSwitcher = document.querySelector('.role-switcher:not(.hmi-role-switcher)');
-        if (roleSwitcher && !roleSwitcher.querySelector('[href="/hmi/"]')) {
-            var hmiLink = document.createElement('a');
-            hmiLink.href = '/hmi/';
-            hmiLink.textContent = '智能座舱';
-            roleSwitcher.appendChild(hmiLink);
-        }
     }
 })();

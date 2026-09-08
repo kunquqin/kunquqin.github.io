@@ -2,7 +2,7 @@
 <article class="ip17-product-page ip17-type-system">
   <header class="ip17-product-hero" id="ip17-top" data-color="orange" data-view="back">
     <div class="ip17-hero-sticky">
-    <a class="ip17-product-back" href="<%- url_for('/3d/#projects') %>">← 返回 3D 项目</a>
+    <a class="ip17-product-back" href="<%- url_for('/3d/#projects') %>">← <%= page.portfolio_home ? '返回作品集' : '返回 3D 项目' %></a>
     <div class="ip17-product-title"><p>iPhone 17 Pro</p><h1>强大，<br>由内而外。</h1></div>
     <figure class="ip17-hero-product" tabindex="0" aria-label="按住并拖动手机" aria-live="polite">
       <div class="ip17-hero-aura"></div>
@@ -18,7 +18,7 @@
     <div class="ip17-product-scroll">向下探索 <b>↓</b></div>
     </div>
   </header>
-  <nav class="ip17-product-nav" aria-label="产品章节"><a href="#design">设计</a><a href="#display">显示屏</a><a href="#camera">影像</a><a href="#performance">性能</a><a href="#battery">续航</a></nav>
+  <nav class="ip17-product-nav" aria-label="产品章节"><a href="#design" class="active">设计</a><a href="#display">显示屏</a><a href="#camera">影像</a><a href="#performance">性能</a><a href="#battery">续航</a></nav>
   <section class="ip17-product-intro" id="design"><h2>一体成型结构<br>更强大的 Pro。</h2><p class="ip17-copy">热锻铝金属一体成型机身，将性能、散热与握持感融入同一条连续曲线。横向延展的专业摄像平台，让内部空间得到更高效的利用。</p><figure class="ip17-design-stage ip17-unibody-visual"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/unibody.png') %>" alt="iPhone 17 Pro 一体成型机身结构展示"></figure></section>
   <section class="ip17-stat-band"><div><b>6.9</b><span>英寸<br>超视网膜 XDR 显示屏</span></div><div><b>120</b><span>Hz<br>ProMotion 自适应刷新率</span></div><div><b>3000</b><span>尼特<br>户外峰值亮度</span></div></section>
   <section class="ip17-display-section" id="display" data-sequence-state="idle">
@@ -110,6 +110,21 @@
   items.forEach((item) => observer.observe(item));
 })();
 (() => {
+  const links = Array.from(document.querySelectorAll('.ip17-product-nav a'));
+  const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  if (!links.length || !sections.length) return;
+  const setActive = section => links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + section.id));
+  links.forEach(link => link.addEventListener('click', event => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+    history.replaceState(null, '', link.getAttribute('href'));
+  }));
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target); }), { rootMargin: '-30% 0px -60%', threshold: 0 });
+  sections.forEach(section => observer.observe(section));
+})();
+(() => {
   const viewer = document.querySelector('.ip17-focal-viewer');
   if (!viewer) return;
   const image = viewer.querySelector('[data-focal-image]');
@@ -181,7 +196,7 @@
   }
   let ticking = false;
   const updateHero = () => {
-    const start = matchMedia('(max-width: 600px)').matches ? 60 : 70;
+    const start = parseFloat(getComputedStyle(sticky).top) || 0;
     const range = Math.max(1, hero.offsetHeight - sticky.offsetHeight);
     const progress = Math.max(0, Math.min(1, (start - hero.getBoundingClientRect().top) / range));
     hero.style.setProperty('--hero-progress', progress.toFixed(3));
@@ -269,7 +284,11 @@
 
   const preload = Promise.all(Array.from({ length: count }, (_, index) => new Promise((resolve) => {
     const image = new Image();
-    image.onload = image.onerror = () => resolve(image);
+    image.onload = async () => {
+      try { await image.decode(); } catch (_) {}
+      resolve(image);
+    };
+    image.onerror = () => resolve(image);
     image.src = frameUrl(index);
     frames[index] = image;
   }))).then(() => {
@@ -310,7 +329,7 @@
   let ticking = false;
   const updateScene = () => {
     const rect = section.getBoundingClientRect();
-    const topOffset = innerWidth <= 600 ? 60 : 70;
+    const topOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--project-nav-stack')) || 0;
     const visibleTrigger = innerHeight * .5;
     if (!played && rect.top <= visibleTrigger && rect.bottom > 0) playOnce();
     const scrollRange = Math.max(360, innerHeight * .72);

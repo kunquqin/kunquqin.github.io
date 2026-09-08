@@ -13,11 +13,8 @@
   });
   const links = [...page.querySelectorAll('.su7-nav-links a')];
   const sections = links.map(link => document.querySelector(link.hash));
-  const progress = page.querySelector('.su7-progress');
   let pending = false;
   function update() {
-    const scrollable = document.documentElement.scrollHeight - innerHeight;
-    progress.style.transform = `scaleX(${scrollable > 0 ? Math.min(1, Math.max(0, scrollY / scrollable)) : 0})`;
     let index = -1;
     sections.forEach((section, i) => { if (section.getBoundingClientRect().top <= innerHeight * .4) index = i; });
     links.forEach((link,i) => { if (i === index) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); });
@@ -26,6 +23,14 @@
   addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(update); } }, {passive:true});
   addEventListener('resize', update);
   update();
+  const safetyHero = page.querySelector('[data-safety-reveal]');
+  if (safetyHero) {
+    if (reduced || !('IntersectionObserver' in window)) safetyHero.classList.add('is-visible');
+    else new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      safetyHero.classList.add('is-visible');
+    }, {threshold:.25}).observe(safetyHero);
+  }
   const getCenteredIndex = (track, slides) => {
     const center = track.scrollLeft + track.clientWidth / 2;
     return slides.reduce((closest, slide, index) => {
@@ -200,14 +205,34 @@
         cabin.src = button.dataset.image;
         cabin.alt = button.dataset.name + '内饰';
         document.getElementById('su7-cabin-label').textContent = button.dataset.name;
+        document.getElementById('su7-cabin-description').textContent = button.dataset.description;
         page.querySelectorAll('.su7-swatch').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
       };
       preload.onerror = () => { if (request === imageRequest) document.getElementById('su7-cabin-label').textContent = '图片暂未加载，请重试'; };
       preload.src = button.dataset.image;
     });
   });
-  document.getElementById('su7-differences').addEventListener('change', event => {
+  const cabinPanorama = document.getElementById('su7-cabin-panorama-image');
+  let cabinSceneRequest = 0;
+  page.querySelectorAll('[data-cabin-scene]').forEach(button => {
+    button.addEventListener('click', () => {
+      if (button.getAttribute('aria-pressed') === 'true') return;
+      const request = ++cabinSceneRequest;
+      const preload = new Image();
+      preload.onload = () => {
+        if (request !== cabinSceneRequest) return;
+        cabinPanorama.src = preload.src;
+        cabinPanorama.alt = button.dataset.alt;
+        page.querySelectorAll('[data-cabin-scene]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        if (!reduced) cabinPanorama.animate([{opacity:.18},{opacity:1}], {duration:360,easing:'ease-out'});
+      };
+      preload.src = button.dataset.image;
+    });
+  });  document.getElementById('su7-differences').addEventListener('change', event => {
     page.querySelectorAll('.su7-common').forEach(row => { row.hidden = event.target.checked; });
     document.getElementById('su7-compare-status').textContent = event.target.checked ? '显示 5 项差异配置，已隐藏 2 项相同配置。' : '显示全部 7 项关键配置。完整配置与选装组合以官方为准。';
   });
 })();
+
+
+

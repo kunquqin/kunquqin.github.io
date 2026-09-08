@@ -6,8 +6,8 @@
     <title><% if (page.title && !is_home()) { %><%= page.title %> · <% } %><%= theme.name %> — <%= theme.title %></title>
     <%- partial('partial/head') %>
 </head>
-<body<% if(page.layout === 'su7'){ %> class="su7-body"<% } %>>
-    <% if(page.layout !== 'su7'){ %><%- partial('partial/header') %><% } %>
+<body<% if(page.portfolio_home){ %> data-portfolio-home="<%= page.portfolio_home %>"<% } %><% if(page.layout === 'su7'){ %> class="su7-body"<% } %>>
+    <%- partial('partial/header') %>
     <main class="site-main" id="main">
         <%- body %>
     </main>

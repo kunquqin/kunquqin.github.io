@@ -1,18 +1,15 @@
 <% const asset = name => url_for('/images/su7/' + name + (name.endsWith('.png') ? '' : '.webp')); %>
-<link rel="stylesheet" href="<%- url_for('/css/su7.css?v=20260906f') %>">
+<link rel="stylesheet" href="<%- url_for('/css/su7.css?v=20260907-safety') %>">
 <article class="su7-page" id="su7-top">
-  <nav class="su7-nav" aria-label="SU7 产品导航">
-    <a class="su7-wordmark" href="#su7-top">xiaomi <b>SU7</b><span>新一代</span></a>
-    <div class="su7-nav-links"><a href="#su7-design">设计</a><a href="#su7-drive">驾控</a><a href="#su7-range">续航</a><a href="#su7-cabin">座舱</a><a href="#su7-smart">智能</a><a href="#su7-safety">安全</a></div>
-    <a class="su7-nav-cta" href="#su7-versions">探索版本 <span>↗</span></a>
-    <div class="su7-progress" aria-hidden="true"></div>
-  </nav>
   <header class="su7-hero">
     <img class="su7-hero-image" src="<%- asset('su7-kaneshiro-hero-refined') %>" alt="卡布里蓝新一代小米 SU7 与人物主视觉" fetchpriority="high" width="2752" height="1520">
     <div class="su7-hero-copy"><h1>新一代 SU7</h1><p>好看&emsp;好开&emsp;舒适&emsp;安全</p></div>
     <a class="su7-back" href="<%- url_for('/3d/#projects') %>">← 返回作品集</a>
   </header>
-  <div class="su7-opening su7-wrap"><p>优雅设计<br><strong>从容驾控</strong></p><div>安全与智能全面进阶</div><a href="#su7-versions">版本对比 <span>↗</span></a></div>
+  <nav class="su7-nav" aria-label="SU7 产品导航">
+    <div class="su7-nav-links"><a href="#su7-design">设计</a><a href="#su7-drive">驾控</a><a href="#su7-range">续航</a><a href="#su7-cabin">座舱</a><a href="#su7-smart">智能</a><a href="#su7-safety">安全</a></div>
+  </nav>
+  <div class="su7-opening su7-wrap"><p>优雅设计<br><strong>从容驾控</strong></p><div>安全与智能全面进阶</div><a class="su7-nav-cta" href="#su7-versions">版本对比 <span>↗</span></a></div>
 
   <section id="su7-design" class="su7-section su7-design">
     <header class="su7-heading su7-wrap"><div><h2>一眼心动&emsp;耐看如初</h2></div></header>
@@ -46,31 +43,67 @@
   </section>
 
   <section id="su7-drive" class="su7-section su7-drive">
-    <div class="su7-wrap su7-heading"><div><h2>精准稳定 自信从容</h2></div></div>
-    <figure class="su7-drive-image"><img loading="lazy" src="<%- asset('drive-clean') %>" alt="新一代 SU7 外观与运动姿态"><figcaption class="su7-video-label">V02 · 行驶镜头预留</figcaption></figure>
+    <figure class="su7-drive-image"><img loading="lazy" src="<%- asset('drive-coastal-motion') %>?v=20260907-details" alt="卡布里蓝 SU7 沿海岸公路行驶的创意视觉" width="1844" height="853"><header class="su7-drive-title"><h2>精准稳定 自信从容</h2></header></figure>
     <div class="su7-drive-facts su7-wrap"><div><strong>3.08<small>s</small></strong><span>Max 版 · 0–100 km/h 加速¹</span></div><div><strong>508<small>kW</small></strong><span>Max 版 · 峰值功率</span></div><div><strong>V6s <small>Plus</small></strong><span>小米超级电机</span></div></div>
     <div class="su7-chassis su7-wrap"><span>小米蛟龙底盘</span><p>Pro Max 版配备闭式双腔空气弹簧与 CDC® 阻尼可变减振器</p></div>
   </section>
 
   <section id="su7-range" class="su7-section su7-range su7-wrap">
     <header class="su7-heading"><div><h2>超长续航</h2></div></header>
-    <div class="su7-range-layout"><div class="su7-range-stat"><span>Pro 版 CLTC 续航里程²</span><strong>902<small>km</small></strong><div class="su7-range-rule"></div><p>全系全域碳化硅高压平台</p><div class="su7-voltage"><span><b>752 V</b>标准版 Pro 峰值电压</span><span><b>897 V</b>Max 峰值电压</span></div></div><figure><img loading="lazy" src="<%- asset('range-clean') %>" alt="SU7 停靠在开阔的海岸公路"><figcaption>路途更远 从容随行</figcaption></figure></div>
+    <div class="su7-range-layout"><div class="su7-range-stat"><span>Pro 版 CLTC 续航里程²</span><strong>902<small>km</small></strong><div class="su7-range-rule"></div><p>全系全域碳化硅高压平台</p><div class="su7-voltage"><span><b>752 V</b>标准版 Pro 峰值电压</span><span><b>897 V</b>Max 峰值电压</span></div></div><figure><img loading="lazy" src="<%- asset('range-long-range') %>" alt="新一代 SU7 超长续航场景"><figcaption>路途更远 从容随行</figcaption></figure></div>
     <p class="su7-note">² CLTC 续航为标准工况测试数据，实际续航受气温、路况、驾驶习惯和车辆配置等因素影响。不同版本数据请见下方对比。</p>
   </section>
 
   <section id="su7-cabin" class="su7-section su7-cabin">
     <header class="su7-heading su7-wrap"><div><h2>精致豪华</h2></div></header>
-    <figure class="su7-cabin-panorama"><img loading="lazy" src="<%- asset('cabin') %>" alt="SU7 Max 驾驶座舱全景" width="1916" height="1078"><figcaption class="su7-video-label">V03 · 座舱镜头预留</figcaption></figure>
-    <div class="su7-cabin-grid su7-wrap"><div class="su7-cabin-selector"><figure><img id="su7-cabin-image" loading="lazy" src="<%- asset('cabin-beige') %>" alt="砂陶米内饰" width="2000" height="1125"></figure><div class="su7-color-row"><span id="su7-cabin-label" aria-live="polite">砂陶米</span><div role="group" aria-label="精选内饰配色"><% [{file:'cabin-beige',name:'砂陶米',color:'#c8bba3'},{file:'cabin-red',name:'暮光红',color:'#833a37'},{file:'cabin-black',name:'暗夜黑',color:'#333738'}].forEach((c,i)=>{ %><button type="button" class="su7-swatch" aria-label="<%= c.name %>" aria-pressed="<%= i === 0 %>" data-image="<%- asset(c.file) %>" data-name="<%= c.name %>" style="--swatch:<%= c.color %>"></button><% }) %></div></div><p class="su7-note">座舱图片以 Max 车型为例</p></div><div class="su7-comfort"><p class="su7-eyebrow">COMFORT, IN EVERY DETAIL</p><h3>前排座椅 全面升级</h3><div><b>18 向</b><p>主驾运动座椅调节</p></div><div><b>10 点式</b><p>主驾座椅按摩</p></div><p>全系标配四门夹层静音玻璃</p></div></div>
+    <figure class="su7-cabin-panorama"><img id="su7-cabin-panorama-image" loading="lazy" src="<%- asset('cabin-coastal-day') %>" alt="白天海天沙滩中的 SU7 驾驶座舱" width="1672" height="941"><figcaption class="su7-cabin-time-switch" role="group" aria-label="座舱日夜场景"><button type="button" aria-label="白天海天沙滩" aria-pressed="true" data-cabin-scene="day" data-image="<%- asset('cabin-coastal-day') %>" data-alt="白天海天沙滩中的 SU7 驾驶座舱">☀</button><button type="button" aria-label="夜晚星空海洋" aria-pressed="false" data-cabin-scene="night" data-image="<%- asset('cabin-coastal-night') %>" data-alt="夜晚星空海洋中的 SU7 驾驶座舱">☾</button></figcaption></figure>
+    <div class="su7-cabin-grid su7-wrap"><div class="su7-cabin-selector"><figure><img id="su7-cabin-image" loading="lazy" src="<%- asset('cabin-seat-sand-beige') %>" alt="砂陶米内饰" width="1672" height="941"></figure><div class="su7-color-row"><span id="su7-cabin-label" aria-live="polite">砂陶米</span><div role="group" aria-label="精选内饰配色"><% [{file:'cabin-seat-sand-beige',name:'砂陶米',color:'#c8bba3',description:'温润浅色调，让座舱更显通透舒展。'},{file:'cabin-seat-twilight-red',name:'暮光红',color:'#833a37',description:'浓郁红调注入鲜明而克制的运动氛围。'},{file:'cabin-seat-night-black',name:'暗夜黑',color:'#333738',description:'深邃暗色收拢视觉，让驾驶空间更显沉稳。'},{file:'cabin-seat-mist-purple',name:'迷雾紫',color:'#796078',description:'柔和紫灰与细腻材质交融，带来轻盈安静的座舱感受。'}].forEach((c,i)=>{ %><button type="button" class="su7-swatch" aria-label="<%= c.name %>" aria-pressed="<%= i === 0 %>" data-image="<%- asset(c.file) %>" data-name="<%= c.name %>" data-description="<%= c.description %>" style="--swatch:<%= c.color %>"></button><% }) %></div></div><p id="su7-cabin-description" class="su7-note">温润浅色调，让座舱更显通透舒展。</p></div><div class="su7-comfort"><p class="su7-eyebrow">COMFORT, IN EVERY DETAIL</p><h3>前排座椅 全面升级</h3><div><b>18 向</b><p>主驾运动座椅调节</p></div><div><b>10 点式</b><p>主驾座椅按摩</p></div><p>全系标配四门夹层静音玻璃</p></div></div>
   </section>
 
-  <section id="su7-smart" class="su7-section su7-smart su7-wrap">
-    <header class="su7-heading"><div><h2>高阶进化</h2></div></header>
-    <div class="su7-smart-grid"><div class="su7-connect"><p class="su7-eyebrow">XIAOMI HYPEROS</p><h3>小米澎湃智能座舱</h3><img loading="lazy" src="<%- asset('smart') %>" alt="小米汽车与 iPhone 互联功能官方示意"><p>手车家全生态互联</p></div><div class="su7-assist"><p class="su7-eyebrow">DRIVING ASSISTANCE</p><h3>满配辅助驾驶硬件</h3><div class="su7-sensor-art" aria-hidden="true"><i></i><i></i><i></i><span>700<small>TOPS</small></span></div><p>激光雷达 4D 毫米波雷达 700 TOPS 算力</p><span class="su7-diagram-note">辅助驾驶不能替代驾驶员</span></div></div>
-    <p class="su7-note">³ 功能支持范围以官方说明、手机型号与系统版本为准。辅助驾驶不能替代驾驶员，使用时应持续观察路况，随时准备控制车辆。V04 · 功能演示视频待评估。</p>
+  <section id="su7-smart" class="su7-section su7-intelligence">
+    <div class="su7-wrap">
+      <header class="su7-intelligence-heading">
+        <div><p class="su7-eyebrow">XIAOMI HYPEROS</p><h2>小米澎湃智能座舱</h2></div>
+        <p>从一句话的回应 到一路上的连接<br>让熟悉的数字生活 自然延伸进座舱</p>
+      </header>
+      <figure class="su7-intelligence-visual">
+        <img loading="lazy" src="<%- asset('smart-cabin-coastal') %>" width="1672" height="941" alt="蓝调海岸环境中的 SU7 智能座舱创意视觉，中控屏与环绕氛围灯亮起">
+        <figcaption><span>人 · 车 · 家</span><p>连接日常 所享随行</p></figcaption>
+      </figure>
+      <div class="su7-intelligence-features">
+        <article class="su7-intelligence-feature" tabindex="0">
+          <div class="su7-feature-art su7-voice-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span>小爱同学</span></div>
+          <span class="su7-feature-kicker">01 / 自然交互</span><h3>常用操作 开口即达</h3><p>调节车内设置、表达出行需求，交给超级小爱。支持一句话多指令，让操作更连贯。</p>
+          <div class="su7-feature-tags"><span>语音控车</span><span>连续指令</span><span>小爱陪伴</span></div>
+        </article>
+        <article class="su7-intelligence-feature" tabindex="0">
+          <div class="su7-feature-art su7-device-art" aria-hidden="true"><span class="su7-device-phone"><i></i></span><span class="su7-device-link">···</span><span class="su7-device-screen"><i></i><i></i><i></i></span></div>
+          <span class="su7-feature-kicker">02 / 手车互联</span><h3>从手机 到座舱</h3><p>手机、车机与车内屏幕协同连接，让熟悉的使用习惯随行。iPhone 用户也能便捷查看车况、远程控车。</p>
+          <div class="su7-feature-tags"><span>多屏协同</span><span>远程控车</span><span>iOS 兼容</span></div>
+        </article>
+        <article class="su7-intelligence-feature" tabindex="0">
+          <div class="su7-feature-art su7-home-art" aria-hidden="true"><svg viewBox="0 0 240 110" fill="none"><path d="M72 55 120 18 168 55V98H72Z"/><path d="M111 98V69H131V98M87 55H101V69H87Z"/><path class="su7-home-signal" d="M32 59Q16 76 32 93M45 66Q36 76 45 86M194 59Q210 76 194 93M181 66Q190 76 181 86"/></svg></div>
+          <span class="su7-feature-kicker">03 / 车家互联</span><h3>车内车外 生活相连</h3><p>借助澎湃 OS 连接智能家居与车载设备，从出门到回家，让车成为日常生活的一部分。</p>
+          <div class="su7-feature-tags"><span>智能家居</span><span>生态配件</span><span>场景联动</span></div>
+        </article>
+      </div>
+      <aside class="su7-intelligence-assist"><div><span class="su7-feature-kicker">辅助驾驶</span><h3>感知更全面 出行更从容</h3></div><div class="su7-intelligence-specs"><span><b>激光雷达</b>环境感知</span><span><b>4D 毫米波雷达</b>多维探测</span><span><b>700 <small>TOPS</small></b>辅助驾驶算力</span></div></aside>
+      <p class="su7-intelligence-note">主视觉为创意演绎。功能支持范围取决于车型、设备与系统版本，以官方说明为准。辅助驾驶不能替代驾驶员，请持续观察路况，随时准备控制车辆。</p>
+    </div>
   </section>
 
-  <section id="su7-safety" class="su7-section su7-safety"><div class="su7-wrap"><header class="su7-heading"><div><h2>安全是基础和前提</h2></div></header><div class="su7-safety-grid"><figure><img loading="lazy" src="<%- asset('safety-clean') %>" alt="官网展示的 SU7 铠甲笼式钢铝混合车身结构"><figcaption>铠甲笼式 钢铝混合车身</figcaption></figure><div class="su7-safety-details"><details open><summary><span>01</span> 车身防护 <i>+</i></summary><p>2200 MPa 小米超强钢四门防撞梁</p></details><details><summary><span>02</span> 乘员保护 <i>+</i></summary><p>全系升级 9 个安全气囊</p></details><details><summary><span>03</span> 电池安全 <i>+</i></summary><p>高压绝缘防护多达 17 层</p></details></div></div></div></section>
+  <section id="su7-safety" class="su7-section su7-safety"><figure class="su7-safety-hero" data-safety-reveal><img loading="lazy" src="<%- asset('safety-vehicle-frame') %>" alt="SU7 铠甲笼式钢铝混合车身结构"><figcaption class="su7-safety-copy"><p class="su7-eyebrow">SAFETY FIRST</p><h2>安全 是每一次出发的前提</h2><p>高于一切的守护，不留妥协余地。</p></figcaption></figure><div class="su7-wrap"><div class="su7-protection-grid">
+      <% [
+        {id:'01',name:'车身防护',file:'body',title:'以坚实结构 承载每次出发',stat:'2200',unit:'MPa',label:'小米超强钢',copy:'钢铝混合车身与笼式结构协同防护，四门防撞梁及内嵌式防滚架采用小米超强钢。',alt:'银色车身框架与紫色强化部位创意示意'},
+        {id:'02',name:'乘员保护',file:'occupant',title:'周全守护 每一个座位',stat:'9',unit:'个',label:'全系安全气囊',copy:'前排、侧面与侧气帘共同构成乘员防护。配合正确佩戴安全带，为车内乘员提供保护。',alt:'座舱剖视与展开气囊创意示意'},
+        {id:'03',name:'电池安全',file:'battery',title:'层层防护 安心随行',stat:'17',unit:'层',label:'高压绝缘防护',copy:'从高压绝缘到电池包物理防护，兼顾内外。底部防护涂层与防刮底横梁进一步加强保护。',alt:'电池包外壳与模块分层创意示意'}
+      ].forEach(item => { %>
+      <article class="su7-protection-card" tabindex="0">
+        <div class="su7-protection-image"><img loading="lazy" src="<%- asset('safety-' + item.file + '-protection') %>" alt="<%= item.alt %>" width="1672" height="941"></div>
+        <div class="su7-protection-content"><div class="su7-protection-label"><span><%= item.id %></span><%= item.name %></div><h3><%= item.title %></h3><p><%= item.copy %></p><div class="su7-protection-stat"><strong><%= item.stat %><small><%= item.unit %></small></strong><span><%= item.label %></span></div></div>
+      </article>
+      <% }) %>
+    </div><p class="su7-note">图片为安全结构创意示意，不代表实际零部件布局。配置与功能以官方说明为准。安全气囊需配合安全带使用。</p></div></section>
 
   <section id="su7-versions" class="su7-section su7-versions su7-wrap"><header class="su7-heading"><div><h2>版本对比</h2></div><div><label class="su7-diff-toggle"><input type="checkbox" id="su7-differences"> 只看差异</label></div></header>
     <div class="su7-table-scroll" tabindex="0" role="region" aria-label="SU7 版本配置对比，可横向滚动"><table><caption>新一代 SU7 关键参数对比</caption><thead><tr><th scope="col">选择你的版本</th><th scope="col">SU7<small>标准版</small></th><th scope="col">SU7 Pro<small>更长的旅程</small></th><th scope="col">SU7 Max<small>更尽兴的驾驭</small></th></tr></thead><tbody>
@@ -82,8 +115,16 @@
       <tr class="su7-common"><th scope="row">辅助驾驶算力</th><td>700 <small>TOPS</small></td><td>700 <small>TOPS</small></td><td>700 <small>TOPS</small></td></tr>
       <tr class="su7-common"><th scope="row">主驾座椅</th><td>18 向调节 / 10 点按摩</td><td>18 向调节 / 10 点按摩</td><td>18 向调节 / 10 点按摩</td></tr>
     </tbody></table></div><p id="su7-compare-status" class="su7-note" aria-live="polite">显示全部 7 项关键配置。完整配置与选装组合以官方为准。</p>
-    <div class="su7-finale"><div><p class="su7-eyebrow">MAKE EVERY JOURNEY YOURS</p><h3>开始选配</h3></div><div><a class="su7-button" href="https://www.xiaomiev.com/xiaomi/su7" target="_blank" rel="noopener noreferrer">前往官网 了解与试驾 <span>↗</span></a><a class="su7-text-link" href="<%- url_for('/3d/#projects') %>">返回 3D 作品集 <span>↗</span></a></div></div>
   </section>
-  <footer class="su7-footer su7-wrap"><div><strong>SU7 / CONCEPT STUDY</strong><a href="#su7-top">回到顶部 ↑</a></div><p>独立产品体验网站概念设计，非小米官方网站。产品图片包含小米官网参考素材与基于官方车型生成的创意视觉；页面结构、排版与交互为本项目设计。视频位置已预留，当前不播放视频。</p><p>¹ 加速数据为官方测试条件下结果。² CLTC 数据不代表实际道路续航。⁴ 充电时间为官方指定条件下 SOC 10%–80% 测试结果，实际表现受环境、电池状态及充电设备影响。页面数据核验于 2026.09.04，最终配置、条件与功能请查阅 <a href="https://www.xiaomiev.com/xiaomi/su7" target="_blank" rel="noopener noreferrer">小米官方产品说明 ↗</a>。</p><span>DESIGN EXPLORATION · 2026</span></footer>
+  <footer class="su7-footer su7-wrap"><div><strong>SU7 · 概念设计</strong><a href="#su7-top">回到顶部 ↑</a></div><p>独立设计作品，非小米官方网站。图片包含官方参考素材与 AI 创意视觉。</p><p>¹ 加速、² CLTC 续航及 ⁴ 10%–80% 充电时间为官方测试数据，实际表现因使用条件而异。配置与功能以 <a href="https://www.xiaomiev.com/su7" target="_blank" rel="noopener noreferrer">官方说明 ↗</a> 为准。</p></footer>
 </article>
 <script defer src="<%- url_for('/js/su7.js?v=20260906b') %>"></script>
+
+
+
+
+
+
+
+
+
