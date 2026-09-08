@@ -3,7 +3,7 @@ setlocal
 cd /d "%~dp0"
 
 set "PAGE_PATH=%~1"
-if not defined PAGE_PATH set "PAGE_PATH=/"
+if not defined PAGE_PATH set "PAGE_PATH=/alljobs/"
 set "LOCAL_URL=http://localhost:4000%PAGE_PATH%"
 
 where npm.cmd >nul 2>nul

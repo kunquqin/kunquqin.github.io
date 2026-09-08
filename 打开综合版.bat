@@ -1,2 +1,2 @@
 @echo off
-call "%~dp0portfolio-launcher.bat" "/"
+call "%~dp0portfolio-launcher.bat" "/alljobs/"

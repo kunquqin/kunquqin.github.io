@@ -1,4 +1,4 @@
 @echo off
-call "%~dp0portfolio-launcher.bat" "/"
+call "%~dp0portfolio-launcher.bat" "/alljobs/"
 start "" "http://localhost:4000/3d/"
 start "" "http://localhost:4000/ai-native-builder/?preview=1"

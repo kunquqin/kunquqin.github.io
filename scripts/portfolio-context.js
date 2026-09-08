@@ -21,16 +21,20 @@ hexo.extend.generator.register('builder-projects', function (locals) {
 });
 
 hexo.extend.filter.register('after_render:html', function (html) {
-  if (!html.includes('data-portfolio-home="' + home + '"')) return html;
+  const isBuilder = html.includes('data-portfolio-home="' + home + '"');
   return html.replace(/(<a\b[^>]*\bhref=")([^"]*)(")/g, function (match, before, href, after) {
     // Preview role selectors are intentionally outside the scoped navigation.
     if (before.includes('data-role-switch')) return match;
     if (!href.startsWith('/') || href.startsWith('//')) return match;
     const url = new URL(href, 'https://portfolio.invalid');
+    if (!isBuilder) {
+      if (url.pathname !== '/' && url.pathname !== '/index.html') return match;
+      return before + '/alljobs/' + url.search + url.hash + after;
+    }
     const project = url.pathname.match(/^\/projects\/([^/]+)\/(?:index\.html)?$/);
     if (project && projects.includes(project[1])) {
       url.pathname = home + 'projects/' + project[1] + '/';
-    } else if (['/', '/index.html', '/3d/', '/ai-product/'].includes(url.pathname)) {
+    } else if (['/', '/index.html', '/alljobs/', '/3d/', '/ai-product/'].includes(url.pathname)) {
       url.pathname = home;
     } else if (url.pathname === '/projects/' || url.pathname === '/about/') {
       url.hash = url.hash || (url.pathname === '/projects/' ? '#projects' : '#about');
