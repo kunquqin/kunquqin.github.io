@@ -1,0 +1,65 @@
+.ep-case{--ep-gutter:clamp(24px,5vw,80px);--ep-blue:#52c9f5}
+.ep-case .rb-heading{padding-inline:var(--ep-gutter)}
+.ep-case .rb-heading p,.ep-case .rb-panel header>div>p:first-child{color:var(--ep-blue)}
+.ep-case .rb-index{--dw-teal:var(--ep-blue)}
+.ep-wide,.ep-stack,.ep-posters{margin-inline:var(--ep-gutter)}
+.ep-case figure{margin-block:0;min-width:0}
+.ep-case figure img{display:block;width:100%;height:auto}
+.ep-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:56px var(--ep-gutter);align-items:start}
+.ep-intro>div>span,.ep-case figcaption>span{display:block;font-size:11px;line-height:1.6;letter-spacing:1.5px;color:var(--ep-blue)}
+.ep-intro h2{margin-top:16px;font-size:clamp(24px,2.5vw,36px);line-height:1.5}
+.ep-intro p{font-size:14px;line-height:1.9;color:#aaa}
+.ep-intro p+p{margin-top:16px}
+.ep-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.ep-tags span{padding:6px 12px;border:1px solid #28363c;border-radius:4px;color:#a4c7d3;font-size:12px}
+.ep-case .rb-panel header{padding:64px var(--ep-gutter) 32px}
+.ep-case .rb-description{max-width:760px}
+.epo-case .rb-description{max-width:none;text-wrap:pretty}
+.epo-case figcaption{text-align:center}
+#ep-posters .rb-description{max-width:none;text-wrap:pretty}
+.ep-posters figcaption{text-align:center}
+.ep-stack{display:grid;gap:40px}
+.ep-stack>figure,.ep-posters>figure{margin-inline:0}
+.ep-case figcaption{padding-top:20px}
+.ep-case figcaption h3{margin:8px 0 0;font-weight:500;font-size:20px;line-height:1.5}
+.ep-posters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ep-case .ep-mockup{margin-top:40px}
+.ep-case .rb-panel:last-of-type{padding-bottom:56px}
+.ep-case .rb-footer{padding-inline:var(--ep-gutter);border-top:1px solid #222}
+.ep-case a:focus-visible{outline-color:var(--ep-blue)}
+.ep-case .rb-footer a:hover{color:var(--ep-blue)}
+@media(max-width:700px){
+ .ep-case{--ep-gutter:20px}
+ .ep-intro{grid-template-columns:1fr;gap:24px;padding:32px var(--ep-gutter)}
+ .ep-intro p,.ep-case .rb-description{font-size:13px}
+ .ep-case .rb-panel header{padding:40px var(--ep-gutter) 24px}
+ .ep-stack{gap:32px}
+ .ep-posters{grid-template-columns:1fr;gap:32px}
+ .ep-case figcaption{padding-top:16px}
+ .ep-case figcaption h3{font-size:18px}
+ .ep-case .rb-index{padding-inline:8px}
+ .ep-case .rb-index a{padding-inline:10px;font-size:12px;gap:5px;white-space:nowrap}
+ .ep-case .rb-index a span{display:none}
+ .ep-case .rb-panel:last-of-type{padding-bottom:32px}
+}
+
+.ep-poster-open{position:relative;display:block;width:100%;padding:0;border:0;background:transparent;overflow:hidden;cursor:zoom-in}
+.ep-poster-open img{transition:transform .45s cubic-bezier(.22,1,.36,1),filter .45s}
+.ep-poster-open>span{position:absolute;right:16px;bottom:16px;display:grid;place-items:center;width:36px;height:36px;border:1px solid #ffffff55;border-radius:50%;background:#0009;color:#fff;font-size:20px;opacity:0;transition:opacity .25s}
+.ep-poster-open:focus-visible{outline:2px solid var(--ep-blue);outline-offset:5px}
+.ep-poster-open:focus-visible>span{opacity:1}
+@media(hover:hover){.ep-poster-open:hover img{transform:scale(1.025);filter:brightness(1.06)}.ep-poster-open:hover>span{opacity:1}}
+.ep-lightbox{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:64px 64px 48px;border:0;background:#000e;color:#fff}
+.ep-lightbox::backdrop{background:#000c;backdrop-filter:blur(12px)}
+.ep-lightbox[open]{display:flex;align-items:center;justify-content:center}
+.ep-lightbox figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:16px;max-width:100%;max-height:100%}
+.ep-lightbox figure img{display:block;max-width:100%;max-height:calc(100dvh - 160px);width:auto;height:auto;object-fit:contain}
+.ep-lightbox figcaption{font-size:14px;color:#ccc;text-align:center}
+.ep-lightbox button{position:absolute;width:44px;height:44px;border:1px solid #ffffff40;border-radius:50%;background:#171717;color:#fff;cursor:pointer;font-size:30px;line-height:1}
+.ep-lightbox button:hover{background:#333}
+.ep-lightbox button:focus-visible{outline:2px solid #52c9f5;outline-offset:3px}
+.ep-lightbox-close{top:16px;right:20px}
+.ep-lightbox-prev{left:16px;top:calc(50% - 22px)}
+.ep-lightbox-next{right:16px;top:calc(50% - 22px)}
+@media(max-width:700px){.ep-lightbox{padding:72px 16px 88px}.ep-lightbox figure img{max-height:calc(100dvh - 200px)}.ep-lightbox-prev{top:auto;bottom:20px;left:calc(50% - 60px)}.ep-lightbox-next{top:auto;bottom:20px;right:calc(50% - 60px)}}
+@media(prefers-reduced-motion:reduce){.ep-poster-open img,.ep-poster-open>span{transition:none}}

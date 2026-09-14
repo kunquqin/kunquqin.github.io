@@ -1,18 +1,21 @@
-<% const slides = [
+<% const isBrand = page.portfolio_mode === 'brand'; const isVisual = ['visual', '3d'].includes(page.portfolio_mode) || isBrand; const slides = [
   {name:'嘟记豆', title:'学习，从一点好奇开始。', lead:'从单词学习体验、角色设计到 AI 协作开发，把一个小想法做成可以使用的背单词产品。', image:'/images/mimo/ai_product_dujidou_cover.png', slug:'mimo', cardTitle:'嘟记豆背单词'},
   {name:'喵息', title:'谁说闹钟不懂你？', lead:'给忙碌的日常留一点休息时间。独立完成桌面闹钟的产品设计、AI 协作开发与上线，让提醒更贴合工作节奏。', image:'/images/meowbreak/ai_product_MeowBreak_cover.png', slug:'meowbreak', cardTitle:'喵息桌面闹钟'},
   {name:'幻星', title:'有个性的数字人', lead:'从角色形象到内容体验，参与虚拟数字人产品与视觉体系建设，让想象中的人物有自己的样子。', image:'/images/portfolio-hd/zstar-group.png', slug:'zstar', cardTitle:'哔哩哔哩 · 幻星项目'},
-]; %>
+]; if(isVisual) slides.forEach(function(slide, i){ Object.assign(slide, (page.portfolio_mode === '3d' ? site.data.three_d : site.data.visual_designer).slides[i]); }); if(page.portfolio_mode === 'visual') {
+  Object.assign(slides[0], {name:'雷朋',title:'雷朋×天猫双十一主视觉',lead:'将雷朋眼镜与写实猫头结合，以三维视觉呈现品牌联名创意，延展至线上店铺与线下广告。',image:'/images/rayban-tmall/cover.webp',slug:'rayban-tmall',cardTitle:'雷朋×天猫双十一主视觉'});
+  Object.assign(slides[1], {name:'九州缥缈录',title:'九州的造境者',lead:'以六位主创的创作分工为线索，将城阙、棋局、楼船与铁甲化为黑金风格的先行海报。',image:'/images/novoland/creators-textless-composite.webp?v=20260914-ps',slug:'novoland',cardTitle:'九州缥缈录×视觉设计'});
+} if(isBrand) slides.unshift({name:'Meshy',title:'想象，有了形状。',lead:'以 Meshy 为对象的自主品牌传播提案。从产品价值、创意方向到视觉体系，让想法走出平面，成为可感知的形状。',image:'/images/meshy/ideas-take-shape.webp',slug:'meshy',cardTitle:'Meshy · 品牌创意提案'}); %>
 <section class="builder-hero" id="home" aria-label="精选作品轮播" aria-roledescription="轮播">
   <% slides.forEach(function(slide, i){ %><div class="builder-glow builder-glow-<%= slide.slug %><%= i === 0 ? ' is-active' : '' %>" aria-hidden="true"></div><% }); %>
   <div class="builder-copy">
-    <nav hidden class="role-switcher" aria-label="作品集方向"><a data-role-switch href="<%- url_for('/alljobs/') %>">综合</a><a data-role-switch href="<%- url_for('/3d/') %>">3D 设计</a><a data-role-switch class="active" href="<%- url_for('/ai-native-builder/') %>">AI Native Builder</a></nav>
-    <div class="builder-identity"><strong>覃保锟</strong><span>AI Native Builder · 设计师</span></div>
+    <%- partial('partial/role-switcher') %>
+    <div class="builder-identity"><strong>覃保锟</strong><span><%= page.portfolio_mode === '3d' ? '3D 设计' : isBrand ? '品牌与创意设计师 · 3D / AI' : isVisual ? '视觉设计师 · 3D / AIGC' : 'AI Native Builder · 设计师' %></span></div>
     <div class="builder-stories">
       <% slides.forEach(function(slide, i){ %>
       <div class="builder-story<%= i === 0 ? ' is-active' : '' %>" <%- i ? 'inert aria-hidden="true"' : '' %>>
         <span class="builder-project-tag"><%= slide.cardTitle %></span>
-        <<%= i === 0 ? 'h1' : 'h2' %>><% if(i === 0){ %>学习，<br>从一点好奇开始。<% } else { %><%= slide.title %><% } %></<%= i === 0 ? 'h1' : 'h2' %>>
+        <<%= i === 0 ? 'h1' : 'h2' %>><% if(i === 0 && isBrand){ %>想象，<br>有了形状。<% } else if(i === 0 && !isVisual){ %>学习，<br>从一点好奇开始。<% } else { %><%= slide.title %><% } %></<%= i === 0 ? 'h1' : 'h2' %>>
         <p class="builder-lead"><%= slide.lead %></p>
         <div class="hero-actions"><a class="button button-primary" href="<%- url_for('/projects/' + slide.slug + '/') %>">查看项目 <i>↗</i></a><a class="button button-ghost" href="#projects">更多作品</a></div>
       </div>

@@ -1,0 +1,36 @@
+.vx-case{--vx-gutter:clamp(24px,5vw,80px);--vx-gap:24px}
+.vx-case .rb-heading{padding-inline:var(--vx-gutter)}
+.vx-case .rb-heading p,.vx-case .rb-panel header>div>p:first-child{color:#d4bb82}
+.vx-case .rb-index{--dw-teal:#d4bb82}
+.vx-case>.rb-image{margin-inline:var(--vx-gutter)}
+.vx-intro{display:grid;grid-template-columns:1fr 1fr;gap:var(--vx-gap);padding:48px var(--vx-gutter);align-items:start}
+.vx-intro span,.vx-case figcaption>span{display:block;font-size:11px;line-height:1.5;letter-spacing:1.5px;color:#d4bb82}
+.vx-intro h2{font-size:clamp(24px,2.5vw,36px);line-height:1.5;margin-top:16px}
+.vx-intro>p{margin-top:32px;max-width:56ch;font-size:14px;line-height:1.9;color:#a9a9a9}
+.vx-case .rb-panel header{padding:64px var(--vx-gutter) 32px}
+.vx-case .rb-panel h2{margin-top:16px;line-height:1.45}
+.vx-case .rb-description{margin-top:16px;max-width:760px;line-height:1.9}
+.vx-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--vx-gap);margin-inline:var(--vx-gutter)}
+.vx-case figure{margin:0;min-width:0}
+.vx-case .vx-wide{margin-inline:var(--vx-gutter)}
+.vx-case figure img{display:block;width:100%;height:auto}
+.vx-case figcaption{padding:24px 0 0}
+.vx-case figcaption h3{margin:8px 0 0;font-size:20px;font-weight:500;line-height:1.5}
+.vx-case figcaption p{margin-top:8px;font-size:14px;line-height:1.8;color:#999;max-width:52ch}
+.vx-case .rb-panel:last-of-type{padding-bottom:48px}
+.vx-case .rb-footer{padding:32px var(--vx-gutter);border-top:1px solid #222}
+@media(max-width:700px){
+.vx-case{--vx-gutter:20px;--vx-gap:32px}
+.vx-intro{grid-template-columns:1fr;gap:16px;padding:32px var(--vx-gutter)}
+.vx-intro>p{margin-top:0;font-size:13px}
+.vx-pair{grid-template-columns:1fr}
+.vx-case .rb-panel header{padding:40px var(--vx-gutter) 24px}
+.vx-case .rb-panel h2{font-size:24px;margin-top:12px}
+.vx-case .rb-description{font-size:13px;margin-top:12px}
+.vx-case figcaption{padding-top:16px}
+.vx-case figcaption h3{font-size:19px}
+.vx-case figcaption p{font-size:13px}
+.vx-case .rb-panel:last-of-type{padding-bottom:32px}
+.vx-case .rb-index a{padding-inline:10px}
+.vx-case .rb-index{padding-inline:12px}
+}

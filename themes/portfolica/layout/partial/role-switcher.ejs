@@ -1,0 +1,2 @@
+<% const roleMode = page.portfolio_mode || 'all'; const roleChoices = [['all','综合','/alljobs/'],['3d','3D 设计','/3d/'],['ai-product','AI Native Builder','/ai-native-builder/'],['visual','视觉设计师','/visual-designer/'],['brand','品牌与创意设计师','/brand-creative/']]; %>
+<nav <%- ['ai-product','visual','brand','3d'].includes(roleMode) ? 'hidden' : '' %> class="role-switcher" aria-label="作品集方向"><% roleChoices.forEach(function(choice){ %><a data-role-switch class="<%= roleMode === choice[0] ? 'active' : '' %>" href="<%- url_for(choice[2]) %>"><%= choice[1] %></a><% }); %></nav>

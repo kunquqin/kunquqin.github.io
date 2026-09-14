@@ -2,7 +2,7 @@
 html,body{max-width:100%;overflow-x:clip}
 img,video,svg,canvas{max-width:100%}
 .portfolio-hero,.portfolio-section,.case-study,.mb-case,.mimo-v2,.dewu-case,.zstar-case{min-width:0}
-.role-switcher{display:inline-flex;align-items:center;gap:4px;margin-bottom:24px;padding:4px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035)}
+.role-switcher{display:inline-flex;max-width:100%;flex-wrap:wrap;align-items:center;gap:4px;margin-bottom:24px;padding:4px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035)}
 .role-switcher a{padding:7px 13px;border-radius:999px;color:#8e96a6;font-size:11px;font-weight:700;line-height:1;text-decoration:none;transition:color .25s ease,background .25s ease}
 .role-switcher a:hover{color:#fff}.role-switcher a.active{background:#f3f5f7;color:#11151b}
 .portfolio-hero-3d .hero-visual>img{object-position:center 54%}

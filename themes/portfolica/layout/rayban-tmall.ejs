@@ -1,0 +1,12 @@
+<article class="rb-case">
+  <header class="rb-heading"><a class="case-back" href="<%- url_for(page.portfolio_home || '/visual-designer/') %>">← 返回作品集</a><div><p>2019 / CAMPAIGN KEY VISUAL</p><h1>雷朋×天猫双十一主视觉</h1><span class="rb-subtitle">品牌联名 · 三维视觉 · 商业广告</span></div></header>
+  <section class="rb-cover" aria-label="联名主视觉与项目背景">
+    <div class="rb-image"><img src="<%- url_for('/images/rayban-tmall/01.webp') %>" width="2560" height="1440" alt="雷朋眼镜与写实黑猫结合，镜片上展示天猫双十一及 Ray-Ban 联名标识" fetchpriority="high"></div>
+    <div class="rb-background"><h2>项目背景：</h2><p>2019 年受邀参与雷朋×天猫双十一主视觉设计，应用于线上店铺头图与线下广告牌。创意将雷朋眼镜与写实猫形象结合，融入空山基风格的金属质感与光影表现，营造真实且富有冲击力的视觉。</p></div>
+  </section>
+  <nav class="dewu-chapter-nav rb-index" aria-label="项目章节"><a href="#rb-concept" class="active" aria-current="location"><span>01</span>创意制作</a><a href="#rb-detail"><span>02</span>视觉细节</a><a href="#rb-application"><span>03</span>广告应用</a></nav>
+  <% const panels = [{id:'concept',number:'02',eyebrow:'01 / CONCEPT & DEVELOPMENT',title:'让品牌符号，拥有真实的质感。',text:'从黑猫的神态、毛发与舞台灯光中提取视觉线索，将猫形轮廓与眼镜组合，推进形体塑造与毛发、镜片的表现。',alt:'黑猫与舞台灯光灵感参考、猫形模型及毛发眼镜组合的制作展示'},{id:'detail',number:'03',eyebrow:'02 / MATERIAL & LIGHT',title:'用细节，建立视觉张力。',text:'细密毛发与光滑镜片形成材质对比，金属镜框的高光勾勒产品轮廓；红色背景与阵列灯光强化双十一的节庆氛围。',alt:'毛发、舞台灯、猫鼻、金属镜框与镜片反射四组局部细节'},{id:'application',number:'04',eyebrow:'03 / CAMPAIGN APPLICATION',title:'从主视觉，走向广告场景。',text:'以居中的猫形主体和雷朋眼镜形成识别焦点，搭配红色背景与重复灯阵，将联名视觉延展至线下广告牌展示。',alt:'雷朋与天猫写实黑猫眼镜主视觉在红色线下广告牌中的应用展示'}]; panels.forEach(function(panel){ %>
+  <section class="rb-panel" id="rb-<%= panel.id %>"><header><div><p><%= panel.eyebrow %></p><h2><%= panel.title %></h2><p class="rb-description"><%= panel.text %></p></div></header><div class="rb-image"><img src="<%- url_for('/images/rayban-tmall/' + panel.number + '.webp') %>" width="2560" height="1440" alt="<%= panel.alt %>" loading="lazy" decoding="async"></div></section>
+  <% }); %>
+  <footer class="rb-footer"><div><span>RAY-BAN × TMALL / 2019</span><p>写实形象 × 产品质感 × 联名识别</p></div><a href="<%- url_for('/visual-designer/#projects') %>">← 返回视觉设计师作品集</a></footer>
+</article>

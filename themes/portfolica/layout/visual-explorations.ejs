@@ -1,0 +1,17 @@
+<% const asset = n => url_for('/images/visual-explorations/' + n + '.webp'); %>
+<article class="rb-case vx-case">
+  <header class="rb-heading"><a class="case-back" href="<%- url_for(page.portfolio_home || '/visual-designer/') %>">← 返回作品集</a><div><p>VISUAL EXPLORATIONS / SELECTED SERIES</p><h1>视觉设计探索</h1><span class="rb-subtitle">掌上异想 · 手机元素系列</span></div></header>
+  <div class="rb-image"><img src="<%- asset('01') %>" width="2400" height="1600" alt="手机功能化成立体微缩装置：红绿金色的相机、音乐、天气与通讯元素" fetchpriority="high"></div>
+  <div class="vx-intro"><div><span>THE POCKET UNIVERSE</span><h2>让屏幕里的功能，<br>走进想象中的空间。</h2></div><p>以手机为舞台，将通讯、应用、运动、出行、影音与安全等日常功能转译为立体装置。六幅画面以红、绿、金为共同语言，通过空间叠层、金属反射与几何纹样，探索数字生活的另一种视觉表达。</p></div>
+  <nav class="dewu-chapter-nav rb-index" aria-label="作品系列章节"><a href="#vx-functions" class="active" aria-current="location"><span>01</span>功能的形状</a><a href="#vx-landscape"><span>02</span>掌上的风景</a><a href="#vx-experience"><span>03</span>体验的想象</a></nav>
+  <section class="rb-panel" id="vx-functions"><header><div><p>01 / FUNCTIONS IN SPACE</p><h2>把抽象功能，变成可感知的场景。</h2><p class="rb-description">应用图标沿传送装置进入屏幕，篮球场与计分牌则把运动体验铺展在掌心。熟悉的界面元素，在立体空间里建立新的联系。</p></div></header><div class="vx-pair">
+    <figure><img src="<%- asset('02') %>" width="2400" height="1600" alt="应用商店主题：手机上的红色传送带、应用图标与立体管道" loading="lazy"><figcaption><span>02 / APP</span><h3>应用的游乐场</h3><p>传送带、管道与悬浮图标，构成应用流动的空间隐喻。</p></figcaption></figure>
+    <figure><img src="<%- asset('03') %>" width="2400" height="1600" alt="运动游戏主题：以手机屏幕为篮球场，搭配计分牌、手柄与奖杯" loading="lazy"><figcaption><span>03 / SPORT</span><h3>掌心里的赛场</h3><p>将屏幕化为球场，以计分牌与控制器连接运动和游戏。</p></figcaption></figure>
+  </div></section>
+  <section class="rb-panel" id="vx-landscape"><header><div><p>02 / LANDSCAPE IN YOUR HAND</p><h2>一块屏幕，也能装下一段旅程。</h2><p class="rb-description">山脉从手机表面隆起，路线、定位与天气符号在地形中展开。起伏的金色山体与平整的机身形成对照，让出行信息拥有空间层次。</p></div></header><figure class="vx-wide"><img src="<%- asset('04') %>" width="2400" height="1600" alt="出行探索主题：手机上叠起金色山脉，红色路线串联飞机、定位与天气元素" loading="lazy"><figcaption><span>04 / EXPLORE</span><h3>把远方，放进掌心</h3></figcaption></figure></section>
+  <section class="rb-panel" id="vx-experience"><header><div><p>03 / EMOTION & EXPERIENCE</p><h2>从功能识别，到情绪表达。</h2><p class="rb-description">影音主题借眼镜、耳机与爆米花制造轻松的观影氛围；安全主题以保险库门和密码键盘表达守护。相同的材质语言，承载不同的体验联想。</p></div></header><div class="vx-pair">
+    <figure><img src="<%- asset('05') %>" width="2400" height="1600" alt="影音娱乐主题：手机拟人化为戴红蓝眼镜与耳机的影院角色" loading="lazy"><figcaption><span>05 / MOVIE</span><h3>随身的小小影院</h3><p>用拟人表情与影院道具，让影音功能变得轻松而有趣。</p></figcaption></figure>
+    <figure><img src="<%- asset('06') %>" width="2400" height="1600" alt="安全主题：手机化作红绿金色保险库，配有密码键盘及输入密码的手" loading="lazy"><figcaption><span>06 / SECURITY</span><h3>数字生活的保险库</h3><p>将抽象的安全概念，转化为门锁、金库与输入动作。</p></figcaption></figure>
+  </div></section>
+  <footer class="rb-footer"><div><span>VISUAL EXPLORATIONS / 01—06</span><p>六个场景，一套视觉语言。</p></div><a href="<%- url_for(page.portfolio_home || '/visual-designer/') %>">← 返回作品集</a></footer>
+</article>
