@@ -91,7 +91,7 @@
     </div>
   </section>
   <section class="ip17-finale"><h2>所需的一切，<br>尽在 iPhone。</h2><div class="ip17-finale-lineup"><figure class="blue"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/finale/iphone17pro-front-deep-blue-side.png') %>" alt="深蓝色 iPhone 17 Pro 正面侧视图"></figure><figure class="orange"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/finale/iphone17pro-front-cosmic-orange.png') %>" alt="星宇橙 iPhone 17 Pro 正面图"></figure><figure class="silver"><img loading="lazy" src="<%- url_for('/images/iphone17-pro/finale/iphone17pro-front-silver-side.png') %>" alt="银色 iPhone 17 Pro 正面侧视图"></figure></div></section>
-  <nav class="case-next ip17-next"><span>NEXT PROJECT</span><a href="<%- url_for('/projects/dewu/') %>">得物 3D 数字资产升级 →</a></nav>
+  <%- partial('partial/project-next', {nextClass: 'case-next ip17-next'}) %>
 </article>
 <script>
 (() => {

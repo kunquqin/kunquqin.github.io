@@ -81,7 +81,7 @@
     <a class="zstar-video-link z-reveal" href="https://www.bilibili.com/video/BV1Uh4y1k7Sa/?spm_id_from=333.337.search-card.all.click" target="_blank" rel="noopener noreferrer" aria-label="在哔哩哔哩查看 Lya 视频"><img src="<%- url_for('/images/portfolio-hd/zstar-lya-video-cover.webp') %>" alt="Lya 视频封面"><span class="zstar-video-play" aria-hidden="true"></span></a>
   </section>
 
-  <nav class="zstar-next"><span>NEXT PROJECT</span><a href="<%- url_for('/projects/mimo/') %>">嘟记豆 · AI 产品设计 →</a></nav>
+  <%- partial('partial/project-next', {nextClass: 'zstar-next'}) %>
   <div class="zstar-media-lightbox" hidden aria-modal="true" role="dialog" aria-label="图片预览"><button type="button" class="zstar-lightbox-close" aria-label="关闭图片预览">×</button><img src="" alt=""><p></p></div>
 </article>
 

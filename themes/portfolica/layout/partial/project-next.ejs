@@ -1,0 +1,3 @@
+<% const nextProject = portfolio_next(page); if(nextProject){ %>
+<nav class="<%= nextClass %>" aria-label="下一个项目"><span>NEXT PROJECT</span><a href="<%- url_for(nextProject.href) %>"><%= nextProject.title %> →</a></nav>
+<% } %>

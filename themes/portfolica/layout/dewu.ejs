@@ -44,7 +44,7 @@
 
   <section class="dewu-results" id="dewuResults"><div class="dewu-section-index">07 / 项目成果</div><div class="results-layout"><div class="results-summary"><div class="result-title"><p>从单点验证走向规模生产</p><h2>流程跑通，并真正产生业务价值。</h2></div><div class="dewu-result-grid"><div><strong>60<small>%</small></strong><span>人工成本降低</span></div><div><strong>6<small>×</small></strong><span>生产效率提升</span></div><div><strong>3W<small>+</small></strong><span>SKU 规模覆盖</span></div></div></div><div class="result-visuals"><figure><img src="<%- url_for('/images/dewu/result-3d-space.png') %>" alt="得物 3D 空间项目成果"></figure><figure><img src="<%- url_for('/images/dewu/result-ar-tryon.png') %>" alt="得物 AR 试穿项目成果"></figure></div></div></section>
 
-  <nav class="case-next dewu-next"><span>NEXT PROJECT</span><a href="<%- url_for('/projects/mimo/') %>">嘟记豆 · AI 产品设计 →</a></nav>
+  <%- partial('partial/project-next', {nextClass: 'case-next dewu-next'}) %>
 </article>
 
 <script>

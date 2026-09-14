@@ -9,4 +9,5 @@
   <section class="rb-panel" id="rb-<%= panel.id %>"><header><div><p><%= panel.eyebrow %></p><h2><%= panel.title %></h2><p class="rb-description"><%= panel.text %></p></div></header><div class="rb-image"><img src="<%- url_for('/images/rayban-tmall/' + panel.number + '.webp') %>" width="2560" height="1440" alt="<%= panel.alt %>" loading="lazy" decoding="async"></div></section>
   <% }); %>
   <footer class="rb-footer"><div><span>RAY-BAN × TMALL / 2019</span><p>写实形象 × 产品质感 × 联名识别</p></div><a href="<%- url_for('/visual-designer/#projects') %>">← 返回视觉设计师作品集</a></footer>
+<%- partial('partial/project-next', {nextClass: 'case-next portfolio-case-next'}) %>
 </article>
