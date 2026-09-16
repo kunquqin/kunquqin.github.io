@@ -11,7 +11,7 @@
   <div class="about-career-layout">
     <aside class="profile-card<%= isBuilder ? ' builder-profile' : '' %>">
       <div class="profile-portrait"><img src="<%- url_for(isBuilder ? '/images/portfolio-hd/portrait-real.webp' : '/images/portfolio-hd/头像.png') %>" alt="覃保锟个人头像"></div>
-      <div class="profile-identity"><% if(!isBuilder){ %><span><%= role.eyebrow %></span><% } %><h2>覃保锟</h2><p><%= mode === 'ai-product' ? 'Ai Native Builder' : role.profile %></p></div>
+      <div class="profile-identity"><% if(!isBuilder){ %><span><%= role.eyebrow %></span><% } %><h2>覃保锟</h2><p><%= mode === 'ai-product' ? '产品设计' : role.profile %></p></div>
       <div class="profile-facts"><div><strong>10+</strong><span>年设计经验</span></div><div><strong>4</strong><span>家头部互联网企业</span></div></div>
       <div class="profile-education"><% if(!isBuilder){ %><span>EDUCATION</span><% } %><div><strong>天津理工大学艺术学院</strong><p>2014 · 本科 · 动画专业</p></div></div>
       <div class="skill-tags"><% if(isVisual){ visual.tags.forEach(function(tag){ %><span><%= tag %></span><% }); } else if(mode === 'ai-product'){ %><span>产品原型</span><span>AI 协作开发</span><span>C 端体验</span><span>虚拟角色</span><span>AIGC 工作流</span><span>产品上线</span><% } else { %><span>3D 资产</span><span>视觉设计</span><span>AI 产品</span><span>AIGC</span><span>流程搭建</span><span>项目管理</span><% } %></div>
@@ -24,7 +24,7 @@
         <article><time><%= job.time %></time><div><h3><%= job.company %></h3><p><%= job.position %></p></div><p><%= job.description %></p></article>
         <% }); } else { %>
         <% if(mode === 'ai-product'){ %>
-        <article><time>2025—2026</time><div><h3>产品开发</h3><p>AI 辅助独立开发</p></div><p>独立完成背单词微信小程序与 Windows 桌面效率工具，从产品构思、体验设计到 Cursor / Claude 辅助开发、验证与上线。</p></article>
+        <article><time>2025—2026</time><div><h3>产品设计</h3><p>AI 辅助独立开发</p></div><p>独立完成背单词微信小程序与 Windows 桌面效率工具，从产品构思、体验设计到 Cursor / Claude 辅助开发、验证与上线。</p></article>
         <% } %>
         <article><time>2024.07—2026.01</time><div><h3>得物</h3><p>C 端体验设计</p></div><p>主导鞋类商品 3D/AR 展示体验建设，推动展示与 AR 试穿上线；覆盖 3W+ SKU、服务千万级用户，并推进资产标准与生产流程升级。</p></article>
         <article><time>2022.01—2024.06</time><div><h3>哔哩哔哩</h3><p>资深美术设计</p></div><p>负责虚拟数字人视觉体系与角色内容规范，推动 AIGC 融入内容创作链路，建立协作与交付机制。</p></article>
@@ -57,7 +57,7 @@
   </div></section>
   <% } else if(isBuilder){ %>
   <% if(!['3d', 'visual'].includes(page.portfolio_mode)){ %>
-  <section class="project-group"><header><div><span><%= isBrand ? '02' : '01' %> / INDEPENDENT AI DEVELOPMENT</span><h3>AI独立开发</h3></div><p>从需求判断、体验设计到 AI 协作开发与上线，展示能够真实运行的产品闭环。</p></header><div class="featured-projects">
+  <section class="project-group"><header><div><span><%= isBrand ? '02' : '01' %> / <%= mode === 'ai-product' ? 'PRODUCT DESIGN' : 'INDEPENDENT AI DEVELOPMENT' %></span><h3><%= mode === 'ai-product' ? '产品设计' : 'AI独立开发' %></h3></div><p>从需求判断、体验设计到 AI 协作开发与上线，展示能够真实运行的产品闭环。</p></header><div class="featured-projects">
     <a class="featured-card featured-card-mimo" href="<%- url_for('/projects/mimo/') %>"><img loading="lazy" src="<%- url_for('/images/mimo/ai_product_dujidou_cover.png') %>" alt="嘟记豆背单词"><div class="card-overlay"><h3>嘟记豆背单词</h3><p>围绕碎片化记忆场景，独立完成学习机制、品牌与产品体验设计，并借助 AI 协作完成小程序开发。</p></div></a>
     <a class="featured-card featured-card-meowbreak" href="<%- url_for('/projects/meowbreak/') %>"><img src="<%- url_for('/images/meowbreak/ai_product_MeowBreak_cover.png') %>" alt="喵息桌面闹钟"><div class="card-overlay"><h3>喵息桌面闹钟</h3><p>面向久坐办公场景，独立完成产品定义与体验设计，借助 AI 协作实现 Electron 客户端并上线 Microsoft Store。</p></div></a>
   </div></section>

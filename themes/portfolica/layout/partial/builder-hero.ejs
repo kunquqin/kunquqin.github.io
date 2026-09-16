@@ -10,7 +10,7 @@
   <% slides.forEach(function(slide, i){ %><div class="builder-glow builder-glow-<%= slide.slug %><%= i === 0 ? ' is-active' : '' %>" aria-hidden="true"></div><% }); %>
   <div class="builder-copy">
     <%- partial('partial/role-switcher') %>
-    <div class="builder-identity"><strong>覃保锟</strong><span><%= page.portfolio_mode === '3d' ? '3D 设计' : isBrand ? '品牌与创意设计师 · 3D / AI' : isVisual ? '视觉设计师 · 3D / AIGC' : 'AI Native Builder · 设计师' %></span></div>
+    <div class="builder-identity<%= page.portfolio_mode === 'ai-product' ? ' builder-identity-product' : '' %>"><strong>覃保锟</strong><span><%= page.portfolio_mode === '3d' ? '3D 设计' : isBrand ? '品牌与创意设计师 · 3D / AI' : isVisual ? '视觉设计师 · 3D / AIGC' : '产品设计' %></span></div>
     <div class="builder-stories">
       <% slides.forEach(function(slide, i){ %>
       <div class="builder-story<%= i === 0 ? ' is-active' : '' %>" <%- i ? 'inert aria-hidden="true"' : '' %>>
