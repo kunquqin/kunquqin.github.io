@@ -4,7 +4,7 @@
 const orders = {
   visual: ['rayban-tmall', 'novoland', 'eleme-pacman', 'epo', 'zstar', 'visual-explorations', 'iphone17-pro'],
   '3d': ['zstar', 'dewu'],
-  'ai-product': ['mimo', 'meowbreak', 'zstar', 'dewu', 'iphone17-pro', 'su7'],
+  'ai-product': ['mimo', 'meowbreak', 'zstar', 'dewu'],
   brand: ['meshy', 'mimo', 'meowbreak', 'zstar', 'dewu', 'iphone17-pro', 'su7'],
   all: ['iphone17-pro', 'su7', 'meowbreak', 'mimo', 'dewu', 'zstar']
 };
