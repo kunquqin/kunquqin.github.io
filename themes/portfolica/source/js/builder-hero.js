@@ -5,6 +5,7 @@
   var glows = Array.from(root.querySelectorAll('.builder-glow'));
   var cards = Array.from(root.querySelectorAll('.builder-card'));
   var stories = Array.from(root.querySelectorAll('.builder-story'));
+  if (cards.length < 2) return;
   var tabs = Array.from(root.querySelectorAll('[data-slide]'));
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   var current = 0, elapsed = 0, last = 0, frame = 0;

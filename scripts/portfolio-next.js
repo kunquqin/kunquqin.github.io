@@ -2,6 +2,7 @@
 
 // Match the project cards in each portfolio home, in reading order.
 const orders = {
+  character: ['zstar', 'one-piece'],
   visual: ['rayban-tmall', 'novoland', 'eleme-pacman', 'epo', 'zstar', 'visual-explorations', 'iphone17-pro'],
   '3d': ['zstar', 'dewu'],
   'ai-product': ['mimo', 'meowbreak', 'zstar', 'dewu'],
@@ -9,6 +10,7 @@ const orders = {
   all: ['iphone17-pro', 'su7', 'meowbreak', 'mimo', 'dewu', 'zstar']
 };
 const titles = {
+  'one-piece': '海贼王3D角色创作',
   'rayban-tmall': '雷朋×天猫双十一主视觉', novoland: '九州缥缈录×视觉设计',
   'eleme-pacman': '饿了么×吃货卡吃豆人', epo: 'E宝设计',
   zstar: '哔哩哔哩 · 幻星项目', 'visual-explorations': '视觉设计探索',

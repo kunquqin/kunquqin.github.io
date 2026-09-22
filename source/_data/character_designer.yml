@@ -1,0 +1,46 @@
+profile: 3D角色设计
+intro: 拥有 10+ 年设计经验，动画专业背景，参与虚拟数字人、三维资产与 IP 视觉项目。在哔哩哔哩幻星项目中负责角色视觉、3D 美术资产与制作管线，协同原画、3D 美术及技术团队推进角色落地。关注角色风格的一致性、模型与材质的表现品质，并将 AI 用于前期概念探索与视觉方案迭代。
+contact: 如果你正在寻找 3D 角色、虚拟形象或 AI 辅助美术流程方面的合作，欢迎直接联系我。
+tags: [角色视觉, 3D 美术, 风格统一, 材质表现, AI 辅助创作, 制作协作]
+capabilities: [角色风格与视觉定义, 原画与三维衔接, 模型与材质品质把控, AI 辅助概念探索, 角色资产规范与验收, 美术与技术协作]
+skills:
+  - title: 三维制作工具
+    tools: [Blender, Cinema 4D, Maya, ZBrush]
+  - title: 角色视觉与表现
+    tools: [Photoshop, 造型与色彩, 服装与材质参考, 风格一致性]
+  - title: AI 辅助创作
+    tools: [Stable Diffusion, ComfyUI, 概念探索, 方案筛选与迭代]
+career:
+  - time: 2024.07—2026.01
+    company: 得物
+    position: 3D 设计专家
+    description: 主导鞋类商品 3D/AR 资产标准与生产流程建设，推动模型、材质与展示效果的质量控制；协同内外部制作与技术团队完成批量交付，整体交付效率提升至原有 6 倍。积累可复用的三维资产规范与验收经验。
+  - time: 2022.01—2024.06
+    company: 哔哩哔哩
+    position: 资深美术设计
+    description: 在幻星项目中负责虚拟角色视觉、3D 美术资产与制作管线，明确角色风格，规范原画、模型、材质到引擎配置的衔接。协同原画、3D 美术及 TA / 开发团队迭代效果并验收品质；引入 Stable Diffusion 与 ComfyUI 辅助角色概念、服装风格及氛围探索。
+  - time: 2020.12—2021.12
+    company: 字节跳动
+    position: 资深创意设计
+    description: 负责品牌营销与商业项目的视觉创意及落地，围绕造型、色彩与画面风格打磨方案；协同制作团队推进多场景视觉延展，保持创意方向与最终呈现的一致性。
+  - time: 2019.12—2020.11
+    company: 阿里巴巴 · 饿了么
+    position: 资深视觉设计
+    description: 负责品牌营销、运营活动与 IP 形象视觉设计，将角色形象延展至产品运营、海报与品牌传播场景，积累角色视觉表达与跨场景风格统一经验。
+  - time: 2014.06—2019.11
+    company: 广告公司与自由设计师
+    position: 品牌视觉设计
+    description: 服务腾讯、美团、京东、外星人、雷朋等品牌，参与品牌传播与商业视觉项目，积累构图、色彩、三维视觉表现及客户沟通经验。
+slides:
+  - name: 幻星
+    title: 让角色，有自己的个性。
+    lead: 从角色风格到三维表现，参与幻星虚拟形象体系建设。以制作规范衔接原画、模型与材质，用 AI 辅助概念探索与视觉迭代。
+    image: /images/portfolio-hd/zstar-group.png
+    slug: zstar
+    cardTitle: 哔哩哔哩 · 幻星项目
+  - name: 海贼王
+    title: 经典角色，重新鲜活。
+    lead: 经典角色的三维再创作，还原熟悉的面孔与性格。
+    image: /images/one-piece/emperors/cover.webp
+    slug: one-piece
+    cardTitle: 海贼王3D角色创作

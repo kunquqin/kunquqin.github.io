@@ -1,6 +1,7 @@
 'use strict';
 
 const portfolios = [
+  { home: '/3d-character/', mode: 'character' },
   { home: '/3d/', mode: '3d' },
   { home: '/ai-native-builder/', mode: 'ai-product' },
   { home: '/visual-designer/', mode: 'visual' },
@@ -11,7 +12,7 @@ const projects = ['mimo', 'meowbreak', 'zstar', 'dewu', 'iphone17-pro', 'su7'];
 // Render the existing project templates within a dedicated portfolio path.
 // Navigation remains correct without cookies, storage, referrers or client JS.
 hexo.extend.generator.register('builder-projects', function (locals) {
-  return portfolios.flatMap(function (portfolio) { return (portfolio.mode === 'brand' ? ['meshy'].concat(projects) : portfolio.mode === 'visual' ? ['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'novoland'].concat(projects) : projects).map(function (slug) {
+  return portfolios.flatMap(function (portfolio) { return (portfolio.mode === 'character' ? ['zstar', 'one-piece'] : portfolio.mode === 'brand' ? ['meshy'].concat(projects) : portfolio.mode === 'visual' ? ['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'novoland'].concat(projects) : projects).map(function (slug) {
     const source = locals.pages.toArray().find(page => page.path === 'projects/' + slug + '/index.html');
     if (!source) throw new Error('Missing portfolio project: ' + slug);
     const path = portfolio.home.slice(1) + 'projects/' + slug + '/index.html';
@@ -38,7 +39,7 @@ hexo.extend.filter.register('after_render:html', function (html) {
       return before + '/alljobs/' + url.search + url.hash + after;
     }
     const project = url.pathname.match(/^\/projects\/([^/]+)\/(?:index\.html)?$/);
-    if (project && (projects.includes(project[1]) || (portfolio.mode === 'brand' && project[1] === 'meshy') || (portfolio.mode === 'visual' && ['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'novoland'].includes(project[1])))) {
+    if (project && (projects.includes(project[1]) || (portfolio.mode === 'character' && project[1] === 'one-piece') || (portfolio.mode === 'brand' && project[1] === 'meshy') || (portfolio.mode === 'visual' && ['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'novoland'].includes(project[1])))) {
       url.pathname = home + 'projects/' + project[1] + '/';
     } else if (['/', '/index.html', '/alljobs/', '/3d/', '/ai-product/'].includes(url.pathname)) {
       url.pathname = home;

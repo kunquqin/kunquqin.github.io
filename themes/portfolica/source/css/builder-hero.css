@@ -35,6 +35,7 @@
 
 .builder-profile .profile-facts>div{text-align:center}.builder-profile .profile-education{grid-template-columns:1fr;text-align:center}.builder-profile .skill-tags{justify-content:center}
 .builder-glow-meshy{--glow-a:132,185,50;--glow-b:50,110,75}
+.builder-glow-one-piece{--glow-a:143,99,66;--glow-b:102,84,146}
 .brand-project-group .meshy-featured{grid-column:1/-1;min-height:0;aspect-ratio:2/1;background:#071b15}
 .meshy-featured>img{object-position:center;filter:none!important;opacity:1!important}
 .meshy-featured-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:6%;background:linear-gradient(90deg,rgba(4,20,12,.7),transparent 65%);color:#f2f4eb}

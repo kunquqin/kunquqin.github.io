@@ -1,0 +1,32 @@
+.op-case{background:#08090b;color:#edf0f4;padding:0 max(24px,5vw);--op-muted:#9da4af}
+.op-breadcrumb{display:flex;flex-wrap:wrap;gap:12px;padding:28px 0;font-size:13px;color:var(--op-muted)}
+.op-breadcrumb a:hover{color:var(--cyan,#53e3dd)}
+.op-heading{max-width:900px;margin:0 auto;padding:56px 0 64px;text-align:center}
+.op-eyebrow{font-size:11px;letter-spacing:.15em;color:var(--op-muted);line-height:1.7}
+.op-heading h1{font-size:clamp(36px,4.6vw,68px);font-weight:600;letter-spacing:-.035em;line-height:1.2;margin:20px 0 0}
+.op-collection.featured-projects{max-width:1440px;margin:auto;padding-bottom:72px}
+.op-card.featured-card{min-height:0;aspect-ratio:4/3}
+.op-card.featured-card .card-overlay{left:50%;right:auto;bottom:32px;width:max-content;max-width:calc(100% - 48px);text-align:center;transform:translateX(-50%)}
+.op-card .card-overlay .op-card-en{display:block;margin:0;color:#edf0f4;font-size:clamp(16px,1.5vw,22px);font-weight:600;line-height:1.25;letter-spacing:.025em;white-space:nowrap;transition:transform .4s ease}
+.op-card .card-overlay .op-card-en:before{content:none}
+.op-card.featured-card .card-overlay h3{position:absolute;inset:0 3%;display:flex;justify-content:center;gap:.45em;align-items:center;margin:0;font-size:clamp(18px,1.6vw,24px);font-weight:500;line-height:1.25;letter-spacing:0;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .4s ease}
+.op-card .card-overlay h3 i{font-style:normal}
+.op-card:is(:hover,:focus-visible) .op-card-en{transform:translateY(calc(-100% - 12px))}
+.op-card:is(:hover,:focus-visible) .card-overlay h3{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.op-card .card-overlay .op-card-en,.op-card.featured-card .card-overlay h3{transition:none}}
+.op-heading-logo{padding:40px 0 64px}.op-heading-logo h1{margin:0}.op-logo{display:block;width:min(100%,550px);height:auto;margin:auto}
+.op-project-info{max-width:1280px;margin:0 auto 56px;padding:32px 0;border-top:1px solid #ffffff16;border-bottom:1px solid #ffffff16;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:64px;align-items:start}
+.op-original-copy{max-width:860px;margin:0;font-size:16px;line-height:2;color:#bbc1ca}.op-original-copy p:last-child{margin-bottom:0}.op-original-copy:empty{display:none}.op-project-info:has(.op-original-copy:empty){grid-template-columns:1fr}
+.op-tools-label{display:block;margin:4px 0 16px;font-size:12px;letter-spacing:.12em;color:#818d9c}.op-tools ul{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}.op-tools li{padding:7px 12px;border:1px solid #ffffff14;border-radius:6px;background:#ffffff04;font-size:13px;color:#c8d1dc;line-height:1.5}
+.op-original-copy p{margin:0 0 20px}
+.op-gallery{max-width:1280px;margin:auto;display:flex;flex-direction:column;gap:20px}
+.op-gallery figure{margin:0;min-width:0}
+.op-gallery .ep-poster-open{display:block;width:100%;border:0;padding:0;background:transparent;border-radius:0;overflow:visible}
+.op-gallery .ep-poster-open img{display:block;width:auto;max-width:100%;height:auto;margin:auto;transform:none;filter:none}
+.op-original-caption{font-size:16px;color:#bbc1ca;margin:12px 0 20px}
+.op-footer{max-width:1280px;margin:72px auto 0;border-top:1px solid #ffffff20;padding:36px 0;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.op-footer small{display:block;color:var(--op-muted);font-size:12px;margin-bottom:8px}
+.op-footer strong{font-size:26px;font-weight:500}.op-footer>a:last-child{text-align:right}
+.op-case a:focus-visible{outline:2px solid var(--cyan,#53e3dd);outline-offset:6px}
+.op-case .portfolio-case-next{padding-left:0;padding-right:0}
+@media(max-width:700px){.op-case{padding:0 20px}.op-breadcrumb{font-size:12px;padding:22px 0}.op-heading{padding:32px 0 40px}.op-heading h1{font-size:34px}.op-collection.featured-projects{grid-template-columns:1fr;padding-bottom:48px}.op-project-info{grid-template-columns:1fr;gap:24px;margin-bottom:32px;padding:24px 0}.op-original-copy{font-size:15px;line-height:1.9}.op-heading-logo{padding:28px 0 40px}.op-gallery{gap:12px}.op-footer{margin-top:48px;font-size:13px}.op-footer strong{font-size:22px}}

@@ -3,7 +3,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 <script src="<%- url_for('js/main.js') %>" defer></script>
 
-<% if(['ai-product', 'visual', 'brand', '3d'].includes(page.portfolio_mode) && !page.portfolio_project){ %><script src="<%- url_for('js/builder-hero.js') %>" defer></script><% } %>
+<% if(['ai-product', 'visual', 'brand', '3d', 'character'].includes(page.portfolio_mode) && !page.portfolio_project){ %><script src="<%- url_for('js/builder-hero.js') %>" defer></script><% } %>
 
 <% if(page.portfolio_home){ %><script src="<%- url_for('js/portfolio-preview.js') %>" defer></script><% } %>
 
