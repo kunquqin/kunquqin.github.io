@@ -16,3 +16,5 @@
 <% if(page.layout === 'one-piece'){ %><link rel="stylesheet" href="<%- url_for('css/one-piece.css') %>"><% } %>
 
 <% if(page.layout === 'ocean-engine'){ %><link rel="stylesheet" href="<%- url_for('css/ocean-engine.css') %>"><% } %>
+
+<% if(page.portfolio_mode === 'visual' && !page.portfolio_project){ %><link rel="stylesheet" href="<%- url_for('css/visual-coverflow.css') %>"><% } %>

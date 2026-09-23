@@ -1,5 +1,6 @@
 <% const isVisual = ['visual', 'brand', '3d', 'character'].includes(page.portfolio_mode); const visual = page.portfolio_mode === 'character' ? site.data.character_designer : page.portfolio_mode === 'brand' ? Object.assign({}, site.data.visual_designer, site.data.brand_creative) : page.portfolio_mode === '3d' ? site.data.three_d : site.data.visual_designer; %>
-<section class="portfolio-section builder-capabilities" id="capabilities" aria-labelledby="builder-capabilities-title">
+<% const softwareIcons = {Blender:"blender", "Cinema 4D":"cinema4d", Maya:"maya", ZBrush:"zbrush", Photoshop:"photoshop", Illustrator:"illustrator", "After Effects":"after-effects", Figma:"figma", Claude:"claude", Cursor:"cursor", Codex:"openai", ComfyUI:"comfyui", Midjourney:"midjourney"}; const monoIcons=["blender","cinema4d","zbrush","photoshop","illustrator","claude","cursor","openai","comfyui","midjourney"]; %>
+<section class="portfolio-section builder-capabilities<%= page.portfolio_mode === 'visual' ? ' visual-software-skills' : '' %>" id="capabilities" aria-labelledby="builder-capabilities-title">
   <div class="section-label">02 / 核心能力</div>
   <div class="builder-capabilities-layout">
     <div>
@@ -14,7 +15,7 @@
       <h2>专业技能</h2>
       <div class="builder-skill-list">
         <% if(isVisual){ visual.skills.forEach(function(skill){ %>
-        <article><h3><%= skill.title %></h3><p><% skill.tools.forEach(function(tool, i){ %><% if(i){ %> <span>·</span> <% } %><%= tool %><% }); %></p></article>
+        <article><h3><%= skill.title %></h3><% if(page.portfolio_mode === 'visual'){ %><p class="software-tools"><% skill.tools.forEach(function(tool){ const icon=softwareIcons[tool]; %><span class="software-tool"><% if(icon){ %><img class="<%= monoIcons.includes(icon)?'software-logo-mono':'' %>" src="<%- url_for('/images/software-logos/'+icon+(icon==='zbrush'?'.png':'.svg')) %>" width="26" height="26" alt="" loading="lazy"><% } %><%= tool %></span><% }); %></p><% } else { %><p><% skill.tools.forEach(function(tool, i){ %><% if(i){ %> <span>·</span> <% } %><%= tool %><% }); %></p><% } %></article>
         <% }); } else { %>
         <article><h3>AI 开发</h3><p>Cursor <span>·</span> Claude <span>·</span> Codex <span>·</span> 微信小程序</p></article>
         <article><h3>产品设计</h3><p>Figma <span>·</span> 产品原型 <span>·</span> Photoshop <span>·</span> After Effects</p></article>

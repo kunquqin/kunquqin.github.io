@@ -1,0 +1,21 @@
+<section class="visual-flow" id="home" aria-label="精选作品" aria-roledescription="轮播">
+  <%- partial('partial/role-switcher') %>
+  <div class="vf-stage" aria-label="作品封面，支持左右滑动">
+    <% slides.forEach(function(slide,i){ const position=i===slides.length-1?-1:i; %>
+    <a class="vf-card" data-index="<%= i %>" data-position="<%= position %>" data-name="<%= slide.name %>" href="<%- url_for('/projects/'+slide.slug+'/') %>" aria-label="<%= i===0?'查看':'选择' %><%= slide.name %>项目" <%- position===2?'tabindex="-1" aria-hidden="true"':'' %>>
+      <img src="<%- url_for(slide.image) %>" alt="<%= slide.name %>项目封面" draggable="false" <%- i===0?'fetchpriority="high"':'' %>>
+    </a>
+    <% }); %>
+  </div>
+  <div class="vf-controls">
+    <nav class="vf-dots" aria-label="选择展示项目"><% slides.forEach(function(slide,i){ %><button type="button" data-select="<%= i %>" aria-label="展示<%= slide.name %>" aria-current="<%= i===0 %>"></button><% }); %></nav>
+  </div>
+  <div class="vf-stories">
+    <% slides.forEach(function(slide,i){ %>
+    <div class="vf-story<%= i===0?' is-active':'' %>" <%- i?'inert aria-hidden="true"':'' %>>
+      <<%= i===0?'h1':'h2' %>><%= slide.cardTitle %></<%= i===0?'h1':'h2' %>>
+    </div><% }); %>
+  </div>
+  <span class="vf-status" role="status" aria-live="polite"></span>
+  <a class="hero-scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i aria-hidden="true">↓</i></a>
+</section>

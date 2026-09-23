@@ -5,7 +5,7 @@
 <section class="portfolio-hero portfolio-hero-<%= mode %>" id="home">
   <div class="hero-copy"><%- partial('partial/role-switcher') %><div class="hero-index">PORTFOLIO / 2026</div><p class="eyebrow"><%= role.eyebrow %></p><h1><%= role.title %><br><span><%= role.accent %></span></h1><p class="hero-lead"><%= role.lead %></p><div class="hero-actions"><a class="button button-primary" href="#projects">查看项目 <i>↘</i></a><a class="button button-ghost" href="#contact">联系我</a></div></div>
   <div class="hero-visual"><img src="<%- url_for(role.image) %>" alt="<%= role.alt %>"><div class="hero-badge"><strong>10+</strong><span>年设计经验</span></div></div>
-</section><% } %><a class="hero-scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i>↓</i></a>
+</section><% } %><% if(page.portfolio_mode !== 'visual'){ %><a class="hero-scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i>↓</i></a><% } %>
 <section class="portfolio-section about-career-section" id="about">
   <div class="section-label">01 / 关于我 · 职业经历</div>
   <div class="about-career-layout">

@@ -43,3 +43,9 @@
 @media(max-width:600px){.brand-project-group .meshy-featured{aspect-ratio:1/1.1}.meshy-featured-copy{justify-content:flex-end;background:linear-gradient(0deg,#071b15 4%,transparent 85%);padding:24px}.meshy-featured-copy>strong{margin:12px 0 4px}.meshy-featured-copy em{margin-top:10px}.meshy-featured>img{object-position:65% center}}
 
 .builder-glow-ocean-engine{--glow-a:225,74,41;--glow-b:223,148,70}.builder-glow-eleme-pacman{--glow-a:38,160,211;--glow-b:233,176,39}
+
+.visual-software-skills .software-tools{display:flex;flex-wrap:wrap;gap:16px 24px;padding-top:5px}
+.visual-software-skills .builder-skill-list .software-tool{display:inline-flex;align-items:center;gap:10px;margin:0;color:#b7c0ce;white-space:nowrap;font-size:13px;line-height:28px}
+.visual-software-skills .software-tool img{display:block;flex:0 0 26px;width:26px;height:26px;object-fit:contain}
+.visual-software-skills .software-logo-mono{filter:brightness(0) invert(1);opacity:.9}
+@media(max-width:900px) and (min-width:521px){.visual-software-skills .software-tools{flex-direction:column;gap:15px}}
