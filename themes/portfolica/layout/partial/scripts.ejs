@@ -9,4 +9,6 @@
 
 <% if(page.layout === 'meshy'){ %><script src="<%- url_for('js/meshy-case.js') %>" defer></script><% } %>
 
-<% if(['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'novoland'].includes(page.layout)){ %><script src="<%- url_for('js/rayban-tmall.js') %>" defer></script><% } %>
+<% if(['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo'].includes(page.layout)){ %><script src="<%- url_for('js/rayban-tmall.js') %>" defer></script><% } %>
+
+<% if(page.layout === 'ocean-engine'){ %><script src="<%- url_for('js/ocean-engine.js') %>" defer></script><% } %>

@@ -1,0 +1,39 @@
+<% const asset = n => url_for('/images/ocean-engine/' + n + '.webp');
+const campaigns = [
+  {id:'qianchuan', number:'01', label:'QIANCHUAN / 55 SHOPPING FESTIVAL', title:'千川55大促', subtitle:'让流量，汇入生意。', bg:'以直播排位赛带动交易增长，配合千川全量后的首次拉新活动，验证全链路能力。在电商节的流量高峰，建立商家与达人对千川的品牌认知。', design:'延续抖音55大促的视觉调性，以电商元素构建热闹的消费场景；让中心活动字体成为视觉焦点，将大促氛围延展至移动端活动页面。', stats:[['84,334','DAU'],['46,309','抽奖 UV']]},
+  {id:'holiday', number:'02', label:'BUSINESS ACCOUNT / FESTIVE CAMPAIGN', title:'亿企欢度双节', subtitle:'把团圆，变成品牌的相遇。', bg:'借中秋与国庆长假开展企业号拉新，衔接商家备战双11的营销需求。整合 DOU+、企业号与活跃奖励，引导用户形成“建号、养号、用号”的行为习惯，减少活动页面分流。', design:'以俯视大广角构建环绕式场景，企业号 Logo 位于中心圆台。荷塘与木桥传递团圆意象，红色主调搭配绿、黄辅助色，在传统节日氛围中强化品牌识别。', stats:[['7.6 亿','活动品牌曝光'],['154,824','新增企业号'],['37,163,400','完成蓝 V 收入 / 元']]}
+]; %>
+<article class="oe-case">
+  <header class="oe-heading">
+    <a class="case-back" href="<%- url_for(page.portfolio_home || '/visual-designer/') %>">← 返回作品集</a>
+    <p class="oe-eyebrow">OCEAN ENGINE / CAMPAIGN DESIGN</p>
+    <h1>巨量引擎<br>活动视觉设计<span>用视觉，点燃每个营销时刻。</span></h1>
+    <div class="oe-meta"><span>品牌营销 · 活动视觉 · 移动端应用</span><span>2021</span></div>
+  </header>
+  <figure class="oe-cover"><img src="<%- asset('cover') %>" width="1280" height="720" alt="巨量引擎牛转乾坤活动主视觉" fetchpriority="high"></figure>
+  <div class="oe-intro"><p class="oe-eyebrow">CAMPAIGN SELECTED / 02 CASES</p><h2>从活动氛围，<br>到用户手中的体验。</h2><p>两场营销活动，两种视觉语境。<br>以鲜明的场景承载品牌，让创意落到真实的活动页面。</p><a href="#oe-qianchuan">探索活动视觉 <span aria-hidden="true">↓</span></a></div>
+  <% campaigns.forEach(c => { %>
+  <section class="oe-campaign" id="oe-<%= c.id %>" aria-labelledby="oe-title-<%= c.id %>">
+    <div class="oe-stage">
+      <img class="oe-bg" src="<%- asset(c.id+'-bg') %>" width="1920" height="1080" alt="<%= c.title %>活动场景主视觉" loading="lazy">
+      <div class="oe-shade" aria-hidden="true"></div>
+      <div class="oe-stage-label" aria-hidden="true"><span><%= c.number %> / <%= c.label %></span></div>
+      <div class="oe-scene-title" aria-hidden="true"><span>CAMPAIGN <%= c.number %></span><p><%= c.title %></p></div>
+      <div class="oe-story">
+        <div class="oe-copy">
+          <p class="oe-eyebrow">活动视觉 <span>/ <%= c.number %></span></p>
+          <h2 id="oe-title-<%= c.id %>"><%= c.title %></h2><p class="oe-subtitle"><%= c.subtitle %></p>
+          <div class="oe-text"><h3>项目背景</h3><p><%= c.bg %></p></div>
+          <div class="oe-text"><h3>设计思路</h3><p><%= c.design %></p></div>
+          <dl class="oe-stats"><% c.stats.forEach(s=>{ %><div><dt><%= s[1] %></dt><dd><%= s[0] %></dd></div><% }); %></dl>
+          <small class="oe-source">上线数据 · 2024 作品集项目记录</small>
+        </div>
+        <div class="oe-device"><img src="<%- asset(c.id+'-phone') %>" width="612" height="995" alt="<%= c.title %>手机端活动页面效果" loading="lazy"></div>
+      </div>
+      <div class="oe-progress" aria-hidden="true"></div>
+    </div>
+  </section>
+  <% }); %>
+  <div class="oe-end"><p class="oe-eyebrow">OCEAN ENGINE / CAMPAIGN DESIGN</p><h2>视觉吸引关注，<br>体验连接品牌。</h2><a href="<%- url_for(page.portfolio_home || '/visual-designer/') %>">← 返回作品集</a></div>
+  <%- partial('partial/project-next', {nextClass:'oe-next'}) %>
+</article>

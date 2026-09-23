@@ -4,7 +4,8 @@
   {name:'幻星', title:'有个性的数字人', lead:'从角色形象到内容体验，参与虚拟数字人产品与视觉体系建设，让想象中的人物有自己的样子。', image:'/images/portfolio-hd/zstar-group.png', slug:'zstar', cardTitle:'哔哩哔哩 · 幻星项目'},
 ]; if(page.portfolio_mode === 'ai-product') slides.push({name:'得物',title:'让购物更沉浸',lead:'从鞋类商品的 3D/AR 展示体验出发，建立数字资产标准与自动化生产流程，推动规模化制作与上线交付。',image:'/images/portfolio-hd/dewu_3d_cover.png',slug:'dewu',cardTitle:'得物 3D 数字资产升级'}); if(isVisual) slides.forEach(function(slide, i){ Object.assign(slide, (page.portfolio_mode === '3d' ? site.data.three_d : site.data.visual_designer).slides[i]); }); if(page.portfolio_mode === 'visual') {
   Object.assign(slides[0], {name:'雷朋',title:'雷朋×天猫双十一主视觉',lead:'将雷朋眼镜与写实猫头结合，以三维视觉呈现品牌联名创意，延展至线上店铺与线下广告。',image:'/images/rayban-tmall/cover.webp',slug:'rayban-tmall',cardTitle:'雷朋×天猫双十一主视觉'});
-  Object.assign(slides[1], {name:'九州缥缈录',title:'九州的造境者',lead:'以六位主创的创作分工为线索，将城阙、棋局、楼船与铁甲化为黑金风格的先行海报。',image:'/images/novoland/creators-textless-composite.webp?v=20260914-ps',slug:'novoland',cardTitle:'九州缥缈录×视觉设计'});
+  Object.assign(slides[1], {name:'巨量引擎',title:'点燃每个营销时刻',lead:'从千川55大促到企业号双节活动，以鲜明的场景承载品牌，将营销创意延展为移动端活动体验。',image:'/images/ocean-engine/cover.webp',slug:'ocean-engine',cardTitle:'巨量引擎活动视觉设计'});
+  slides.splice(2, 0, {name:'吃货豆',title:'让品牌多一点趣味',lead:'围绕饿了么吃货卡，探索角色形象、三维表现与活动应用，让 IP 走进用户熟悉的消费场景。',image:'/images/eleme-pacman/beans.webp',slug:'eleme-pacman',cardTitle:'IP设计 · 吃货豆'});
 } if(isBrand) slides.unshift({name:'Meshy',title:'想象，有了形状。',lead:'以 Meshy 为对象的自主品牌传播提案。从产品价值、创意方向到视觉体系，让想法走出平面，成为可感知的形状。',image:'/images/meshy/ideas-take-shape.webp',slug:'meshy',cardTitle:'Meshy · 品牌创意提案'}); %>
 <% if(isCharacter) slides.splice(0, slides.length, ...site.data.character_designer.slides); %>
 <section class="builder-hero" id="home" aria-label="精选作品" <%- slides.length > 1 ? 'aria-roledescription="轮播"' : '' %>>

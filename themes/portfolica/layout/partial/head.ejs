@@ -6,12 +6,13 @@
 
 <% if(['ai-product', 'visual', 'brand', '3d', 'character'].includes(page.portfolio_mode) && !page.portfolio_project){ %><link rel="stylesheet" href="<%- url_for('css/builder-hero.css') %>"><% } %>
 
-<% if(['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'novoland'].includes(page.layout)){ %><link rel="stylesheet" href="<%- url_for('css/rayban-tmall.css') %>"><% } %>
+<% if(['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo'].includes(page.layout)){ %><link rel="stylesheet" href="<%- url_for('css/rayban-tmall.css') %>"><% } %>
 <% if(page.layout === 'visual-explorations'){ %><link rel="stylesheet" href="<%- url_for('css/visual-explorations.css') %>"><% } %>
 <% if(page.layout === 'meshy'){ %><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="<%- url_for('css/meshy-case.css') %>"><% } %>
 
-<% if(['eleme-pacman', 'epo', 'novoland', 'one-piece'].includes(page.layout)){ %><link rel="stylesheet" href="<%- url_for('css/eleme-pacman.css') %>"><% } %>
+<% if(['eleme-pacman', 'epo', 'one-piece'].includes(page.layout)){ %><link rel="stylesheet" href="<%- url_for('css/eleme-pacman.css') %>"><% } %>
 
-<% if(page.layout === 'novoland'){ %><link rel="stylesheet" href="<%- url_for('css/novoland.css') %>"><% } %>
 
 <% if(page.layout === 'one-piece'){ %><link rel="stylesheet" href="<%- url_for('css/one-piece.css') %>"><% } %>
+
+<% if(page.layout === 'ocean-engine'){ %><link rel="stylesheet" href="<%- url_for('css/ocean-engine.css') %>"><% } %>

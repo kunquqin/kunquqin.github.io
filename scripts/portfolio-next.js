@@ -3,15 +3,16 @@
 // Match the project cards in each portfolio home, in reading order.
 const orders = {
   character: ['zstar', 'one-piece'],
-  visual: ['rayban-tmall', 'novoland', 'eleme-pacman', 'epo', 'zstar', 'visual-explorations', 'iphone17-pro'],
+  visual: ['rayban-tmall', 'ocean-engine', 'eleme-pacman', 'epo', 'zstar', 'visual-explorations', 'iphone17-pro'],
   '3d': ['zstar', 'dewu'],
   'ai-product': ['mimo', 'meowbreak', 'zstar', 'dewu'],
   brand: ['meshy', 'mimo', 'meowbreak', 'zstar', 'dewu', 'iphone17-pro', 'su7'],
   all: ['iphone17-pro', 'su7', 'meowbreak', 'mimo', 'dewu', 'zstar']
 };
 const titles = {
+  'ocean-engine': '巨量引擎活动视觉设计',
   'one-piece': '海贼王3D角色创作',
-  'rayban-tmall': '雷朋×天猫双十一主视觉', novoland: '九州缥缈录×视觉设计',
+  'rayban-tmall': '雷朋×天猫双十一主视觉',
   'eleme-pacman': '饿了么×吃货卡吃豆人', epo: 'E宝设计',
   zstar: '哔哩哔哩 · 幻星项目', 'visual-explorations': '视觉设计探索',
   'iphone17-pro': 'iPhone 17 Pro', su7: '小米SU7',
