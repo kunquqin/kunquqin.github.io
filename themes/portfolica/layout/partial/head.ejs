@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="<%- url_for('css/style.css?v=20260904b') %>">
 <link rel="stylesheet" href="<%- url_for('css/responsive.css') %>">
 
-<% if(['ai-product', 'visual', 'brand', '3d', 'character'].includes(page.portfolio_mode) && !page.portfolio_project){ %><link rel="stylesheet" href="<%- url_for('css/builder-hero.css') %>"><% } %>
+<% if(['ai-product', 'visual', 'brand', '3d', 'character'].includes(page.portfolio_mode) && !page.portfolio_project){ %><link rel="stylesheet" href="<%- url_for('css/builder-hero.css?v=20260923-skills') %>"><% } %>
 
 <% if(['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo'].includes(page.layout)){ %><link rel="stylesheet" href="<%- url_for('css/rayban-tmall.css') %>"><% } %>
 <% if(page.layout === 'visual-explorations'){ %><link rel="stylesheet" href="<%- url_for('css/visual-explorations.css') %>"><% } %>

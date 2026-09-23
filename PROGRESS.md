@@ -4,7 +4,9 @@
 
 ## 当前目标
 
-- 2026-09-23：用户已授权提交部署，本轮Cover Flow与专业技能Logo准备发布；发布前构建、JS语法及差异检查通过。仅提交本轮相关源码、素材与来源说明。
+- 2026-09-23：修复线上专业技能在521–900px强制竖排：改为各技能分类占整行、软件横向自动换行；builder-hero.css增加版本参数避免旧缓存。线上浏览器已复现800px为column；修复后本地1440/800/390px均row、前两项同排且无横向溢出，构建通过。继续本次发布修复部署。
+
+- 2026-09-23：本轮Cover Flow与专业技能Logo已提交并推送main：7ebb185。GitHub Pages运行35878854504 completed/success；线上页面含Cover Flow及13个Logo，SVG/PNG资源访问成功。构建和JS语法通过；之前浏览器视觉与交互验证结果见下。以下本轮未部署标记由此状态覆盖，指示条闪跳仍待修复。
 
 - 2026-09-23：仅视觉岗位专业技能新增13个本地软件Logo，统一26px、图文对齐与响应式换行，保留软件名称；移除图标行hover禁止位移的覆盖，复用标题与正文整体向右16px的0.28秒过渡。已修复中断下载导致的破损SVG、缺失文件和ZBrush PNG扩展名错误；构建通过，1440/390px浏览器13/13图片均decode成功、无横向溢出，截图已检查。来源Devicon、Simple Icons、LobeHub、Icons8；Codex使用OpenAI品牌标识。文件source/images/software-logos、partial/builder-capabilities.ejs、builder-hero.css。未提交或部署。此前指示条闪跳排查被中断，尚未修复，后续需继续验证。
 
@@ -138,4 +140,3 @@
 - 已提交并推送 9e3d298（Launch AI Native Builder portfolio and refresh project showcases）。GitHub Actions 34193960324 completed/success，GitHub Pages 部署成功。线上 /ai-native-builder/ 验证新文案、默认隐藏岗位标签和专属项目链接，嘟记豆项目返回 /ai-native-builder/#projects 检查通过。
 - 最新 Hexo 预览运行于 4004，包含 Meshy 第二版；4003 及更早服务可能缓存旧模板。
 - `docs/` 未提交参考资料与 `assets-source/` 原始素材留在本地，不纳入本次发布。
-
