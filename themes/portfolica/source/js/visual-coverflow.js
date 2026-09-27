@@ -22,13 +22,15 @@
       card.dataset.position=distance;
       card.tabIndex=Math.abs(distance)<2?0:-1;
       card.setAttribute('aria-hidden',String(Math.abs(distance)>=2));
-      card.setAttribute('aria-label',(distance===0?'查看':'选择')+card.dataset.name+'项目');
+      var en=window.visualLanguage&&window.visualLanguage.get()==='en';
+      var name=en?window.visualLanguage.translate(card.dataset.name):card.dataset.name;
+      card.setAttribute('aria-label',en?(distance===0?'View ':'Select ')+name+' project':(distance===0?'查看':'选择')+name+'项目');
       stories[i].classList.toggle('is-active',i===current);
       stories[i].inert=i!==current;
       stories[i].setAttribute('aria-hidden',String(i!==current));
       dots[i].setAttribute('aria-current',String(i===current));
     });
-    if(!automatic)root.querySelector('.vf-status').textContent=cards[current].dataset.name+'，'+(current+1)+' / '+cards.length;
+    if(!automatic){var name=window.visualLanguage?window.visualLanguage.translate(cards[current].dataset.name):cards[current].dataset.name;root.querySelector('.vf-status').textContent=name+' · '+(current+1)+' / '+cards.length;}
     schedule();
   }
   cards.forEach(function(card,i){card.addEventListener('click',function(event){
@@ -63,5 +65,6 @@
   new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;schedule();},{threshold:.15}).observe(root);
   window.addEventListener('pagehide',function(){clearTimeout(timer);});
   window.addEventListener('pageshow',schedule);
+  document.addEventListener('visual-language-change',function(){select(current,true);root.querySelector('.vf-status').textContent='';});
   schedule();
 })();

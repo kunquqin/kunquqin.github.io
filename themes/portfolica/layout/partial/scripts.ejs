@@ -1,4 +1,8 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<% if(visual_bilingual(page)){ %>
+<script id="visual-translations" type="application/json"><%- JSON.stringify(site.data.visual_i18n).replace(/</g, '\\u003c') %></script>
+<script src="<%- url_for('js/visual-language.js?v=20260925') %>"></script>
+<% } %>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 <script src="<%- url_for('js/main.js') %>" defer></script>
@@ -13,4 +17,4 @@
 
 <% if(page.layout === 'ocean-engine'){ %><script src="<%- url_for('js/ocean-engine.js') %>" defer></script><% } %>
 
-<% if(page.portfolio_mode === 'visual' && !page.portfolio_project){ %><script src="<%- url_for('js/visual-coverflow.js') %>" defer></script><% } %>
+<% if(page.portfolio_mode === 'visual' && !page.portfolio_project){ %><script src="<%- url_for('js/visual-coverflow.js?v=20260925') %>" defer></script><% } %>

@@ -5,6 +5,7 @@ const portfolios = [
   { home: '/3d/', mode: '3d' },
   { home: '/ai-native-builder/', mode: 'ai-product' },
   { home: '/visual-designer/', mode: 'visual' },
+  { home: '/creative-visual-designer/', mode: 'visual', variant: 'creative' },
   { home: '/brand-creative/', mode: 'brand' }
 ];
 const projects = ['mimo', 'meowbreak', 'zstar', 'dewu', 'iphone17-pro', 'su7'];
@@ -20,6 +21,7 @@ hexo.extend.generator.register('builder-projects', function (locals) {
       path,
       portfolio_home: portfolio.home,
       portfolio_mode: portfolio.mode,
+      portfolio_variant: portfolio.variant,
       portfolio_project: true
     });
     return { path, layout: source.layout, data };
@@ -29,6 +31,7 @@ hexo.extend.generator.register('builder-projects', function (locals) {
 hexo.extend.filter.register('after_render:html', function (html) {
   const portfolio = portfolios.find(item => html.includes('data-portfolio-home="' + item.home + '"'));
   const home = portfolio && portfolio.home;
+  if (portfolio && portfolio.variant === 'creative') html = html.replace(/返回视觉设计师作品集/g, '返回创意视觉设计师作品集');
   return html.replace(/(<a\b[^>]*\bhref=")([^"]*)(")/g, function (match, before, href, after) {
     // Preview role selectors are intentionally outside the scoped navigation.
     if (before.includes('data-role-switch')) return match;
@@ -41,7 +44,7 @@ hexo.extend.filter.register('after_render:html', function (html) {
     const project = url.pathname.match(/^\/projects\/([^/]+)\/(?:index\.html)?$/);
     if (project && (projects.includes(project[1]) || (portfolio.mode === 'character' && project[1] === 'one-piece') || (portfolio.mode === 'brand' && project[1] === 'meshy') || (portfolio.mode === 'visual' && ['rayban-tmall', 'visual-explorations', 'eleme-pacman', 'epo', 'ocean-engine'].includes(project[1])))) {
       url.pathname = home + 'projects/' + project[1] + '/';
-    } else if (['/', '/index.html', '/alljobs/', '/3d/', '/ai-product/'].includes(url.pathname)) {
+    } else if (['/', '/index.html', '/alljobs/', '/3d/', '/ai-product/'].includes(url.pathname) || (portfolio.variant === 'creative' && url.pathname === '/visual-designer/')) {
       url.pathname = home;
     } else if (url.pathname === '/projects/' || url.pathname === '/about/') {
       url.hash = url.hash || (url.pathname === '/projects/' ? '#projects' : '#about');

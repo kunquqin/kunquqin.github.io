@@ -3,7 +3,7 @@
 // Match the project cards in each portfolio home, in reading order.
 const orders = {
   character: ['zstar', 'one-piece'],
-  visual: ['rayban-tmall', 'ocean-engine', 'eleme-pacman', 'epo', 'zstar', 'visual-explorations', 'iphone17-pro'],
+  visual: ['rayban-tmall', 'ocean-engine', 'eleme-pacman', 'epo', 'zstar', 'dewu', 'su7', 'iphone17-pro', 'mimo', 'meowbreak'],
   '3d': ['zstar', 'dewu'],
   'ai-product': ['mimo', 'meowbreak', 'zstar', 'dewu'],
   brand: ['meshy', 'mimo', 'meowbreak', 'zstar', 'dewu', 'iphone17-pro', 'su7'],
