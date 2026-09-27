@@ -33,7 +33,13 @@
 
 .builder-hero .role-switcher[hidden]{display:none}
 
-.builder-profile .profile-facts>div{text-align:center}.builder-profile .profile-education{grid-template-columns:1fr;text-align:center}.builder-profile .skill-tags{justify-content:center}
+.builder-profile .profile-facts>div{text-align:center}
+.visual-profile-card .profile-identity h2{transform:scale(.8);transform-origin:center}
+.visual-profile-card .profile-identity p{transform:translateY(8px)}
+.visual-profile-facts{transform:translateY(42px);grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}.visual-profile-facts>div{display:flex;flex-direction:column;justify-content:center;min-width:0}.visual-profile-facts .profile-school strong{font-size:13px;line-height:1.5}.visual-profile-facts .profile-school span{line-height:1.5}
+.builder-profile .profile-education{grid-template-columns:1fr;text-align:center}.builder-profile .skill-tags{justify-content:center}
+/* Preserve the profile geometry while removing redundant labels from view. */
+.builder-profile .profile-tags-spacer{visibility:hidden;pointer-events:none}
 .builder-glow-meshy{--glow-a:132,185,50;--glow-b:50,110,75}
 .builder-glow-one-piece{--glow-a:143,99,66;--glow-b:102,84,146}
 .brand-project-group .meshy-featured{grid-column:1/-1;min-height:0;aspect-ratio:2/1;background:#071b15}

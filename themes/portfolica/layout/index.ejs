@@ -9,12 +9,12 @@
 <section class="portfolio-section about-career-section" id="about">
   <div class="section-label">01 / 关于我 · 职业经历</div>
   <div class="about-career-layout">
-    <aside class="profile-card<%= isBuilder ? ' builder-profile' : '' %>">
+    <aside class="profile-card<%= isBuilder ? ' builder-profile' : '' %><%= page.portfolio_mode === 'visual' ? ' visual-profile-card' : '' %>">
       <div class="profile-portrait"><img src="<%- url_for(isBuilder ? '/images/portfolio-hd/portrait-real.webp' : '/images/portfolio-hd/头像.png') %>" alt="覃保锟个人头像"></div>
       <div class="profile-identity"><% if(!isBuilder){ %><span><%= role.eyebrow %></span><% } %><h2>覃保锟</h2><p><%= mode === 'ai-product' ? '产品设计' : page.portfolio_variant === 'creative' ? '创意视觉设计师' : role.profile %></p></div>
-      <div class="profile-facts"><div><strong>10+</strong><span>年设计经验</span></div><div><strong>4</strong><span>家头部互联网企业</span></div></div>
-      <div class="profile-education"><% if(!isBuilder){ %><span>EDUCATION</span><% } %><div><strong>天津理工大学艺术学院</strong><p>2014 · 本科 · 动画专业</p></div></div>
-      <div class="skill-tags"><% if(isVisual){ visual.tags.forEach(function(tag){ %><span><%= tag %></span><% }); } else if(mode === 'ai-product'){ %><span>产品原型</span><span>AI 协作开发</span><span>C 端体验</span><span>虚拟角色</span><span>AIGC 工作流</span><span>产品上线</span><% } else { %><span>3D 资产</span><span>视觉设计</span><span>AI 产品</span><span>AIGC</span><span>流程搭建</span><span>项目管理</span><% } %></div>
+      <div class="profile-facts<%= page.portfolio_mode === 'visual' ? ' visual-profile-facts' : '' %>"><div><strong>10+</strong><span>年设计经验</span></div><% if(page.portfolio_mode === 'visual'){ %><div class="profile-school"><strong>天津理工大学艺术学院</strong><span>动画专业 · 本科</span></div><% } else { %><div><strong>4</strong><span>家头部互联网企业</span></div><% } %></div>
+      <% if(page.portfolio_mode !== 'visual'){ %><div class="profile-education"><% if(!isBuilder){ %><span>EDUCATION</span><% } %><div><strong>天津理工大学艺术学院</strong><p>2014 · 本科 · 动画专业</p></div></div><% } %>
+      <div class="skill-tags<%= page.portfolio_mode === 'visual' ? ' profile-tags-spacer' : '' %>"<%- page.portfolio_mode === 'visual' ? ' aria-hidden="true" inert' : '' %>><% if(isVisual){ visual.tags.forEach(function(tag){ %><span><%= tag %></span><% }); } else if(mode === 'ai-product'){ %><span>产品原型</span><span>AI 协作开发</span><span>C 端体验</span><span>虚拟角色</span><span>AIGC 工作流</span><span>产品上线</span><% } else { %><span>3D 资产</span><span>视觉设计</span><span>AI 产品</span><span>AIGC</span><span>流程搭建</span><span>项目管理</span><% } %></div>
     </aside>
     <div class="career-column">
       <header class="career-intro"><p class="eyebrow">ABOUT & EXPERIENCE</p><p><%= role.intro %></p></header>
